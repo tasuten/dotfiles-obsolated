@@ -3,4 +3,6 @@
 * .vim/
 * .zshrc
 * .zprofile
+* .gitconfig
+* .gitignore_global
 
