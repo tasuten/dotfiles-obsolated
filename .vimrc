@@ -152,6 +152,8 @@ Bundle 'choplin/unite-vim_hacks'
 Bundle 'Wombat'
 Bundle 'wombat256.vim'
 
+" 自作プラグイン
+Bundle 'tasuten/gcalc.vim'
 
 filetype plugin indent on
 
