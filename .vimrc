@@ -180,7 +180,6 @@ endif
 let g:quickrun_config.html = { 'command' : 'open', 'exec' : ['%c %s'] }
 " Javaの文字化け対策
 let g:quickrun_config.java = { 'exec': ['javac -J-Dfile.encoding=UTF-8 %o %s', '%c -Dfile.encoding=UTF-8 %s:t:r %a', ':call delete("%S:t:r.class")'] }
-
 " Markdown
 let g:quickrun_config.markdown = {
       \ 'type' : 'markdown/bluecloth',
