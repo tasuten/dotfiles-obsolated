@@ -213,10 +213,8 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 " Define dictionary.
 " \  'vimshell' : $HOME.'/.vimshell_hist',
 " の行を少し書き換えた
-" 'text'の時は*.txtのようなファイルの時の設定
 let g:neocomplcache_dictionary_filetype_lists = {
       \ 'default' : '',
-      \ 'text' : $HOME.'/.vim/dict/tech.dict',
       \ 'vimshell' : $HOME.'/.vimshell/command-history',
       \ 'scheme' : $HOME.'/.gosh_completions'
       \ }
