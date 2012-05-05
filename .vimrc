@@ -141,6 +141,7 @@ Bundle 'mattn/excitetranslate-vim'
 Bundle 'ZenCoding.vim'
 Bundle 'houtsnip/vim-emacscommandline'
 Bundle 'yuratomo/w3m.vim'
+Bundle 'sudo.vim'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
