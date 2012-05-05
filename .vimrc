@@ -39,15 +39,7 @@ highlight PmenuSel ctermbg=blue
 " ※（colorschemeにかかわらず適用させたい）ハイライト設定はもっと後ろの方参照
 
 
-" statusline
-" statuslineを常に表示
-set laststatus=2
-"大体こんな感じで表示
-" hoge.c [+][utf-8:LF][c]                         0,0-1    全て
-" help.jax [ヘルプ][-][RO][utf-8:LF][help]        1,1      先頭
-let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
-let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=  %-14.(%l,%c%V%) %P'
-
+" statuslineはプラグイン設定の後で
 
 " インデントに関する設定も反映させるためにindentもonに
 filetype on
@@ -142,6 +134,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'houtsnip/vim-emacscommandline'
 Bundle 'yuratomo/w3m.vim'
 Bundle 'sudo.vim'
+Bundle 'tyru/current-func-info.vim'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
@@ -358,6 +351,17 @@ let g:yankring_history_file = '.yankring_history'
 let g:w3m#external_browser = 'open -a Firefox'
 let g:w3m#homepage = 'http://www.google.co.jp/'
 
+" current-func-info.vim
+" サポート外のファイルタイプの場合何も表示しないようにちょっとした関数を
+" ちなみにC, Perl, Ruby, Python, PHP, VimScをサポートしてるとか
+function! Cfi_warpper()
+  if cfi#supported_filetype(&filetype)
+    return cfi#format("[%s()]", "No")
+  else
+    return ''
+  endif
+endfunction
+
 " プラグイン設定ここまで
 
 " （colorschemeにかかわらず適用させたい）ハイライト設定
@@ -379,6 +383,16 @@ augroup MyHighlight
 augroup END
 
 " （colorschemeにかかわらず適用させたい）ハイライト設定ここまで
+
+" statusline
+" statuslineを常に表示
+set laststatus=2
+"大体こんな感じで表示
+" hoge.c [+][utf-8:LF][c]               [main()]  0,0-1    全て
+" help.jax [ヘルプ][-][RO][utf-8:LF][help]        1,1      先頭
+let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
+let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=%{Cfi_warpper()}  %-14.(%l,%c%V%) %P'
+
 
 
 let g:hatena_user = 'tasuten'
