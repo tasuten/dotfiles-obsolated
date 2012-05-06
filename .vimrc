@@ -358,7 +358,7 @@ function! Cfi_warpper()
   if cfi#supported_filetype(&filetype)
     return cfi#format("[%s()]", "No")
   else
-    return ''
+    return ""
   endif
 endfunction
 
