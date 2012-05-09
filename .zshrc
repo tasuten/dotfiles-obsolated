@@ -119,8 +119,8 @@ SPROMPT="correct: %R -> %r [nyae]? "
 # RPROMTは
 # git のブランチ名 *と作業状態* を zsh の右プロンプトに表示＋ status に応じて色もつけてみた - Yarukidenized:ヤルキデナイズド
 # http://d.hatena.ne.jp/uasi/20091025/1256458798
-# を別ファイルで
-source ~/dotfiles/.zshrc.gitprompt
+# をsubmoduleで
+source ~/dotfiles/214109/gistfile1.txt
 
 # ターミナルのタイトル
 #  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
