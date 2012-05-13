@@ -91,6 +91,10 @@ nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC<CR>
 " どうせならそれ系のプラグインとか入れてカーソルを良い感じの位置に…とか
 autocmd BufNewFile *.scm 0r ~/.vim/template/template.scm
 
+" *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
+autocmd BufNewFile,BufRead *.md setfiletype markdown
+
+
 " ここからプラグイン設定
 
 " Vundle
