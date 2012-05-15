@@ -77,6 +77,9 @@ nnoremap X "_X
 " http://d.hatena.ne.jp/yano3/20090526/1243350033
 let g:yankring_n_keys = 'Y D'
 
+" 検索結果ハイライトを<ESC><ESC>で消す
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
 " Vim-users.jp - Hack #74: 簡単にvimrcを編集する
 " http://vim-users.jp/2009/09/hack74/ より
 " .(g)vimrcを編集するためのkey-mapping
