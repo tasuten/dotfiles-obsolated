@@ -160,9 +160,10 @@ alias man='jman'
 alias pd='popd'
 
 # ls関連エイリアス
-alias ll='ls -la'
-alias l='ls -F'
-alias la='ls -a'
+# Ubutnuのデフォルトのaliasと同じにした
+alias ll='ls -alF'
+alias l='ls -CF'
+alias la='ls -A'
 
 # グローバルエイリアス
 # 例: ls | grep word -> ls G word
