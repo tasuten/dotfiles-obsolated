@@ -159,6 +159,11 @@ alias man='jman'
 # cdがpushdなのでpopdをpdにalias
 alias pd='popd'
 
+# ls関連エイリアス
+alias ll='ls -la'
+alias l='ls -F'
+alias la='ls -a'
+
 # グローバルエイリアス
 # 例: ls | grep word -> ls G word
 alias -g L='| less'
