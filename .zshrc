@@ -159,6 +159,13 @@ alias man='jman'
 # cdがpushdなのでpopdをpdにalias
 alias pd='popd'
 
+# グローバルエイリアス
+# 例: ls | grep word -> ls G word
+alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+
 # vimrc/zshrc/zprofileで当該ファイルを編集
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
