@@ -99,7 +99,7 @@ setopt interactive_comments
 ## ファイル名の展開でディレクトリにマッチした場合末尾に / を付加する
 setopt mark_dirs
 ## history (fc -l) コマンドをヒストリリストから取り除く。
-setopt hist_no_store
+# setopt hist_no_store
 ## 補完候補を詰めて表示
 setopt list_packed
 ## 最後のスラッシュを自動的に削除しない
