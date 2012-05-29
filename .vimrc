@@ -29,12 +29,13 @@ set listchars=tab:>-
 highlight SpecialKey ctermfg=lightblue guibg=lightblue
 
 " 行番号を濃い灰色で表示
-" highlightの色とかは:so $VIMRUNTIME/syntax/colortest.vim参照
+" highlightの色とかは:so $VIMRUNTIME/syntax/colortest.vim 参照
 set number
 highlight LineNr ctermfg=darkgray
 
 " 補完候補の背景色変更
-highlight PmenuSel ctermbg=blue
+highlight Pmenu ctermfg=white ctermbg=magenta
+highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
 
 " ※（colorschemeにかかわらず適用させたい）ハイライト設定はもっと後ろの方参照
 
