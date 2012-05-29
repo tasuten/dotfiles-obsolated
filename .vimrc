@@ -33,7 +33,7 @@ highlight SpecialKey ctermfg=lightblue guibg=lightblue
 set number
 highlight LineNr ctermfg=darkgray
 
-" 補完候補の背景色変更
+" 補完候補の色変更
 highlight Pmenu ctermfg=white ctermbg=magenta
 highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
 
