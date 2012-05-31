@@ -1,3 +1,6 @@
+# ~/binにパスを通す
+export PATH=$HOME/bin:$PATH
+
 # Homebrewでインストールした最新版がある場合、システム標準のものではなく
 # Homebrewで入れた方を優先して使うようにする
 export PATH=/usr/local/bin:$PATH
