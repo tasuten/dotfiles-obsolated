@@ -196,3 +196,13 @@ function search() {
   find "$1" -print | xargs grep "$2"
 }
 
+# cdd を tmux, bash, multi session +α に対応した - カワイイはつくれる
+# http://m4i.hatenablog.com/entry/2012/01/26/064329
+autoload -Uz compinit
+compinit
+. ~/bin/cdd
+
+chpwd() {
+  _cdd_chpwd
+}
+
