@@ -171,14 +171,15 @@ NeoBundle 'wombat256.vim'
 NeoBundle 'tasuten/gcalc.vim'
 
 " リポジトリを持たないプラグイン
+let g:local_plugin_base_path = $HOME.'/.vim/bundle/local/'
 " neobundleでpathogenと同等の機能を使用する方法 | karakaram-blog
 " http://www.karakaram.com/vim/neobundle120421/
 " NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
 " => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
 " rsense.vim
-NeoBundle 'rsense.vim', {'type' : 'nosync'}
+NeoBundle 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " 今のところ雑多な自作プラグイン等は全部まとめてmypluginに放り込んでる
-NeoBundle 'myplugin', {'type' : 'nosync'}
+NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 
 filetype plugin indent on
 
