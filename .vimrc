@@ -102,74 +102,85 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 " ここからプラグイン設定
 
-" Vundle
-" 以下あたり参考に
-" https://github.com/gmarik/vundle
-" http://vim-users.jp/2011/04/hack215/
-" http://shu-cream.blogspot.com/2011/04/2011vimvundle.html
-" Vundle作者本人gmarikさんのvimrc
-" https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136
-filetype off
-set runtimepath+=~/.vim/bundle/vundle/
-" ローカルの自作スクリプトはVunldeでの管理の仕方がわからないので
-" mypluginにでもまとめて放り込んでおく
-set runtimepath+=~/.vim/myplugin/
+" NeoBundle
+" set nocompatible               " be iMproved
+filetype off                   " required!
+filetype plugin indent off     " required!
 
-call vundle#rc()
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+NeoBundle 'Shougo/neobundle.vim'
 
-Bundle 'thinca/vim-quickrun'
-Bundle 'endwise.vim'
-Bundle 'thinca/vim-ref'
-Bundle 'matchit.zip'
-Bundle 'The-NERD-Commenter'
-Bundle 'tyru/open-browser.vim'
-Bundle 'mattn/webapi-vim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'endwise.vim'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'matchit.zip'
+NeoBundle 'The-NERD-Commenter'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
 " vimprocはvimshellとquickrunの非同期実行に必要
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'YankRing.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
-Bundle 'neco-look'
-Bundle 'html5.vim'
-Bundle 'HTML5-Syntax-File'
+NeoBundle 'Shougo/vimproc', {
+    \ 'build' : {
+    \ 'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+    \ },
+  \ }
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'YankRing.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'neco-look'
+NeoBundle 'html5.vim'
+NeoBundle 'HTML5-Syntax-File'
 " Google翻訳APIの有料化により利用不可
-" Bundle 'mattn/googletranslate-vim'
-Bundle 'mattn/excitetranslate-vim'
-Bundle 'ZenCoding.vim'
-Bundle 'houtsnip/vim-emacscommandline'
-Bundle 'yuratomo/w3m.vim'
-Bundle 'sudo.vim'
-Bundle 'tyru/current-func-info.vim'
+" NeoBundle 'mattn/googletranslate-vim'
+NeoBundle 'mattn/excitetranslate-vim'
+NeoBundle 'ZenCoding.vim'
+NeoBundle 'houtsnip/vim-emacscommandline'
+NeoBundle 'yuratomo/w3m.vim'
+NeoBundle 'sudo.vim'
+NeoBundle 'tyru/current-func-info.vim'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
-Bundle 'Shougo/unite.vim'
-Bundle 'tsukkee/unite-help'
-Bundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'h1mesuke/unite-outline'
 " colorschemeを変更するsource
 " -auto-previewと組み合わせると便利かもしれない、とのこと
-Bundle 'ujihisa/unite-colorscheme'
+NeoBundle 'ujihisa/unite-colorscheme'
 " GVim限定だがフォントを変更するsource
-Bundle 'ujihisa/unite-font'
-Bundle 'mattn/unite-remotefile'
+NeoBundle 'ujihisa/unite-font'
+NeoBundle 'mattn/unite-remotefile'
 " unite.vimでVim Hacksを閲覧するプラグイン
 " webapi-vimとvim-openbufに依存
-Bundle 'thinca/vim-openbuf'
-Bundle 'choplin/unite-vim_hacks'
+NeoBundle 'thinca/vim-openbuf'
+NeoBundle 'choplin/unite-vim_hacks'
 " これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
 
 " colorscheme類
-Bundle 'Wombat'
-Bundle 'wombat256.vim'
+NeoBundle 'Wombat'
+NeoBundle 'wombat256.vim'
 
 " 自作プラグイン
-Bundle 'tasuten/gcalc.vim'
+NeoBundle 'tasuten/gcalc.vim'
+
+" リポジトリを持たないプラグイン
+" neobundleでpathogenと同等の機能を使用する方法 | karakaram-blog
+" http://www.karakaram.com/vim/neobundle120421/
+" NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
+" => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
+" 今のところ全部まとめてmypluginに放り込んでる
+NeoBundle 'myplugin', {'type' : 'nosync'}
 
 filetype plugin indent on
+
+" NeoBundleここまで
 
 " pathogen.vim
 " 2011-05-23 pathogenからVundleに乗り換え。故にpathogen関連全コメントアウト
