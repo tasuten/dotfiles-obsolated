@@ -3,4 +3,5 @@
 * .vim/
 * .zshrc
 * .zprofile
+* .tmux.conf
 
