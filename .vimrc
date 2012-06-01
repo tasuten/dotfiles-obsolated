@@ -182,15 +182,6 @@ filetype plugin indent on
 
 " NeoBundleここまで
 
-" pathogen.vim
-" 2011-05-23 pathogenからVundleに乗り換え。故にpathogen関連全コメントアウト
-" 以下コメントアウト
-" pathogenのhelptags()(ヘルプファイルのインデックス)を自動でやってくれる
-" call pathogen#helptags()はちょっと重くなるしそんなに使うものでもないので
-" コメントアウト中
-" call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
-" 以上コメントアウト
 
 " open-browser.vim
 " wはWebから''
