@@ -175,7 +175,9 @@ NeoBundle 'tasuten/gcalc.vim'
 " http://www.karakaram.com/vim/neobundle120421/
 " NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
 " => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
-" 今のところ全部まとめてmypluginに放り込んでる
+" rsense.vim
+NeoBundle 'rsense.vim', {'type' : 'nosync'}
+" 今のところ雑多な自作プラグイン等は全部まとめてmypluginに放り込んでる
 NeoBundle 'myplugin', {'type' : 'nosync'}
 
 filetype plugin indent on
@@ -287,7 +289,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
@@ -298,6 +300,18 @@ if !exists('g:neocomplcache_include_paths')
   let g:neocomplcache_include_paths = {}
 endif
 let g:neocomplcache_include_paths.c  =  '/usr/include,'.'/usr/local/include'
+
+" rsense
+" 補記:neocomplcacheで補完されない時は
+" 何度かやってみるかオムニ補完(<C-x><C-o>)でやるといいかも
+" if !exists('g:neocomplcache_omni_patterns')
+"  let g:neocomplcache_omni_patterns = {}
+" endif
+let g:rsenseUseOmniFunc = 1
+if filereadable(expand('/usr/local/bin/rsense'))
+  let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
+  let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+endif
 
 " neocomplcacheここまで
 
