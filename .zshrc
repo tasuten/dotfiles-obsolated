@@ -125,9 +125,9 @@ source ~/dotfiles/214109/gistfile1.txt
 # ターミナルのタイトル
 #  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
 case "${TERM}" in
-    kterm*|xterm|xterm-256color)
-        precmd() {
-            echo -ne "\033]0;${USER}@${HOST%%.*}: ${PWD}\007"
+  kterm*|xterm|xterm-256color)
+    precmd() {
+      echo -ne "\033]0;${USER}@${HOST%%.*}: ${PWD}\007"
     }
     ;;
 esac
