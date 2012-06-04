@@ -206,3 +206,8 @@ chpwd() {
   _cdd_chpwd
 }
 
+# tmuxを自動で起動
+if [ "$TMUX" = "" ]; then
+  tmux
+fi
+
