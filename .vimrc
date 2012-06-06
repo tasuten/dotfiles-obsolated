@@ -413,13 +413,26 @@ augroup END
 " statusline
 " statuslineを常に表示
 set laststatus=2
-"大体こんな感じで表示
-" hoge.c [+][utf-8:LF][c]               [main()]  0,0-1    全て
-" help.jax [ヘルプ][-][RO][utf-8:LF][help]        1,1      先頭
+
+" 改行コードの対応表
 let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
-let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=%{Cfi_warpper()}  %-14.(%l,%c%V%) %P'
 
+" inputsourceコマンドを使ってIMの状況を返す関数
+function! IM_status()
+  let l:id = substitute(system('inputsource'), '\n', '', '')
+  if l:id == 'com.apple.inputmethod.Kotoeri.Roman' || l:id == 'com.google.inputmethod.Japanese.Roman'
+    return ' A'
+  elseif l:id == 'com.apple.inputmethod.Kotoeri.Japanese' || l:id == 'com.google.inputmethod.Japanese.base'
+    return 'あ'
+  else
+    return ''
+  endif
+endfunction
 
+"大体こんな感じで表示
+" hoge.c [+][utf-8:LF][c]          [あ] [main()]  0,0-1    全て
+" help.jax [ヘルプ][-][RO][utf-8:LF][help]  [ A]  1,1      先頭
+let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=[%{IM_status()}] %{Cfi_warpper()}  %-14.(%l,%c%V%) %P'
 
 let g:hatena_user = 'tasuten'
 
