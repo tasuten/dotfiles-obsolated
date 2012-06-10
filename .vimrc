@@ -348,6 +348,11 @@ nnoremap <silent> [unite]u :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
+" Unite outline
+nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
+" Unite colorscheme
+nnoremap <silent> [unite]cs :<C-u>Unite colorscheme -auto-preview<CR>
+
 " file選択時でのデフォルトアクション（<CR>の時とかの挙動）をopenではなくsplitに
 call unite#custom_default_action('file', 'split')
 
