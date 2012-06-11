@@ -145,6 +145,7 @@ NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'tyru/current-func-info.vim'
+NeoBundle 'nishigori/vim-sunday'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
