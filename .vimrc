@@ -317,7 +317,12 @@ endif
 " neocomplcacheここまで
 
 " ZenCoding.vim
-let g:user_zen_settings = { 'indentation':'  ' }
+if !exists('g:user_zen_settings')
+  let g:user_zen_settings = {}
+endif
+let g:user_zen_settings.indentation = '  '
+let g:user_zen_settings.lang = 'ja'
+" let g:user_zen_complete_tag = 1
 
 " scheme.vim（Gauche向けシンタックスファイル。~/.vim/syntax/scheme.vim）
 " http://legacy.e.tir.jp/wiliki?vim%3Ascheme.vim
