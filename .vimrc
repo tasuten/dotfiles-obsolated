@@ -62,7 +62,7 @@ inoremap `` ``<Left>
 inoremap <> <><Left>
 
 " カンマ(,)の後に自動的にスペースを入れる
-inoremap , ,<Space>
+" inoremap , ,<Space>
 
 " カーソル移動を物理行でなくレイアウト行で
 " 物理行で移動するにはC-pやC-nで
