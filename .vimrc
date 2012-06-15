@@ -179,8 +179,10 @@ let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 " => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
 " rsense.vim
 NeoBundle 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
-" 今のところ雑多な自作プラグイン等は全部まとめてmypluginに放り込んでる
+" 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
+" 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
 NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundle 'scripts', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 
 filetype plugin indent on
 
