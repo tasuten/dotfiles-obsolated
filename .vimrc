@@ -172,7 +172,7 @@ NeoBundle 'wombat256.vim'
 NeoBundle 'tasuten/gcalc.vim'
 
 " リポジトリを持たないプラグイン
-let g:local_plugin_base_path = $HOME.'/.vim/bundle/local/'
+let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 " neobundleでpathogenと同等の機能を使用する方法 | karakaram-blog
 " http://www.karakaram.com/vim/neobundle120421/
 " NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
