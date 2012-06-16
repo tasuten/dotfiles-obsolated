@@ -159,6 +159,9 @@ alias man='jman'
 # cdがpushdなのでpopdをpdにalias
 alias pd='popd'
 
+# gitレポジトリのルートに移動する
+alias cd_git='cd $(git rev-parse --show-toplevel)'
+
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
 alias ll='ls -alF'
