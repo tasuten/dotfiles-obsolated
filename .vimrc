@@ -92,10 +92,6 @@ nnoremap <silent> <Space>eg  :<C-u>edit $MYGVIMRC<CR>
 nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
 nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC<CR>
 
-" ファイル新規作成時にテンプレートファイルを読み込む
-" どうせならそれ系のプラグインとか入れてカーソルを良い感じの位置に…とか
-autocmd BufNewFile *.scm 0r ~/.vim/template/template.scm
-
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
@@ -146,6 +142,7 @@ NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
+NeoBundle 'thinca/vim-template'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
@@ -400,6 +397,16 @@ function! Cfi_warpper()
     return ""
   endif
 endfunction
+
+" template.vim
+" execute内は<>で囲まれたテキストオブジェクト全体(a>)を
+" 削除レジスタ("_)へ削除(d)の意味
+" つまり<Cursor>を消去している
+" 最終的にカーソルは<Cursor>の有った場所の一つ前にある
+autocmd User plugin-template-loaded
+      \ if search('<Cursor>')
+      \ | execute 'normal! "_da>'
+      \ | endif
 
 " プラグイン設定ここまで
 
