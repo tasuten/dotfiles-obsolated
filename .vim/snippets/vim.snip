@@ -1,0 +1,10 @@
+# .vimrc内で、
+# 未定義の辞書型配列型のプラグインのオプション変数を宣言するときに
+snippet     notexists
+abbr        if !exists(g:var)
+prev_word   '^'
+        if !exists('g:${1:var}')
+            let g:$1 = {}
+        endif
+        ${0}
+
