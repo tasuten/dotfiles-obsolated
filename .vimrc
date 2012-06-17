@@ -308,11 +308,11 @@ let g:neocomplcache_include_paths.c  =  '/usr/include,'.'/usr/local/include'
 " if !exists('g:neocomplcache_omni_patterns')
 "  let g:neocomplcache_omni_patterns = {}
 " endif
-let g:rsenseUseOmniFunc = 1
-if filereadable(expand('/usr/local/bin/rsense'))
-  let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
+" let g:rsenseUseOmniFunc = 1
+" if filereadable(expand('/usr/local/bin/rsense'))
+  " let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-endif
+" endif
 
 " neocomplcacheここまで
 
