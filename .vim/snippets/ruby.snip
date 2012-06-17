@@ -50,10 +50,15 @@ prev_word   '^'
 #             ${0}
 #         end
 
+snippet     elsif
+prev_word   '^'
+        elsif ${1:condition}
+            ${0}
+
 snippet     else
 prev_word   '^'
         else
-          ${1}
+            ${1}
 
 # begin rescue
 snippet     begin
