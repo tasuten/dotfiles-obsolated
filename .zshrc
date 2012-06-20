@@ -159,8 +159,16 @@ alias man='jman'
 # cdがpushdなのでpopdをpdにalias
 alias pd='popd'
 
+# git周りのalias
 # gitレポジトリのルートに移動する
 alias cd_git='cd $(git rev-parse --show-toplevel)'
+# 短縮コマンド
+# gstでgit statusを短縮表示(-s)かつブランチ名を表示(-b)し
+# stashのリストも表示
+alias gst='git status -s -b && git stash list'
+alias gca='git commit -a'
+alias gd='git diff --word-diff'
+
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
