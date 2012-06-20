@@ -167,8 +167,8 @@ alias cd_git='cd $(git rev-parse --show-toplevel)'
 # stashのリストも表示
 alias gst='git status -s -b && git stash list'
 alias gca='git commit -a'
-alias gd='git diff --word-diff'
-
+alias gdf='git diff --word-diff'
+alias glo='git log --oneline --decorate'
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
