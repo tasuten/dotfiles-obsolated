@@ -160,6 +160,14 @@ alias diff='colordiff -u'
 export LESS='-R'
 export MORE='-R'
 
+# grepに色を付ける
+# --color=alwaysにしないのは、grepコマンドを使用しているスクリプトなんかで
+# 困るかもしれないそうなので
+# http://d.hatena.ne.jp/bubbles/20081210/1228918665
+export GREP_OPTIONS='--color=auto'
+# 色はシアン
+export GREP_COLOR='00;36'
+
 # manがデフォルトでは英語版なので日本語のjmanをインストールしてalias
 alias man='jman'
 
