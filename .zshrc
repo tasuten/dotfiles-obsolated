@@ -153,6 +153,13 @@ alias firefox='open -a Firefox'
 # lsで色をつける
 alias ls='ls -G'
 
+# diffの代わりにcolordiffを使う。Homebrewでインストール可能
+# ついでにunified形式で出力するようにする
+alias diff='colordiff -u'
+# lessやmoreを色付きで表示してくれるように
+export LESS='-R'
+export MORE='-R'
+
 # manがデフォルトでは英語版なので日本語のjmanをインストールしてalias
 alias man='jman'
 
