@@ -143,6 +143,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
+NeoBundle 'camelcasemotion'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
@@ -407,6 +408,23 @@ autocmd User plugin-template-loaded
       \ if search('<Cursor>')
       \ | execute 'normal! "_da>'
       \ | endif
+
+" camelcasemotion
+" :h camelcasemotion-configuration より
+map w <Plug>CamelCaseMotion_w
+map b <Plug>CamelCaseMotion_b
+map e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+" テキストオブジェクト
+omap iw <Plug>CamelCaseMotion_iw
+xmap iw <Plug>CamelCaseMotion_iw
+omap ib <Plug>CamelCaseMotion_ib
+xmap ib <Plug>CamelCaseMotion_ib
+omap ie <Plug>CamelCaseMotion_ie
+xmap ie <Plug>CamelCaseMotion_ie
+
 
 " プラグイン設定ここまで
 
