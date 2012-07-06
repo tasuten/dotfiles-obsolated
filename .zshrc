@@ -194,6 +194,7 @@ alias la='ls -A'
 # グローバルエイリアス
 # 例: ls | grep word -> ls G word
 alias -g L='| less'
+alias -g M='| more'
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
