@@ -18,6 +18,13 @@ set backupdir=~/.vim/tmp
 " Backspaceをちょっと賢く。インデントとかも消せるように
 set backspace=indent,eol,start
 
+" 常に大文字小文字を区別して検索（置換時の検索等含む）
+" 大文字小文字を区別せず検索したい時は\cをパターン中に含める
+" eg.) /aa\c みたく
+" 置換だと:%s/hoge/fuga/gi みたくiフラグを入れてもいい
+set noignorecase
+set nosmartcase
+
 " <C-p><C-n>の補完でincludeファイル(requireとか#includeしたファイル)からも
 " 補完されるのが邪魔だったのでそうしないように
 " デフォルトは.,w,b,u,t,i
