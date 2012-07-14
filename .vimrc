@@ -32,7 +32,7 @@ set complete=.,w,b,u,t
 
 " タブを可視化
 set list
-set listchars=tab:>-
+set listchars=tab:>\ 
 highlight SpecialKey ctermfg=lightblue guibg=lightblue
 
 " 行番号を濃い灰色で表示
