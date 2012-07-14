@@ -187,6 +187,8 @@ let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 " => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
 " rsense.vim
 NeoBundle 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+" eregex.vim
+NeoBundle 'eregex.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
 " 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
 NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
@@ -434,6 +436,14 @@ omap ib <Plug>CamelCaseMotion_ib
 xmap ib <Plug>CamelCaseMotion_ib
 omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
+
+
+"eregex.vim
+" 置換は:<range>s -> :<range>Sで
+nnoremap / :<C-u>M/
+nnoremap ? :<C-u>?
+nnoremap * :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
+nnoremap g* :<C-u>execute 'M/' . expand('<cword>') <CR>
 
 
 " プラグイン設定ここまで
