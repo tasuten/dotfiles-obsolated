@@ -119,7 +119,6 @@ NeoBundle 'Shougo/neobundle.vim'
 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'endwise.vim'
-NeoBundle 'thinca/vim-ref'
 NeoBundle 'matchit.zip'
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'tyru/open-browser.vim'
@@ -151,6 +150,10 @@ NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
+
+" ref
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'taka84u9/vim-ref-ri'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
