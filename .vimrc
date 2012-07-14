@@ -192,6 +192,9 @@ let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 NeoBundle 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " eregex.vim
 NeoBundle 'eregex.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+" vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
+" Gauche用シンタックスファイル
+NeoBundle 'gauche-syntax', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
 " 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
 NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
