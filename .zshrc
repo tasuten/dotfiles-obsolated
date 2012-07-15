@@ -190,6 +190,8 @@ alias glo='git log --oneline --decorate'
 alias ll='ls -alF'
 alias l='ls -CF'
 alias la='ls -A'
+# ついでにtypo補正も(;s -> ls)
+alias s='ls'
 
 # グローバルエイリアス
 # 例: ls | grep word -> ls G word
