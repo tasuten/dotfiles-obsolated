@@ -367,8 +367,6 @@ nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 " source一覧
 nnoremap <silent> [unite]s :<C-u>Unite source<CR>
-" 常用セット（？）
-nnoremap <silent> [unite]u :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
