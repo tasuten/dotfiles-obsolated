@@ -347,6 +347,16 @@ let g:user_zen_settings.lang = 'ja'
 " http://legacy.e.tir.jp/wiliki?vim%3Ascheme.vim
 autocmd FileType scheme :let is_gauche=1
 
+" ドキュメントを引くキーバインドのプレフィックスを_で統一
+" ちなみに元の機能は__で使えるようにしておいた
+nnoremap __ _
+nnoremap [doc] <Nop>
+nmap _ [doc]
+" _hでVimのhelpを引く
+nnoremap [doc]h :<C-u>h<Space>
+" ref.vim
+nnoremap [doc]r :<C-u>Ref<Space>
+
 " unite.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin を参考にした
 
