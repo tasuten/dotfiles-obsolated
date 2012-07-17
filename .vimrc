@@ -463,6 +463,15 @@ nnoremap ? :<C-u>?
 nnoremap * :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
 nnoremap g* :<C-u>execute 'M/' . expand('<cword>') <CR>
 
+" sunday.vim
+let g:sunday_pairs = [
+      \   ['right', 'left'],
+      \   ['up', 'down'],
+      \   ['top', 'bottom'],
+      \   ['max', 'min'],
+      \   ['width', 'height']
+      \ ]
+
 
 " プラグイン設定ここまで
 
