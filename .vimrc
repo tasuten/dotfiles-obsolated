@@ -78,6 +78,10 @@ nnoremap k gk
 nnoremap <Up> gk
 nnoremap <Down> gj
 
+" 挿入モードでEmacsライクなキーバインド
+inoremap <C-a> <C-o>0
+inoremap <C-e> <C-o>$
+
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
@@ -286,7 +290,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
+" inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " AutoComplPop like behavior.
 " let g:neocomplcache_enable_auto_select = 1
