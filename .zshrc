@@ -112,7 +112,8 @@ setopt complete_aliases
 # プロンプトの設定
 autoload colors
 colors
-PROMPT="%m: %n%(!.#.$) "
+# 太字シアンの文字に、アンダーバーを付ける
+PROMPT="%U%B%F{cyan}%m: %n%(!.#.$)%u %f%b"
 PROMPT2="%_> "
 SPROMPT="correct: %R -> %r [nyae]? "
 # RPROMPT="[%~]"
