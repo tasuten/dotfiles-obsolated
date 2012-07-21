@@ -462,6 +462,12 @@ nnoremap / :<C-u>M/
 nnoremap ? :<C-u>?
 nnoremap * :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
 nnoremap g* :<C-u>execute 'M/' . expand('<cword>') <CR>
+" eregex.vimとは関係ないけどよく似た設定なのでこれもここで
+" MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
+" デフォルトではg/なのが思い出せないのでm/にも
+" 元のmは一応mmに
+nnoremap mm m
+nnoremap m/ g/
 
 " sunday.vim
 let g:sunday_pairs = [
