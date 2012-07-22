@@ -46,6 +46,9 @@ set number
 " highlight Pmenu ctermfg=white ctermbg=magenta
 " highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
 
+" カーソルがある行をハイライト
+set cursorline
+
 " ※（colorschemeにかかわらず適用させたい）ハイライト設定はもっと後ろの方参照
 
 
@@ -504,13 +507,17 @@ nnoremap U :<C-u>GundoToggle<CR>
 " 背景色を濃い灰色ではなく黒にする
 let g:jellybeans_background_color_256 = 0
 let g:jellybeans_background_color = "000000"
-" [Tab]なんかの色(SpecialKey)も背景黒、文字はlightblueで
+" 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はlightblueで
+" 2.CursorLineの行の行番号は、
 " 不思議な事にCUIのVimでも何故かgui*の方が適用されてる
 let g:jellybeans_overrides = {
-      \    'SpecialKey': {
+      \    'SpecialKey' : {
       \              'guifg': 'add8e6', 'guibg': '000000',
-      \              'ctermfg': 'lighblue', 'ctermbg': 'Black',
-      \              'attr': '' },
+      \              'ctermfg': 'lighblue', 'ctermbg': 'black',
+      \              'attr': ''} ,
+      \   'CursorLineNr' : {
+      \               'guifg' : '707070', 'guibg' : '222222',
+      \               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'}
       \ }
 colorscheme jellybeans
 
