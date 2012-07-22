@@ -159,6 +159,8 @@ NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
 NeoBundle 'kana/vim-smartinput'
+" 要python
+NeoBundle 'sjl/gundo.vim'
 
 " ref
 NeoBundle 'thinca/vim-ref'
@@ -485,6 +487,9 @@ let g:sunday_pairs = [
       \   ['max', 'min'],
       \   ['width', 'height']
       \ ]
+
+" gundo.vim
+nnoremap U :<C-u>GundoToggle<CR>
 
 " プラグイン設定ここまで
 
