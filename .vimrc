@@ -480,10 +480,19 @@ xmap ie <Plug>CamelCaseMotion_ie
 
 "eregex.vim
 " 置換は:<range>s -> :<range>Sで
-nnoremap / :<C-u>M/
-nnoremap ? :<C-u>?
-nnoremap * :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
-nnoremap g* :<C-u>execute 'M/' . expand('<cword>') <CR>
+" eregex.vim版はprefixに,を付ける
+nnoremap [eregex] <nop>
+nmap , [eregex]
+nnoremap [eregex]/ :<C-u>M/
+nnoremap [eregex]? :<C-u>?
+nnoremap [eregex]* :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
+nnoremap [eregex]g* :<C-u>execute 'M/' . expand('<cword>') <CR>
+" Vimデフォルトの検索をeregex.vimで置き換える場合こっち
+" これをするとincsearchなんかは使えないので注意
+" nnoremap / :<C-u>M/
+" nnoremap ? :<C-u>?
+" nnoremap * :<C-u>execute 'M/\<' . expand('<cword>') . '\>' <CR>
+" nnoremap g* :<C-u>execute 'M/' . expand('<cword>') <CR>
 " eregex.vimとは関係ないけどよく似た設定なのでこれもここで
 " MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
 " デフォルトではg/なのが思い出せないのでm/にも
