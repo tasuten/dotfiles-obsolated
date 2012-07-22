@@ -403,6 +403,9 @@ nnoremap <silent> [unite]s :<C-u>Unite source<CR>
 " 全部乗せ
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
+" Unite grep
+nnoremap [unite]g :<C-u>Unite grep -buffer-name=grep -no-quit -auto-preview<CR>
+
 " Unite outline
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
 " Unite colorscheme
