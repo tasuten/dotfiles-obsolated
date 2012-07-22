@@ -1,4 +1,4 @@
-" .vimrcのエンコーディング指定
+  " .vimrcのエンコーディング指定
 scriptencoding utf-8
 
 " Vim特有の設定とかすると思うのでvi互換をオフに
@@ -60,12 +60,12 @@ set shiftround
 
 " ()みたいに打った時カーソルを()の中に
 " Cとかだったらinoremap /**/ /**/<Left><Left>とかいいかも
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap () ()<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap `` ``<Left>
+" inoremap {} {}<Left>
+" inoremap [] []<Left>
+" inoremap () ()<Left>
+" inoremap "" ""<Left>
+" inoremap '' ''<Left>
+" inoremap `` ``<Left>
 inoremap <> <><Left>
 
 " カンマ(,)の後に自動的にスペースを入れる
@@ -158,6 +158,7 @@ NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
+NeoBundle 'kana/vim-smartinput'
 
 " ref
 NeoBundle 'thinca/vim-ref'
@@ -484,7 +485,6 @@ let g:sunday_pairs = [
       \   ['max', 'min'],
       \   ['width', 'height']
       \ ]
-
 
 " プラグイン設定ここまで
 
