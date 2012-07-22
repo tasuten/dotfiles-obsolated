@@ -188,6 +188,7 @@ NeoBundle 'choplin/unite-vim_hacks'
 " colorscheme類
 NeoBundle 'Wombat'
 NeoBundle 'wombat256.vim'
+NeoBundle 'nanotech/jellybeans.vim'
 
 " 自作プラグイン
 NeoBundle 'tasuten/gcalc.vim'
