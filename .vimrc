@@ -27,6 +27,11 @@ set nosmartcase
 " デフォルトは.,w,b,u,t,i
 set complete=.,w,b,u,t
 
+" コマンドライン補完。最長共通部分を補完しつつ候補をstatuslineに表示した後、
+" 候補を順に回る
+set wildmenu
+set wildmode=longest:full,full
+
 " タブを可視化
 set list
 set listchars=tab:>\ 
