@@ -30,16 +30,16 @@ set complete=.,w,b,u,t
 " タブを可視化
 set list
 set listchars=tab:>\ 
-highlight SpecialKey ctermfg=lightblue guibg=lightblue
+" highlight SpecialKey ctermfg=lightblue guibg=lightblue
 
 " 行番号を濃い灰色で表示
 " highlightの色とかは:so $VIMRUNTIME/syntax/colortest.vim 参照
 set number
-highlight LineNr ctermfg=darkgray
+" highlight LineNr ctermfg=darkgray
 
 " 補完候補の色変更
-highlight Pmenu ctermfg=white ctermbg=magenta
-highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
+" highlight Pmenu ctermfg=white ctermbg=magenta
+" highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
 
 " ※（colorschemeにかかわらず適用させたい）ハイライト設定はもっと後ろの方参照
 
@@ -487,6 +487,21 @@ let g:sunday_pairs = [
 
 
 " プラグイン設定ここまで
+
+" colorscheme設定
+" jellybeans
+" 背景色を濃い灰色ではなく黒にする
+let g:jellybeans_background_color_256 = 0
+let g:jellybeans_background_color = "000000"
+" [Tab]なんかの色(SpecialKey)も背景黒、文字はlightblueで
+" 不思議な事にCUIのVimでも何故かgui*の方が適用されてる
+let g:jellybeans_overrides = {
+      \    'SpecialKey': {
+      \              'guifg': 'add8e6', 'guibg': '000000',
+      \              'ctermfg': 'lighblue', 'ctermbg': 'Black',
+      \              'attr': '' },
+      \ }
+colorscheme jellybeans
 
 " （colorschemeにかかわらず適用させたい）ハイライト設定
 " colorschemeするとこれらの設定が消されるそうなのでcolorschemeの設定はこれより前で行うこと
