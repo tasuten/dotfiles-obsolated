@@ -1,6 +1,3 @@
-" Tabのことなどファイルタイプごとの設定は~/.vim/ftplugin/filetype.vimにある
-" もしかすると書かなくてもそのとおりに動くようなものもあると思うけど念のため
-
 " .vimrcのエンコーディング指定
 scriptencoding utf-8
 
