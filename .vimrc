@@ -145,9 +145,6 @@ NeoBundle 'Shougo/vimproc', {
   \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'YankRing.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
-NeoBundle 'neco-look'
 NeoBundle 'html5.vim'
 NeoBundle 'HTML5-Syntax-File'
 " Google翻訳APIの有料化により利用不可
@@ -165,6 +162,11 @@ NeoBundle 'camelcasemotion'
 " ref
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'taka84u9/vim-ref-ri'
+
+" neocomplcache
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'neco-look'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
