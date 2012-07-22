@@ -55,6 +55,9 @@ filetype indent on
 set splitright
 set splitbelow
 
+" >や<をshiftwidthの倍数倍に丸めるようにする
+set shiftround
+
 " ()みたいに打った時カーソルを()の中に
 " Cとかだったらinoremap /**/ /**/<Left><Left>とかいいかも
 inoremap {} {}<Left>
