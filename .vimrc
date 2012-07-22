@@ -187,6 +187,7 @@ NeoBundle 'mattn/unite-remotefile'
 NeoBundle 'thinca/vim-openbuf'
 NeoBundle 'choplin/unite-vim_hacks'
 " これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
+" Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
 
 " colorscheme類
 NeoBundle 'Wombat'
