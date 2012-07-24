@@ -1,4 +1,4 @@
-  " .vimrcのエンコーディング指定
+" .vimrcのエンコーディング指定
 scriptencoding utf-8
 
 " Vim特有の設定とかすると思うのでvi互換をオフに
