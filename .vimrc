@@ -12,6 +12,13 @@ set nocompatible
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 
+" アンドゥ履歴をファイルに保存。これもtmp以下に
+" なお、この機能はVim7.3から追加されたとか
+if has('persistent_undo')
+  set undodir=~/.vim/tmp
+  set undofile
+endif
+
 " Backspaceをちょっと賢く。インデントとかも消せるように
 set backspace=indent,eol,start
 
