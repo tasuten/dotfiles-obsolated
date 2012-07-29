@@ -8,14 +8,14 @@ scriptencoding utf-8
 " が、非互換モードであるのが分かるように明示的に書いておく
 set nocompatible
 
-" バックアップファイルやスワップファイルを一箇所に
-set directory=~/.vim/tmp
-set backupdir=~/.vim/tmp
+" バックアップファイルやスワップファイルをtmp以下に
+set directory=~/.vim/tmp/swap
+set backupdir=~/.vim/tmp/backup
 
 " アンドゥ履歴をファイルに保存。これもtmp以下に
 " なお、この機能はVim7.3から追加されたとか
 if has('persistent_undo')
-  set undodir=~/.vim/tmp
+  set undodir=~/.vim/tmp/undo
   set undofile
 endif
 
