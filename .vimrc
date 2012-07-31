@@ -386,6 +386,7 @@ nmap _ [doc]
 nnoremap [doc]h :<C-u>h<Space>
 " ref.vim
 nnoremap [doc]r :<C-u>Ref<Space>
+nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 
 " unite.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin を参考にした
