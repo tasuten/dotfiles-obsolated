@@ -145,6 +145,8 @@ alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app "$@"'
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
 
+# opencでopen .（カレントディレクトリを開く）
+alias openc='open .'
 # emacsコマンドでCarbon Emacsを起動
 alias emacs='open -a Emacs'
 # 他にもGUIなソフトウェアをいくつかコマンドラインでも起動できるように
