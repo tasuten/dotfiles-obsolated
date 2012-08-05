@@ -97,6 +97,11 @@ nnoremap <Down> gj
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
 
+" カーソルキー（とh, l）で行末-次の行頭の移動を可能に
+set whichwrap=b,s,[,],<,>
+nnoremap h <Left>
+nnoremap l <Right>
+
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
