@@ -130,6 +130,10 @@ nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC<CR>
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 
+" helpをブラウズ時なんかに、CTRL-]から戻るのにCTRL-OやCTRL-Tは少し打ちにくいので、
+" CTRL-_に。本当はCTRL-:にしたかったけど、そんなキーコードはASCII的に無い
+nnoremap <C-_> <C-o>
+
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
