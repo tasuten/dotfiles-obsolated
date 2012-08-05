@@ -574,6 +574,13 @@ augroup END
 
 " （colorschemeにかかわらず適用させたい）ハイライト設定ここまで
 
+" colorschemeを弄るときに便利なコマンドを設定
+" カラーパレット
+command! -nargs=0 ColorTest runtime syntax/colortest.vim
+" 現在のハイライト一覧
+command! -nargs=0 HiTest runtime syntax/hitest.vim
+
+
 " statusline
 " statuslineを常に表示
 set laststatus=2
