@@ -537,7 +537,8 @@ nnoremap U :<C-u>GundoToggle<CR>
 let g:jellybeans_background_color_256 = 0
 let g:jellybeans_background_color = "000000"
 " 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はlightblueで
-" 2.CursorLineの行の行番号は、
+" 2.CursorLineの行の行番号は、CursorLineと同じ感じに
+" 3.対応する括弧の色を？山吹色背景黒文字に変更
 " 不思議な事にCUIのVimでも何故かgui*の方が適用されてる
 let g:jellybeans_overrides = {
       \    'SpecialKey' : {
@@ -546,7 +547,10 @@ let g:jellybeans_overrides = {
       \              'attr': ''} ,
       \   'CursorLineNr' : {
       \               'guifg' : '707070', 'guibg' : '222222',
-      \               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'}
+      \               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'},
+      \   'MatchParen' : {
+      \               'guifg' : '222222', 'guibg' : 'fad07a',
+      \               'ctermfg' : 'darkgray', 'ctermbg' : 'yellow'}
       \ }
 colorscheme jellybeans
 
