@@ -102,6 +102,9 @@ set whichwrap=b,s,[,],<,>
 nnoremap h <Left>
 nnoremap l <Right>
 
+" vvで行単位選択ビジュアルモードに入る。元のVが打ちづらかったので
+nnoremap vv V
+
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
