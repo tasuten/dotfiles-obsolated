@@ -122,8 +122,8 @@ nnoremap <silent> <C-h> :set hlsearch!<CR>
 " Vim-users.jp - Hack #74: 簡単にvimrcを編集する
 " http://vim-users.jp/2009/09/hack74/ より
 " .(g)vimrcを編集するためのkey-mapping
-nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
-nnoremap <silent> <Space>eg  :<C-u>edit $MYGVIMRC<CR>
+nnoremap <silent> <Space>v  :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Space>g  :<C-u>edit $MYGVIMRC<CR>
 " .(g)vimrcを反映するためのkey-mapping
 " Load .gvimrc after .vimrc edited at GVim.
 nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
