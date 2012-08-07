@@ -129,6 +129,9 @@ nnoremap <silent> <Space>eg  :<C-u>edit $MYGVIMRC<CR>
 nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
 nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC<CR>
 
+" <Space>sでスクラッチファイルを開く。:ScratchはKaoriYa同梱
+nnoremap <Space>s :Scratch<CR>
+
 " <ESC>と誤爆しやすい<F1>でヘルプが表示されないように
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
