@@ -136,6 +136,16 @@ nnoremap <Space>s :Scratch<CR>
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 
+" 誤爆しやすいq:等をqq:に割り当て(Vimテクニックバイブル P.124より)
+" qqは「qというレジスタにレコーディング」というコマンドと衝突するが
+" その時はtimeoutlenだけ待ちましょう
+nnoremap qq: <ESC>q:
+nnoremap qq/ <ESC>q/
+nnoremap qq? <ESC>q?
+nnoremap q: <Nop>
+nnoremap q/ <Nop>
+nnoremap q? <Nop>
+
 " helpをブラウズ時なんかに、CTRL-]から戻るのにCTRL-OやCTRL-Tは少し打ちにくいので、
 " CTRL-_に。本当はCTRL-:にしたかったけど、そんなキーコードはASCII的に無い
 nnoremap <C-_> <C-o>
