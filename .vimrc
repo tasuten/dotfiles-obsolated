@@ -364,6 +364,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
+let g:neocomplcache_omni_patterns.ruby = ''
 " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
@@ -385,7 +386,7 @@ let g:neocomplcache_include_paths.c  =  '/usr/include,'.'/usr/local/include'
 " let g:rsenseUseOmniFunc = 1
 " if filereadable(expand('/usr/local/bin/rsense'))
   " let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
-  let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+  " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " endif
 
 " neocomplcacheここまで
