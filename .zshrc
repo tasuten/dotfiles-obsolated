@@ -205,6 +205,12 @@ alias -g M='| more'
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
+alias -g UTFM='| iconv -f UTF-8-MAC -t UTF-8'
+# UTFMフィルタを利用した、UTF-8-MAC向けls。
+# zshの方はsetopt combining_charsで行けるけどtmuxの方が今のところ無理そうなので
+function lsmac(){
+  ls $@ UTFM
+}
 
 # vimrc/zshrc/zprofileで当該ファイルを編集
 alias vimrc='vim ~/.vimrc'
