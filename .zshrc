@@ -106,6 +106,8 @@ setopt list_packed
 setopt noautoremoveslash
 # aliasを貼ってる場合の補完を適時うまいことやってくれる
 setopt complete_aliases
+# 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
+setopt combining_chars
 
 # プロンプト
 # http://blog.blueblack.net/item_207 参考
