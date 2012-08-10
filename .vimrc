@@ -153,6 +153,25 @@ nnoremap <C-_> <C-o>
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
+" Vimバンドルのnetrw.vimをファイラとしても使う
+" http://blog.tojiru.net/article/234400966.html 参考
+" 簡易な操作説明としては、<CR>で現在のバッファに、tで新しいタブに
+" oでsplitしてそのファイルを開く、vでvsplitしてそのファイルを開く
+" iで表示スタイルの切り替え
+" splitしてnetrwを開くキーバインド。大文字だとプロンプトを出す
+nnoremap <Leader>n :Sexplore<CR>
+nnoremap <Leader>N :Sexplore<Space>
+" oで下側にsplit、vで右側にvsplitする（デフォルトは逆方向）
+" ちなみに<CR>の挙動はg:netrw_browse_splitで変更可能
+let g:netrw_alto = 1
+let g:netrw_altv = 1
+" ブックマークと履歴の保存先
+let g:netrw_home = $HOME.'/.vim/'
+" デフォルトでツリー表示にする
+let g:netrw_liststyle = 3
+" netrwの画面ではqqqで閉じる
+autocmd FileType netrw nnoremap <buffer> qqq :q<CR>
+
 
 " ここからプラグイン設定
 
