@@ -422,6 +422,45 @@ let g:user_zen_settings.lang = 'ja'
 " http://legacy.e.tir.jp/wiliki?vim%3Ascheme.vim
 autocmd FileType scheme :let is_gauche=1
 
+" ref.vim
+" webdictソースについて
+if !exists('g:ref_source_webdict_sites')
+ let g:ref_source_webdict_sites = {}
+endif
+" Wikipedia（日本語版）
+let g:ref_source_webdict_sites.wikipedia = {
+      \  'url' : 'http://ja.wikipedia.org/wiki/%s',
+      \ 'keyword_encoding' : 'utf-8',
+      \ 'cache' : 1
+      \ }
+" Wiktionary
+" 15行目（あたり）に適当にフォーカス
+let g:ref_source_webdict_sites.wiktionary = {
+      \  'url' : 'http://ja.wiktionary.org/wiki/%s',
+      \ 'keyword_encoding' : 'utf-8',
+      \ 'cache' : 1,
+      \ 'line' : 15
+      \ }
+" Infoseekマルチ辞書
+" http://www.karakaram.com/vim/ref-webdict/ 参考
+" 最初の数行を削除している
+" 和英
+let g:ref_source_webdict_sites.je = {
+      \  'url' : 'http://dictionary.infoseek.ne.jp/jeword/%s',
+      \ 'keyword_encoding' : 'utf-8',
+      \ }
+function! g:ref_source_webdict_sites.je.filter(output)
+  return join(split(a:output, "\n")[15 :], "\n")
+endfunction
+" 英和
+let g:ref_source_webdict_sites.ej = {
+      \  'url' : 'http://dictionary.infoseek.ne.jp/ejword/%s',
+      \ 'keyword_encoding' : 'utf-8',
+      \ }
+function! g:ref_source_webdict_sites.ej.filter(output)
+  return join(split(a:output, "\n")[15 :], "\n")
+endfunction
+
 " ドキュメントを引くキーバインドのプレフィックスを_で統一
 " ちなみに元の機能は__で使えるようにしておいた
 nnoremap __ _
@@ -432,6 +471,11 @@ nnoremap [doc]h :<C-u>h<Space>
 " ref.vim
 nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
+" ref.vim/webdict
+nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
+nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
+nnoremap [doc]je :<C-u>Ref<Space>webdict<Space>je<Space>
+nnoremap [doc]ej :<C-u>Ref<Space>webdict<Space>ej<Space>
 
 " unite.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin を参考にした
