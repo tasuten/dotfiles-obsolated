@@ -75,12 +75,12 @@ set shiftround
 
 " ()みたいに打った時カーソルを()の中に
 " Cとかだったらinoremap /**/ /**/<Left><Left>とかいいかも
-" inoremap {} {}<Left>
-" inoremap [] []<Left>
-" inoremap () ()<Left>
-" inoremap "" ""<Left>
-" inoremap '' ''<Left>
-" inoremap `` ``<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap () ()<Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap `` ``<Left>
 inoremap <> <><Left>
 
 " カンマ(,)の後に自動的にスペースを入れる
@@ -217,7 +217,6 @@ NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
-NeoBundle 'kana/vim-smartinput'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
