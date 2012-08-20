@@ -93,6 +93,11 @@ nnoremap k gk
 nnoremap <Up> gk
 nnoremap <Down> gj
 
+" Hで行頭、Lで行末へ
+" ノーマルモード、ビジュアルモード、演算待モードで有効
+map H 0
+map L $
+
 " 挿入モードでEmacsライクなキーバインド
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
