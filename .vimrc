@@ -470,6 +470,7 @@ nnoremap [doc]h :<C-u>h<Space>
 " ref.vim
 nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
+nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 " ref.vim/webdict
 nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
 nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
