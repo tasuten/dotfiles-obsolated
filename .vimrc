@@ -223,6 +223,7 @@ NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
+NeoBundle 't9md/vim-quickhl'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
@@ -611,6 +612,15 @@ let g:sunday_pairs = [
       \   ['max', 'min'],
       \   ['width', 'height']
       \ ]
+
+" quickhl.vim
+" カーソル下の単語のハイライトをトグル
+nmap <Space>m <Plug>(quickhl-toggle)
+xmap <Space>m <Plug>(quickhl-toggle)
+" 全てのハイライトをクリア
+nmap <Space>M <Plug>(quickhl-reset)
+xmap <Space>M <Plug>(quickhl-reset)
+" nmap <Space>j <Plug>(quickhl-match)
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
