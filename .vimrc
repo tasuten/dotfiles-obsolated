@@ -222,6 +222,7 @@ NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
+NeoBundle 'thinca/vim-prettyprint'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
