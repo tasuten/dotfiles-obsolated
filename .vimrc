@@ -164,8 +164,8 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 " oでsplitしてそのファイルを開く、vでvsplitしてそのファイルを開く
 " iで表示スタイルの切り替え
 " splitしてnetrwを開くキーバインド。大文字だとプロンプトを出す
-nnoremap <Leader>n :Sexplore<CR>
-nnoremap <Leader>N :Sexplore<Space>
+nnoremap <Space>n :Sexplore<CR>
+nnoremap <Space>N :Sexplore<Space>
 " oで下側にsplit、vで右側にvsplitする（デフォルトは逆方向）
 " ちなみに<CR>の挙動はg:netrw_browse_splitで変更可能
 let g:netrw_alto = 1
@@ -615,12 +615,12 @@ let g:sunday_pairs = [
 
 " quickhl.vim
 " カーソル下の単語のハイライトをトグル
-nmap <Space>m <Plug>(quickhl-toggle)
-xmap <Space>m <Plug>(quickhl-toggle)
+nmap <Leader>m <Plug>(quickhl-toggle)
+xmap <Leader>m <Plug>(quickhl-toggle)
 " 全てのハイライトをクリア
-nmap <Space>M <Plug>(quickhl-reset)
-xmap <Space>M <Plug>(quickhl-reset)
-" nmap <Space>j <Plug>(quickhl-match)
+nmap <Leader>M <Plug>(quickhl-reset)
+xmap <Leader>M <Plug>(quickhl-reset)
+" nmap <Leader>j <Plug>(quickhl-match)
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
