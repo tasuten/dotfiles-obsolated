@@ -282,6 +282,9 @@ NeoBundle 'scripts', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 
 filetype plugin indent on
 
+" Uniteを用いたNeoBundleのUpdateの非同期実行
+command! -nargs=0 NeoBundleUpdateUnite Unite neobundle/update -auto-quit
+
 " NeoBundleここまで
 
 
