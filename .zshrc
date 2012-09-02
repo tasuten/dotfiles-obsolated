@@ -226,6 +226,10 @@ alias gls="nocorrect gls"
 alias gmv="nocorrect gmv"
 # お節介のここまで
 
+# exit周り
+alias q='exit'
+alias quit='exit'
+
 # alias周りここまで
 
 
