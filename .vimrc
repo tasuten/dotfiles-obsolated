@@ -224,6 +224,7 @@ NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
+NeoBundle 'capslock.vim'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
@@ -355,7 +356,7 @@ let g:neocomplcache_keyword_patterns.default = '\h\w*'
 imap <C-k>     <Plug>(neocomplcache_snippets_expand)
 smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+" inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " SuperTab like snippets behavior.
 " imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -533,7 +534,7 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-e> unite#do_action('open'
 " au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 " ウィンドウを縦に分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+" au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 " ESCキーを2回押すと終了する
 " au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 " au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
@@ -628,6 +629,9 @@ xmap <Leader>m <Plug>(quickhl-toggle)
 nmap <Leader>M <Plug>(quickhl-reset)
 xmap <Leader>M <Plug>(quickhl-reset)
 " nmap <Leader>j <Plug>(quickhl-match)
+
+" capslock.vim
+imap <C-l> <Plug>CapsLockToggle
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
