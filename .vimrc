@@ -541,6 +541,9 @@ au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 
 " unite.vimここまで
 
+" VimShell
+nnoremap <silent> <Leader>vs :<C-u>VimShellPop -toggle<CR>
+
 " YankRing.vim
 " 履歴ファイルは
 " g:yankring_history_dir.g:yankring_history_file.'_v2.txt'
