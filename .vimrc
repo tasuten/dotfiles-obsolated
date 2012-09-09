@@ -641,7 +641,9 @@ nnoremap U :<C-u>GundoToggle<CR>
 
 " プラグイン設定ここまで
 
+
 " colorscheme設定
+
 " jellybeans
 " 背景色を濃い灰色ではなく黒にする
 let g:jellybeans_background_color_256 = 0
@@ -662,27 +664,25 @@ let g:jellybeans_overrides = {
       \               'guifg' : '222222', 'guibg' : 'fad07a',
       \               'ctermfg' : 'darkgray', 'ctermbg' : 'yellow'}
       \ }
-colorscheme jellybeans
 
-" （colorschemeにかかわらず適用させたい）ハイライト設定
-" colorschemeするとこれらの設定が消されるそうなのでcolorschemeの設定はこれより前で行うこと
-
-" 全角スペースを視覚化
+" ユーザ定義のハイライト
+" 1.全角スペースを視覚化
 " 全角スペースをライトブルーのアンダーラインで表す
-" 行末の空白文字をハイライト
+" 2.行末の空白文字をハイライト
 " 参考:
 " http://d.hatena.ne.jp/piropiropiroshki/20100321/1269119181
 " http://mugijiru.seesaa.net/article/203066121.html
 " http://vim-users.jp/2009/07/hack40/
-augroup MyHighlight
-  autocmd!
+autocmd ColorScheme * call s:my_highlights()
+function! s:my_highlights()
   highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
   highlight WhitespaceEOL ctermbg=red guibg=red
-  autocmd VimEnter,WinEnter * let w:m1 = matchadd('ZenkakuSpace', '　')
-  autocmd VimEnter,WinEnter  * let w:m2 =  matchadd('WhitespaceEOL', '\s\+$')
-augroup END
+  let w:m1 = matchadd('ZenkakuSpace', '　')
+  let w:m2 = matchadd('WhitespaceEOL', '\s\+$')
+endfunction
 
-" （colorschemeにかかわらず適用させたい）ハイライト設定ここまで
+" colorschemeの適用
+colorscheme jellybeans
 
 " colorschemeを弄るときに便利なコマンドを設定
 " カラーパレット
