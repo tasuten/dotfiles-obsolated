@@ -39,6 +39,9 @@ set complete=.,w,b,u,t
 set wildmenu
 set wildmode=longest:full,full
 
+" 最後の行を出来る限り表示する（@のように略さない）
+set display=lastline
+
 " タブを可視化
 set list
 set listchars=tab:>\ 
@@ -55,9 +58,6 @@ set number
 
 " カーソルがある行をハイライト
 set cursorline
-
-" ※（colorschemeにかかわらず適用させたい）ハイライト設定はもっと後ろの方参照
-
 
 " statuslineはプラグイン設定の後で
 
