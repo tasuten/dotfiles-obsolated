@@ -110,6 +110,12 @@ nnoremap l <Right>
 " vvで行単位選択ビジュアルモードに入る。元のVが打ちづらかったので
 nnoremap vv V
 
+" 検索結果を画面中央に表示するようにする
+noremap n nzz
+noremap N Nzz
+noremap * *zz
+noremap # #zz
+
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
