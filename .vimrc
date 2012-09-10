@@ -255,6 +255,8 @@ NeoBundle 'neco-look'
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
 NeoBundle 'Shougo/unite.vim'
+" Vimのコマンド履歴や検索履歴を実行出来るsource
+NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
 " colorschemeを変更するsource
