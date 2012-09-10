@@ -263,6 +263,7 @@ NeoBundle 'choplin/unite-vim_hacks'
 " filetype類
 NeoBundle 'html5.vim'
 NeoBundle 'HTML5-Syntax-File'
+NeoBundle 'thinca/vim-ft-clojure'
 
 " colorscheme類
 NeoBundle 'Wombat'
