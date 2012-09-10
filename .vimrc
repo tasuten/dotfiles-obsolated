@@ -229,9 +229,19 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'capslock.vim'
-
 " 要python
 NeoBundle 'sjl/gundo.vim'
+
+" text-object
+NeoBundle 'kana/vim-textobj-user'
+" 以下i, a以降のキーのみ示す。ちなみにaはオブジェクト全体、iはその"内側"
+" 例（削除の例）: da → dida/dada
+" 時刻リテラル。da等
+NeoBundle 'kana/vim-textobj-datetime'
+" コメント。c
+NeoBundle 'thinca/vim-textobj-comment'
+" 日本語の括弧類。（）はjbかj(かj)、「」はjk、『』はjK、【】はjs
+NeoBundle 'kana/vim-textobj-jabraces'
 
 " ref
 NeoBundle 'thinca/vim-ref'
