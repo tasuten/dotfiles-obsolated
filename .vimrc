@@ -215,8 +215,6 @@ NeoBundle 'Shougo/vimproc', {
   \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'YankRing.vim'
-NeoBundle 'html5.vim'
-NeoBundle 'HTML5-Syntax-File'
 " Google翻訳APIの有料化により利用不可
 " NeoBundle 'mattn/googletranslate-vim'
 NeoBundle 'mattn/excitetranslate-vim'
@@ -231,6 +229,7 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'capslock.vim'
+
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
@@ -260,6 +259,10 @@ NeoBundle 'thinca/vim-openbuf'
 NeoBundle 'choplin/unite-vim_hacks'
 " これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
 " Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
+
+" filetype類
+NeoBundle 'html5.vim'
+NeoBundle 'HTML5-Syntax-File'
 
 " colorscheme類
 NeoBundle 'Wombat'
