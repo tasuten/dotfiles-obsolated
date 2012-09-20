@@ -276,6 +276,13 @@ NeoBundle 'choplin/unite-vim_hacks'
 NeoBundle 'html5.vim'
 NeoBundle 'HTML5-Syntax-File'
 NeoBundle 'thinca/vim-ft-clojure'
+NeoBundle 'javacomplete', {
+    \ 'build' : {
+    \ 'mac' : 'javac autoload/Reflection.java',
+    \ 'unix' : 'javac autoload/Reflection.java',
+    \ },
+  \ }
+
 
 " colorscheme類
 NeoBundle 'Wombat'
@@ -414,6 +421,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
