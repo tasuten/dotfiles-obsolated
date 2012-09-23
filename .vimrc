@@ -259,6 +259,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'osyo-manga/unite-filetype'
 " colorschemeを変更するsource
 " -auto-previewと組み合わせると便利かもしれない、とのこと
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -551,6 +552,8 @@ nnoremap [unite]g :<C-u>Unite grep -buffer-name=grep -no-quit -auto-preview<CR>
 
 " Unite outline
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
+" Unite filetype
+nnoremap <silent> [unite]t :<C-u>Unite filetype<CR>
 " Unite colorscheme
 nnoremap <silent> [unite]cs :<C-u>Unite colorscheme -auto-preview<CR>
 
