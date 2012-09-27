@@ -1,0 +1,196 @@
+# EclipseのJava > エディター > テンプレート参考
+
+snippet     import
+prev_word   '^'
+        import ${1:package};${0}
+
+snippet     sysout
+abbr        sysout.println
+        System.out.println(${1});${0}
+
+snippet     syserr
+abbr        syserr.println
+        System.err.println(${1});${0}
+
+
+snippet     if
+abbr        if
+prev_word   '^'
+        if (${1:condition}) {
+                ${0}
+        }
+
+snippet     else
+abbr        else
+        else {
+                ${0}
+        }
+
+snippet elseif
+abbr else if
+        else if (${1:condition}) {
+                ${0}
+        }
+
+snippet     for
+abbr        for
+prev_word   '^'
+        for (int ${1:i} = 0; $1 < ${2}; $1++) {
+                ${0}
+        }
+
+snippet     forarr
+abbr        for array
+prev_word   '^'
+        for (int ${1:i} = 0; $1 < ${2:array}.length; $1++) {
+                ${0}
+        }
+
+snippet     foreach
+abbr        for-each
+prev_word   '^'
+        for ( ${1:type} ${2:elem} : ${3:set}) {
+                ${0}
+        }
+
+snippet     while
+abbr        while
+prev_word   '^'
+        while (${1:condition}) {
+                ${0}
+        }
+
+
+snippet     switch
+abbr        switch
+prev_word   '^'
+        switch (${1:key}) {
+                case ${2:val}:
+                        ${0}
+                        break;
+       }
+
+snippet     case
+abbr        case
+prev_word   '^'
+        case ${1:val}:
+                ${0}
+                break;
+
+snippet     default
+abbr        default
+prev_word   '^'
+        default:
+                ${0}
+                break;
+
+
+
+snippet     new
+abbr        new
+prev_word   '^'
+        ${1:type} ${2:name} = new $1(${3:args});${0}
+
+snippet     method
+abbr        method
+        ${1:return_type} ${2:methodName}(${3:args}) {
+                ${0}
+        }
+
+
+snippet     try
+abbr        try
+prev_word   '^'
+        try {
+                ${0}
+        } //TODO:catch
+
+
+snippet     catch
+abbr        catch
+        catch (${1:Exception} ${2:e}) {
+                ${0}
+        }
+
+snippet     finally
+abbr        finally
+        finally {
+                ${0}
+        }
+
+
+snippet     public
+abbr        public
+        public ${0}
+
+snippet     protected
+abbr        protected
+        protected ${0}
+
+snippet     static
+abbr        static
+        static ${0}
+
+snippet     final
+abbr        final
+        final ${0}
+
+snippet     abstract
+abbr        abstract
+        abstract ${0}
+
+snippet     extends
+abbr        extends
+        extends ${0:Class} 
+
+snippet     implements
+abbr        implements
+        implements ${0:Interface} 
+
+snippet     throws
+abbr        throws
+        throws ${0:Exception} 
+
+
+snippet     class
+abbr        class
+        class ${1:ClassName} ${2}{
+                ${0}
+        }
+
+snippet     interface
+abbr        interface
+        interface ${1:InterfaceName} {
+                ${0}
+        }
+
+
+snippet     constant
+abbr        constant value
+prev_word   '^'
+        public static final ${1:Type} ${2:CONST_VALUE} = ${3};${0}
+
+snippet     return
+abbr        return
+prev_word   '^'
+        return ${1};${0}
+
+snippet     throw
+abbr        throw Exception
+prev_word   '^'
+        throw new ${1:Exception()};
+
+
+snippet     main
+abbr        main
+prev_word   '^'
+        public static void main(String[] args) {
+                ${0}
+        }
+
+snippet     comment
+alias /*
+abbr        comment
+        /* ${1:comment} */
+        ${0}
+
