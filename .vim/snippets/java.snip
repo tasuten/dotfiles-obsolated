@@ -118,10 +118,21 @@ abbr        finally
                 ${0}
         }
 
+snippet     synchro_block
+abbr        synchronized block
+prev_word   '^'
+        synchronized (${1:var}) {
+                ${0}
+        }
+
 
 snippet     public
 abbr        public
         public ${0}
+
+snippet     private
+abbr        private
+        private ${0}
 
 snippet     protected
 abbr        protected
@@ -138,6 +149,10 @@ abbr        final
 snippet     abstract
 abbr        abstract
         abstract ${0}
+
+snippet     synchro_modefier
+abbr        synchronized modefier
+        synchronized ${0}
 
 snippet     extends
 abbr        extends
@@ -170,6 +185,17 @@ abbr        constant value
 prev_word   '^'
         public static final ${1:Type} ${2:CONST_VALUE} = ${3};${0}
 
+snippet     array
+abbr        one-dim array
+prev_word   '^'
+        ${1:Type}[] ${2:typeArrary} = new $1[${3:size}];${0}
+
+snippet     two_dim_arr
+abbr        two-dim array
+prev_word   '^'
+        ${1:Type}[][] ${2:typeArray} = new $1[${3:row}][${4:column}];${0}
+
+
 snippet     return
 abbr        return
 prev_word   '^'
@@ -185,6 +211,13 @@ snippet     main
 abbr        main
 prev_word   '^'
         public static void main(String[] args) {
+                ${0}
+        }
+
+snippet     public_class
+abbr        public class
+prev_word   '^'
+        public class ${1:ClassName} {
                 ${0}
         }
 
