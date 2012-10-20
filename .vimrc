@@ -394,6 +394,11 @@ inoremap <expr><C-g>     neocomplcache#undo_completion()
 " ユーザ定義のsnippetsの保存先ディレクトリ
 let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
 
+" Runtime snippetsを無効化したいfiletype。1で無効化
+let g:neosnippet#disable_runtime_snippets = {
+      \   'java' : 1,
+      \ }
+
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 " inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
