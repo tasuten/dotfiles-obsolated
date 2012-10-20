@@ -249,7 +249,7 @@ NeoBundle 'taka84u9/vim-ref-ri'
 
 " neocomplcache
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'neco-look'
 
 " unite.vimとそのsource類
