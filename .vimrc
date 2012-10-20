@@ -383,16 +383,16 @@ endif
 let g:neocomplcache_keyword_patterns.default = '\h\w*'
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 " inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " SuperTab like snippets behavior.
-" imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" imap <expr><TAB> neosippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " ユーザ定義のsnippetsの保存先ディレクトリ
-let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
 
 " Runtime snippetsを無効化したいfiletype。1で無効化
 let g:neosnippet#disable_runtime_snippets = {
