@@ -221,6 +221,61 @@ prev_word   '^'
                 ${0}
         }
 
+snippet     class_var
+abbr        class var / static field
+prev_word   '^'
+        static ${1:Type} ${2:name};${0}
+
+snippet     instance_var
+alias       field
+abbr        instance var / field
+prev_word   '^'
+        private ${1:Type} ${2:name};${0}
+
+snippet     getter
+abbr        getter
+prev_word   '^'
+        public ${1:Type} get${2:Name}() {
+                return this.${3:name};
+        }
+        ${0}
+
+snippet     setter
+abbr        setter
+prev_word   '^'
+        public void set${1:Name}(${2:Type} ${3:name}) {
+                this.$3 = $3;
+        }
+        ${0}
+
+snippet     accessor
+abbr        getter / setter
+prev_word   '^'
+        public ${1:Type} get${2:Name}() {
+                return this.${3:name};
+        }
+
+        public void set$2($1 $3) {
+                this.$3 = $3;
+        }
+
+        ${0}
+
+snippet     constractor
+abbr        constractor
+prev_word   '^'
+        public ${1:ClassName}(${2}) {
+                ${0}
+        }
+
+snippet     toString
+abbr        toString()
+prev_word   '^'
+        public String toString() {
+                return ${1:returnString};
+        }
+        ${0}
+
 snippet     comment
 alias /*
 abbr        comment
