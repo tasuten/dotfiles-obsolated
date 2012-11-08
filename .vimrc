@@ -164,6 +164,9 @@ nnoremap <C-_> <C-o>
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
+" TeXは全てLaTeXと見做す
+let g:tex_flavor = "latex"
+
 " Vimバンドルのnetrw.vimをファイラとしても使う
 " http://blog.tojiru.net/article/234400966.html 参考
 " 簡易な操作説明としては、<CR>で現在のバッファに、tで新しいタブに
@@ -342,6 +345,11 @@ let g:quickrun_config.markdown = {
       \ 'cmdopt' : '-f',
       \ 'outputter' : 'browser'
       \ }
+" (La)TeX
+"LaTeXをquickrunで楽に処理する - プログラムモグモグ
+" http://d.hatena.ne.jp/itchyny/20121001/1349094989
+" 等参考。viewtexは~/bin/に
+let g:quickrun_config.tex = { 'command' : 'viewtex' }
 
 " NERD_Commenter
 " コメントの間にスペースを入れる
