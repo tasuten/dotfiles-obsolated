@@ -136,7 +136,6 @@ case "${TERM}" in
 esac
 
 # auto-fu.zsh
-# http://blog.glidenote.com/blog/2012/04/07/auto-fu.zsh/
 # http://d.hatena.ne.jp/hchbaw/20100526/1274886125
 if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   # 初期設定
