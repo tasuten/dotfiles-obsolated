@@ -10,7 +10,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # sudo でも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# zshの補完関数ファイルの保存先
+# zshの補完関数ファイル等の保存先
 fpath=(~/.zsh/functions $fpath)
 
 # http://d.hatena.ne.jp/tsaka/20060819/1162739565 も参考にするといいかも
@@ -134,6 +134,19 @@ case "${TERM}" in
     }
     ;;
 esac
+
+# auto-fu.zsh
+# http://blog.glidenote.com/blog/2012/04/07/auto-fu.zsh/
+# http://d.hatena.ne.jp/hchbaw/20100526/1274886125
+if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
+source ~/.zsh/auto-fu.zsh/auto-fu.zsh
+    function zle-line-init () {
+        auto-fu-init
+    }
+    zle -N zle-line-init
+    zstyle ':completion:*' completer _oldlist _complete _approximate _match _expand _prefix
+fi
+
 
 # 以下alias周り
 
