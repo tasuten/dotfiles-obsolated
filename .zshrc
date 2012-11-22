@@ -139,12 +139,21 @@ esac
 # http://blog.glidenote.com/blog/2012/04/07/auto-fu.zsh/
 # http://d.hatena.ne.jp/hchbaw/20100526/1274886125
 if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
-source ~/.zsh/auto-fu.zsh/auto-fu.zsh
-    function zle-line-init () {
-        auto-fu-init
-    }
-    zle -N zle-line-init
-    zstyle ':completion:*' completer _oldlist _complete _approximate _match _expand _prefix
+  # 初期設定
+  # README嫁
+  source ~/.zsh/auto-fu.zsh/auto-fu.zsh
+  function zle-line-init() {
+      auto-fu-init
+  }
+  zle -N zle-line-init
+  zle -N zle-keymap-select auto-fu-zle-keymap-select
+  # 補完をどのようにするか
+  # それぞれについてはhttp://voidy21.hatenablog.jp/entry/20090902/1251918174 など参考
+  zstyle ':completion:*' completer _oldlist _complete _match _ignored
+  # これをしないと、ディレクトリの補完でタブ押すとdirectory//みたいになる
+  setopt autoremoveslash
+  # 「-azfu-」を表示させない
+  zstyle ':auto-fu:var' postdisplay $''
 fi
 
 
