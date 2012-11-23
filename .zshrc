@@ -155,6 +155,13 @@ if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   zstyle ':auto-fu:var' postdisplay $''
 fi
 
+# autojump(brewでインストール)
+# ちなみに重みのデータベースは
+# /Users/tasuku/.local/share/autojump/autojump.txt にある
+[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+# prefer symlinks
+export AUTOJUMP_KEEP_SYMLINKS=1
+
 
 # 以下alias周り
 
