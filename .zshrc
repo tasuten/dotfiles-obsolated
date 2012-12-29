@@ -9,6 +9,8 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # sudo でも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+# ../とした時に今いるディレクトリを補完候補から外す
+zstyle ':completion:*' ignore-parents parent pwd ..
 
 # zshの補完関数ファイル等の保存先
 fpath=(~/.zsh/functions $fpath)
