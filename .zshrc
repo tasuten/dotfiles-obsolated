@@ -178,6 +178,7 @@ alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app "$@"'
 # javacなんかで文字化けするのでUTF-8を指定して実行するようにalias
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
+alias javadoc='javadoc -J-Dfile.encoding=UTF-8'
 
 # opencでopen .（カレントディレクトリを開く）
 alias openc='open .'
