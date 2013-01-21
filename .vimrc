@@ -298,6 +298,9 @@ NeoBundle 'Wombat'
 NeoBundle 'wombat256.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 
+" 文書類
+NeoBundleLazy 'mattn/learn-vimscript'
+
 " 自作プラグイン
 NeoBundle 'tasuten/gcalc.vim'
 
