@@ -232,6 +232,7 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'capslock.vim'
+NeoBundleLazy 'mattn/lisper-vim'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
