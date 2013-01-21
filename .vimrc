@@ -245,6 +245,8 @@ NeoBundle 'kana/vim-textobj-datetime'
 NeoBundle 'thinca/vim-textobj-comment'
 " 日本語の括弧類。（）はjbかj(かj)、「」はjk、『』はjK、【】はjs
 NeoBundle 'kana/vim-textobj-jabraces'
+" Rubyのブロック。r
+NeoBundle 'rhysd/vim-textobj-ruby'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
 " 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
 NeoBundle 'tpope/vim-surround'
