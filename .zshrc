@@ -221,7 +221,7 @@ alias cd_git='cd $(git rev-parse --show-toplevel)'
 alias gst='git status -s -b && git stash list'
 alias gca='git commit -a'
 alias gdf='git diff --word-diff'
-alias glo='git log --oneline --decorate'
+alias glo='git log --oneline --decorate --graph'
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
