@@ -110,6 +110,8 @@ setopt noautoremoveslash
 setopt complete_aliases
 # 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
 setopt combining_chars
+# パスを重複登録させない
+typeset -U path cdpath fpath manpath
 # zshのビルトインコマンドのr（直前に実行したコマンドを実行）を無効化
 disable r
 
