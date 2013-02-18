@@ -265,6 +265,7 @@ NeoBundle 'tpope/vim-surround'
 " ref
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'taka84u9/vim-ref-ri'
+NeoBundle 'pekepeke/ref-javadoc'
 
 " neocomplcache
 NeoBundle 'Shougo/neocomplcache'
@@ -501,6 +502,9 @@ let g:user_zen_settings.lang = 'ja'
 autocmd FileType scheme :let is_gauche=1
 
 " ref.vim
+" ref-javadoc
+" ローカルのパスでないとダメ
+let g:ref_javadoc_path = '/usr/local/java6_ja_apidocs/'
 " webdictソースについて
 if !exists('g:ref_source_webdict_sites')
  let g:ref_source_webdict_sites = {}
@@ -550,6 +554,7 @@ nnoremap [doc]h :<C-u>h<Space>
 nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
+nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
 " ref.vim/webdict
 nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
 nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
