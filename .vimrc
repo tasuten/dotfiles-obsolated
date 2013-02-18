@@ -136,6 +136,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" QuickFixの開閉
+nnoremap <silent> <Space>qo :copen<CR>
+nnoremap <silent> <Space>qc :cclose<CR>
+
 " Vim-users.jp - Hack #74: 簡単にvimrcを編集する
 " http://vim-users.jp/2009/09/hack74/ より
 " .(g)vimrcを編集するためのkey-mapping
