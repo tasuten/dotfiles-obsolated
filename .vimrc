@@ -254,6 +254,10 @@ NeoBundle 'thinca/vim-textobj-comment'
 NeoBundle 'kana/vim-textobj-jabraces'
 " Rubyのブロック。r
 NeoBundle 'rhysd/vim-textobj-ruby'
+" あるsyntaxで始まり、またある別のsyntaxで終わる範囲。q
+" 例としてRubyやPerlの正規表現リテラルなど
+" 詳しくはhttp://d.hatena.ne.jp/deris/20121209/1355048075 参照
+NeoBundle 'deris/vim-textobj-enclosedsyntax'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
 " 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
 NeoBundle 'tpope/vim-surround'
