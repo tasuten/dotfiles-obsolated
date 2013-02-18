@@ -318,7 +318,7 @@ let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 " NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
 " => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
 " rsense.vim
-NeoBundle 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLazy 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " eregex.vim
 NeoBundle 'eregex.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
