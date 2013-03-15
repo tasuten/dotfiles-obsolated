@@ -1,0 +1,32 @@
+# 以下自分で追加または上書きするもの
+
+snippet     inc
+abbr        #include <${1}>
+options     head
+        #include <${1}>${0}
+
+snippet     inc2
+abbr        #include "${1}"
+options     head
+        #include "${1}"${0}
+
+snippet     cout
+abbr        std::cout
+        std::cout << ${1};${0}
+
+snippet     cin
+abbr        std::cin
+        std::cin >> ${1};${0}
+
+snippet     public
+abbr        public:
+options     head
+        public:
+          ${0}
+
+snippet     private
+abbr        private:
+options     head
+        private:
+          ${0}
+
