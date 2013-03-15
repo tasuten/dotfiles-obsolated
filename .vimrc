@@ -310,7 +310,7 @@ NeoBundle 'javacomplete', {
     \ 'unix' : 'javac autoload/Reflection.java',
     \ },
   \ }
-
+NeoBundle 'Rip-Rip/clang_complete'
 
 " colorscheme類
 NeoBundle 'Wombat'
@@ -493,6 +493,23 @@ let g:neocomplcache_include_paths.c  =  '/usr/include,'.'/usr/local/include'
   " let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
   " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " endif
+
+" clang_completeの補完をneocomplcacheで
+" http://d.hatena.ne.jp/osyo-manga/20120911/1347354707 より
+" neocomplcache 側の設定
+let g:neocomplcache_force_overwrite_completefunc=1
+if !exists("g:neocomplcache_force_omni_patterns")
+    let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
+" clang_complete 側の設定
+" clang_complete の自動呼び出しは切っておく
+let g:clang_complete_auto = 0
+" プレビューウィンドウを自動的に閉じる
+let g:clang_close_preview = 1
+" libclangを用いる
+let g:clang_use_library = 1
+let g:clang_library_path = '/usr/lib'
 
 " neocomplcacheここまで
 
