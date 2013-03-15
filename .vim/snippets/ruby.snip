@@ -1,69 +1,69 @@
 snippet     require
-prev_word   '^'
+options     head
         require '${1}'${0}
 
 snippet     class
 abbr       class end
-prev_word   '^'
+options     head
         class ${1:ClassName}
             ${0}
         end
 
 snippet     unless
 abbr        unless end
-prev_word   '^'
+options     head
         unless ${1:condition}
             ${0}
         end
 
 snippet     case
 abbr        case when end
-prev_word   '^'
+options     head
         case ${1:var}
         when ${2:val}
             ${0}
         end
 
 snippet     when
-prev_word   '^'
+options     head
         when ${1:val}
             ${0}
 
 snippet     while
 abbr        while end
-prev_word   '^'
+options     head
         while ${1:condition}
             ${0}
        end
 
 snippet     until
 abbr        until end
-prev_word   '^'
+options     head
         until ${1:condition}
             ${0}
         end
 
 # snippet     for
 # abbr        for end
-# prev_word   '^'
+# options     head
 #         for ${1:var} in ${2:expression}
 #             ${0}
 #         end
 
 snippet     elsif
-prev_word   '^'
+options     head
         elsif ${1:condition}
             ${0}
 
 snippet     else
-prev_word   '^'
+options     head
         else
             ${1}
 
 # begin rescue
 snippet     begin
 abbr        begin rescue end
-prev_word   '^'
+options     head
        begin
             ${1}
         rescue ${2}

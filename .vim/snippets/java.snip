@@ -1,7 +1,7 @@
 # EclipseのJava > エディター > テンプレート参考
 
 snippet     import
-prev_word   '^'
+options     head
         import ${1:package};${0}
 
 snippet     sysout
@@ -15,7 +15,7 @@ abbr        syserr.println
 
 snippet     if
 abbr        if
-prev_word   '^'
+options     head
         if (${1:condition}) {
                 ${0}
         }
@@ -34,28 +34,28 @@ abbr else if
 
 snippet     for
 abbr        for
-prev_word   '^'
+options     head
         for (int ${1:i} = 0; $1 < ${2}; $1++) {
                 ${0}
         }
 
 snippet     forarr
 abbr        for array
-prev_word   '^'
+options     head
         for (int ${1:i} = 0; $1 < ${2:array}.length; $1++) {
                 ${0}
         }
 
 snippet     foreach
 abbr        for-each
-prev_word   '^'
+options     head
         for ( ${1:type} ${2:elem} : ${3:set}) {
                 ${0}
         }
 
 snippet     while
 abbr        while
-prev_word   '^'
+options     head
         while (${1:condition}) {
                 ${0}
         }
@@ -63,7 +63,7 @@ prev_word   '^'
 
 snippet     switch
 abbr        switch
-prev_word   '^'
+options     head
         switch (${1:key}) {
                 case ${2:val}:
                         ${0}
@@ -72,14 +72,14 @@ prev_word   '^'
 
 snippet     case
 abbr        case
-prev_word   '^'
+options     head
         case ${1:val}:
                 ${0}
                 break;
 
 snippet     default
 abbr        default
-prev_word   '^'
+options     head
         default:
                 ${0}
                 break;
@@ -88,7 +88,7 @@ prev_word   '^'
 
 snippet     new
 abbr        new
-prev_word   '^'
+options     head
         ${1:type} ${2:name} = new $1(${3});${0}
 
 snippet     method
@@ -100,7 +100,7 @@ abbr        method
 
 snippet     try
 abbr        try
-prev_word   '^'
+options     head
         try {
                 ${0}
         } //TODO:catch
@@ -120,7 +120,7 @@ abbr        finally
 
 snippet     synchro_block
 abbr        synchronized block
-prev_word   '^'
+options     head
         synchronized (${1:var}) {
                 ${0}
         }
@@ -182,59 +182,59 @@ abbr        interface
 
 snippet     constant
 abbr        constant value
-prev_word   '^'
+options     head
         public static final ${1:Type} ${2:CONST_VALUE} = ${3};${0}
 
 snippet     array
 abbr        one-dim array
-prev_word   '^'
+options     head
         ${1:Type}[] ${2:typeArrary} = new $1[${3:size}];${0}
 
 snippet     two_dim_arr
 abbr        two-dim array
-prev_word   '^'
+options     head
         ${1:Type}[][] ${2:typeArray} = new $1[${3:width}][${4:height}];${0}
 
 
 snippet     return
 abbr        return
-prev_word   '^'
+options     head
         return ${1};${0}
 
 snippet     throw
 abbr        throw Exception
-prev_word   '^'
+options     head
         throw new ${1:Exception()};
 
 
 snippet     main
 abbr        main
-prev_word   '^'
+options     head
         public static void main(String[] args) {
                 ${0}
         }
 
 snippet     public_class
 abbr        public class
-prev_word   '^'
+options     head
         public class ${1:ClassName} {
                 ${0}
         }
 
 snippet     class_var
 abbr        class var / static field
-prev_word   '^'
+options     head
         static ${1:Type} ${2:name};${0}
 
 snippet     instance_var
 alias       field
 abbr        instance var / field
-prev_word   '^'
+options     head
         private ${1:Type} ${2:name};${0}
 
 snippet     getter
 abbr        getter
-prev_word   '^'
+options     head
         public ${1:Type} get${2:Name}() {
                 return this.${3:name};
         }
@@ -242,7 +242,7 @@ prev_word   '^'
 
 snippet     setter
 abbr        setter
-prev_word   '^'
+options     head
         public void set${1:Name}(${2:Type} ${3:name}) {
                 this.$3 = $3;
         }
@@ -250,7 +250,7 @@ prev_word   '^'
 
 snippet     accessor
 abbr        getter / setter
-prev_word   '^'
+options     head
         public ${1:Type} get${2:Name}() {
                 return this.${3:name};
         }
@@ -263,14 +263,14 @@ prev_word   '^'
 
 snippet     constractor
 abbr        constractor
-prev_word   '^'
+options     head
         public ${1:ClassName}(${2}) {
                 ${0}
         }
 
 snippet     toString
 abbr        toString()
-prev_word   '^'
+options     head
         public String toString() {
                 return ${1:returnString};
         }
