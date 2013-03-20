@@ -161,13 +161,10 @@ esac
   # zstyle ':auto-fu:var' postdisplay $''
 # fi
 
-# autojump(brewでインストール)
-# ちなみに重みのデータベースは
-# /Users/tasuku/.local/share/autojump/autojump.txt にある
-[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-# prefer symlinks
-export AUTOJUMP_KEEP_SYMLINKS=1
-
+# z
+. `brew --prefix`/etc/profile.d/z.sh
+# zの代わりにより打ちやすいjキーに
+export _Z_CMD=j
 
 # 以下alias周り
 
