@@ -242,6 +242,7 @@ alias -g M='| more'
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
+alias -g C='| pbcopy' # クリップボードへコピー
 
 # vimrc/zshrc/zprofileで当該ファイルを編集
 alias vimrc='vim ~/.vimrc'
