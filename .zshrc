@@ -39,6 +39,11 @@ limit coredumpsize 102400
 #unsetopt promptcr
 ## Emacsライクキーバインド設定
 bindkey -e
+# Ctrl-F, Ctrl-Bでワード単位
+bindkey '^F' forward-word
+bindkey '^B' backward-word
+# Ctrl-Dでワードを削除
+bindkey '^D' kill-word
 
 ## 色を使う
 setopt prompt_subst
