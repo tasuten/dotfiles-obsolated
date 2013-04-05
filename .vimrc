@@ -136,9 +136,19 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" QuickFixの開閉
-nnoremap <silent> <Space>qo :copen<CR>
-nnoremap <silent> <Space>qc :cclose<CR>
+" QuickFixの開閉のトグル
+" http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
+command -bang -nargs=? QFixToggle call QFixToggle(<bang>0)
+function! QFixToggle(forced)
+  if exists("g:qfix_win") && a:forced == 0
+    cclose
+    unlet g:qfix_win
+  else
+    copen
+    let g:qfix_win = bufnr("$")
+  endif
+endfunction
+nnoremap <silent> <Space>q :QFixToggle<CR>
 
 " Vim-users.jp - Hack #74: 簡単にvimrcを編集する
 " http://vim-users.jp/2009/09/hack74/ より
