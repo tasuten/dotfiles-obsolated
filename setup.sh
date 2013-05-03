@@ -8,7 +8,7 @@ DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .vim/template .vim/snippets .vim/ft
 ROOT_DIR=$HOME/
 
 for file in ${DOTFILES[@]}; do
-  # ディレクトリへのシンボリックリンクでその親ディレクトリが無いとエラーるので
+  # ディレクトリのシンボリックリンクでその親ディレクトリが無いとエラーるので
   if [ ! -e $ROOT_DIR/.vim ]; then
     mkdir $ROOT_DIR/.vim
   fi
