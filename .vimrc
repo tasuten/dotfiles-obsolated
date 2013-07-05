@@ -245,7 +245,6 @@ NeoBundle 'ZenCoding.vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'tyru/current-func-info.vim'
 NeoBundle 'nishigori/vim-sunday'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
@@ -305,8 +304,8 @@ NeoBundle 'ujihisa/unite-font'
 NeoBundle 'mattn/unite-remotefile'
 " unite.vimでVim Hacksを閲覧するプラグイン
 " webapi-vimとvim-openbufに依存
-NeoBundle 'thinca/vim-openbuf'
-NeoBundle 'choplin/unite-vim_hacks'
+NeoBundleLazy 'thinca/vim-openbuf'
+NeoBundleLazy 'choplin/unite-vim_hacks'
 " これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
 " Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
 
@@ -664,16 +663,6 @@ let g:yankring_history_file = '.yankring_history'
 let g:w3m#external_browser = 'open -a Firefox'
 let g:w3m#homepage = 'http://www.google.co.jp/'
 
-" current-func-info.vim
-" サポート外のファイルタイプの場合何も表示しないようにちょっとした関数を
-" ちなみにC, Perl, Ruby, Python, PHP, VimScをサポートしてるとか
-function! Cfi_warpper()
-  if cfi#supported_filetype(&filetype)
-    return cfi#format("[%s()]", "No")
-  else
-    return ""
-  endif
-endfunction
 
 " template.vim
 " execute内は<>で囲まれたテキストオブジェクト全体(a>)を
@@ -804,10 +793,10 @@ command! -nargs=0 HiTest runtime syntax/hitest.vim
 " statuslineを常に表示
 set laststatus=2
 "大体こんな感じで表示
-" hoge.c [+][utf-8:LF][c]               [main()]  0,0-1    全て
+" hoge.c [+][utf-8:LF][c]                         0,0-1    全て
 " help.jax [ヘルプ][-][RO][utf-8:LF][help]        1,1      先頭
 let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
-let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=%{Cfi_warpper()}  %-14.(%l,%c%V%) %P'
+let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%=%-14.(%l,%c%V%) %P'
 
 
 
