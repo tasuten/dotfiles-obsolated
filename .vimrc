@@ -345,6 +345,9 @@ NeoBundle 'eregex.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
 " vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
 " Gauche用シンタックスファイル
 NeoBundle 'gauche-syntax', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+" https://github.com/sophacles/vim-processing を自分用に弄ったもの
+NeoBundle 'vim-processing', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+
 " 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
 " 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
 NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
@@ -386,6 +389,13 @@ let g:quickrun_config.markdown = {
 " http://d.hatena.ne.jp/itchyny/20121001/1349094989
 " 等参考。viewtexは~/bin/に
 let g:quickrun_config.tex = { 'command' : 'viewtex' }
+" Processing
+" http://kazuph.hateblo.jp/entry/2013/03/20/211336
+let g:quickrun_config.processing = {
+      \ 'command' : 'processing-java',
+      \ 'exec': '%c --sketch=$PWD/ --output=$PWD/quickrun --run --force'
+      \ }
+
 
 " NERD_Commenter
 " コメントの間にスペースを入れる
