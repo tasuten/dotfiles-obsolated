@@ -167,9 +167,9 @@ esac
 # fi
 
 # z
-. `brew --prefix`/etc/profile.d/z.sh
 # zの代わりにより打ちやすいjキーに
 export _Z_CMD=j
+. `brew --prefix`/etc/profile.d/z.sh
 
 # 以下alias周り
 
