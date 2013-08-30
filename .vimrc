@@ -241,7 +241,7 @@ NeoBundle 'YankRing.vim'
 " Google翻訳APIの有料化により利用不可
 " NeoBundle 'mattn/googletranslate-vim'
 NeoBundle 'mattn/excitetranslate-vim'
-NeoBundle 'ZenCoding.vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
