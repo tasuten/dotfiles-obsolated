@@ -126,9 +126,9 @@ let g:yankring_n_keys = 'Y D'
 " クリップボードからの貼り付け
 inoremap <silent> <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
 
-" 検索結果のハイライトを<C-b>でトグル(C-bにしたのはhの1つ下にあったから)
+" 検索結果のハイライトを<C-g>でトグル(C-gにしたのはhの1つ左にあったから)
 " http://stackoverflow.com/questions/99161/how-do-you-make-vim-unhighlight-what-you-searched-for
-nnoremap <silent> <C-b> :set hlsearch!<CR>
+nnoremap <silent> <C-g> :set hlsearch!<CR>
 
 " <C-hjkl>でウィンドウ移動
 nnoremap <C-h> <C-w>h
