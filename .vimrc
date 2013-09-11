@@ -432,21 +432,8 @@ endif
 let g:neocomplete#keyword_patterns.default = '\h\w*'
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 inoremap <expr><C-g>     neocomplete#undo_completion()
 " inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" SuperTab like snippets behavior.
-" imap <expr><TAB> neosippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" ユーザ定義のsnippetsの保存先ディレクトリ
-let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
-
-" Runtime snippetsを無効化したいfiletype。1で無効化
-let g:neosnippet#disable_runtime_snippets = {
-      \   'java' : 1,
-      \ }
 
 " Recommended key-mappings.
 "" <CR>: close popup and save indent.
@@ -530,6 +517,19 @@ let g:clang_use_library = 1
 let g:clang_library_path = '/usr/lib'
 
 " neocompleteここまで
+
+" neosnippet
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" SuperTab like snippets behavior.
+" imap <expr><TAB> neosippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" ユーザ定義のsnippetsの保存先ディレクトリ
+let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
+" Runtime snippetsを無効化したいfiletype。1で無効化
+let g:neosnippet#disable_runtime_snippets = {
+      \   'java' : 1,
+      \ }
 
 " emmet-vim
 if !exists('g:user_emmet_settings')
