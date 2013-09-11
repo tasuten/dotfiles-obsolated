@@ -167,6 +167,9 @@ nnoremap <Space>s :Scratch<CR>
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 
+" <ESC>CTRL-Wをi_CTRL-Wに誤爆して挿入データを消してしまうことがあるので
+inoremap <C-w> <ESC><C-w>
+
 " 誤爆しやすいq:等をqq:に割り当て(Vimテクニックバイブル P.124より)
 " qqは「qというレジスタにレコーディング」というコマンドと衝突するが
 " その時はtimeoutlenだけ待ちましょう
