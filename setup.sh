@@ -7,16 +7,15 @@ DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .vim/template .vim/snippets .vim/ft
 # ので、スクリプトのテストする時はテスト用のディレクトリに変えて
 ROOT_DIR=$HOME/
 
+# ディレクトリのシンボリックリンクでその親ディレクトリが無いとエラーるので
+if [ ! -e $ROOT_DIR/.vim ]; then
+  mkdir $ROOT_DIR/.vim
+fi
+if [ ! -e $ROOT_DIR/.vim/after ]; then
+  mkdir $ROOT_DIR/.vim/after
+fi
+
 for file in ${DOTFILES[@]}; do
-  # ディレクトリのシンボリックリンクでその親ディレクトリが無いとエラーるので
-  if [ ! -e $ROOT_DIR/.vim ]; then
-    mkdir $ROOT_DIR/.vim
-  fi
-  if [ ! -e $ROOT_DIR/.vim/after ]; then
-    mkdir $ROOT_DIR/.vim/after
-  fi
-
   ln -s $HOME/dotfiles/$file $ROOT_DIR/$file
-
 done
 
