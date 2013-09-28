@@ -834,7 +834,7 @@ function! MyMode()
         \ &ft == 'vimshell' ? 'VimShell' :
         \ &ft == 'netrw' ? 'Netrw' :
         \ &ft == 'gundo' ? 'Gundo' :
-        \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+        \ fname == '__Gundo_Preview__' ? 'Gundo-P' :
         \ lightline#mode()
 endfunction
 
