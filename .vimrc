@@ -813,6 +813,9 @@ if !exists('g:lightline')
 endif
 " colorscheme
 let g:lightline.colorscheme = 'jellybeans'
+" セパレータの指定
+let g:lightline.separator    = { 'left' : '', 'right' : '' }
+let g:lightline.subseparator = { 'left' : '', 'right' : '' }
 " fileformat（改行コード）の表示だけ気に入らなかったので変更
 let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
 let g:lightline.component = {
