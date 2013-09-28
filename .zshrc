@@ -170,6 +170,8 @@ esac
 # zの代わりにより打ちやすいjキーに
 export _Z_CMD=j
 . `brew --prefix`/etc/profile.d/z.sh
+# v
+export vim=env\ LANG=ja_JP.UTF-8\ /Applications/MacVim.app/Contents/MacOS/Vim "$@"
 
 # 以下alias周り
 
