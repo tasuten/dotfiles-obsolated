@@ -821,6 +821,10 @@ let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
 let g:lightline.component = {
       \   'fileformat' : '%{ff_table[&fileformat]}',
       \ }
+" readonlyがfilenameより左に表示されるのが気になったので
+let g:lightline.active = {
+      \ 'left' : [['mode', 'paste'], ['filename', 'modified', 'readonly']]
+      \ }
 
 
 let g:hatena_user = 'tasuten'
