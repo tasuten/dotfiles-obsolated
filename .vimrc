@@ -821,6 +821,36 @@ let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
 let g:lightline.component = {
       \   'fileformat' : '%{ff_table[&fileformat]}',
       \ }
+
+" UniteやVimShell、Netrw、Gundoの時modeやfilenameをちょっと細工する
+let g:lightline.component_function = {
+      \ 'mode'     : 'MyMode',
+      \ 'filename' : 'MyFilename',
+      \ }
+
+function! MyMode()
+  let fname = expand('%:t')
+  return  &ft == 'unite' ? 'Unite' :
+        \ &ft == 'vimshell' ? 'VimShell' :
+        \ &ft == 'netrw' ? 'Netrw' :
+        \ &ft == 'gundo' ? 'Gundo' :
+        \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+        \ lightline#mode()
+endfunction
+
+function! MyFilename()
+  let fname = expand('%:t')
+  " netrwでは開いているディレクトリを表示
+  return  &ft == 'unite' ? unite#get_status_string() :
+        \ &ft == 'vimshell' ? vimshell#get_status_string() :
+        \ &ft == 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
+        \ (fname == '__Gundo__' || fname == '__Gundo_Preview__') ? '' :
+        \ '' != fname ? fname : '[No Name]'
+endfunction
+
+let g:unite_force_overwrite_statusline = 0
+let g:vimshell_force_overwrite_statusline = 0
+
 " readonlyがfilenameより左に表示されるのが気になったので
 let g:lightline.active = {
       \ 'left' : [['mode', 'paste'], ['filename', 'modified', 'readonly']]
