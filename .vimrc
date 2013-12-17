@@ -266,6 +266,8 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'capslock.vim'
+" なお、smartinputは<BS>や<Enter>にマッピングを行うが
+" 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
 NeoBundleLazy 'mattn/lisper-vim'
 " neocomplete, vimproc必須。uniteは有った方が良い
