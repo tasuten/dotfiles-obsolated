@@ -73,16 +73,6 @@ set splitbelow
 " >や<をshiftwidthの倍数倍に丸めるようにする
 set shiftround
 
-" ()みたいに打った時カーソルを()の中に
-" Cとかだったらinoremap /**/ /**/<Left><Left>とかいいかも
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap () ()<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap `` ``<Left>
-inoremap <> <><Left>
-
 " カンマ(,)の後に自動的にスペースを入れる
 inoremap , ,<Space>
 
@@ -276,6 +266,7 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'capslock.vim'
+NeoBundle 'kana/vim-smartinput'
 NeoBundleLazy 'mattn/lisper-vim'
 " neocomplete, vimproc必須。uniteは有った方が良い
 " また、Gauche必須
