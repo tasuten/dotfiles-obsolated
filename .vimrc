@@ -763,6 +763,15 @@ xmap <Leader>M <Plug>(quickhl-reset)
 " capslock.vim
 imap <C-l> <Plug>CapsLockToggle
 
+" vim-smartinput
+" <や>に関する設定
+" >をトリガとして設定
+call smartinput#map_to_trigger('i', '>', '>', '>')
+" <> で<><Left>。<で>を補完しないのは不等号の入力時などを考え
+call smartinput#define_rule({'at': '<\%#', 'char': '>', 'input': '><Left>'})
+" <>内にいる時>で<>の外に脱出
+call smartinput#define_rule({'at': '\%#\_s*>', 'char': '>', 'input': '<C-r>=smartinput#_leave_block(''>'')<Enter><Right>'})
+
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
 
