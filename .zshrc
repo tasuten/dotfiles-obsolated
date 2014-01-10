@@ -51,6 +51,8 @@ bindkey '^F' forward-word
 bindkey '^B' backward-word
 # Ctrl-Dでワードを削除
 bindkey '^D' kill-word
+# Shift-Tabで補完一覧候補を逆順に辿る
+bindkey "^[[Z" reverse-menu-complete
 
 # PROMPT変数で変数展開などを行う
 setopt prompt_subst
