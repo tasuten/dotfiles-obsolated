@@ -223,9 +223,6 @@ export GREP_COLOR='00;36'
 # 隠しファイル(.vimrc等)を検索対象に入れるが、.git/は無視する
 alias ag='ag --hidden --ignore .git/'
 
-# manがデフォルトでは英語版なので日本語のjmanをインストールしてalias
-alias man='jman'
-
 # cdがpushdなのでpopdをpdにalias
 alias pd='popd'
 
