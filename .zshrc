@@ -6,6 +6,8 @@
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # 補完の方の色はこっち
 export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+# lsに色を付ける（-G指定と同じ）
+export CLICOLOR=true
 
 # 補完の時にVimで言うsmartcaseにする
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -205,9 +207,6 @@ alias emacs='open -a Emacs'
 # 他にもGUIなソフトウェアをいくつかコマンドラインでも起動できるように
 alias coteditor='open -a CotEditor'
 alias firefox='open -a Firefox'
-
-# lsで色をつける
-alias ls='ls -G'
 
 # diffの代わりにcolordiffを使う。Homebrewでインストール可能
 # ついでにunified形式で出力するようにする
