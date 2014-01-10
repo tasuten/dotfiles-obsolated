@@ -260,11 +260,6 @@ alias -g T='| tail'
 alias -g G='| grep'
 alias -g C='| pbcopy' # クリップボードへコピー
 
-# vimrc/zshrc/zprofileで当該ファイルを編集
-alias vimrc='vim ~/.vimrc'
-alias zshrc='vim ~/.zshrc'
-alias zprofile='vim ~/.zprofile'
-
 # zshのcorrectのお節介を少し改善
 # coreutilsパッケージのGNU版lsとか向け
 # 一応使いそうなのだけ。また適時追加
@@ -279,14 +274,6 @@ alias q='exit'
 alias quit='exit'
 
 # alias周りここまで
-
-
-# 全文検索のfindをzshrcに登録 - La Faïence
-# http://d.hatena.ne.jp/famnet/20110723/fulltext_find_function_in_zshrc
-# search dir/ hogeみたく使う
-function search() {
-  find "$1" -print | xargs grep "$2"
-}
 
 # cdd を tmux, bash, multi session +α に対応した - カワイイはつくれる
 # http://m4i.hatenablog.com/entry/2012/01/26/064329
