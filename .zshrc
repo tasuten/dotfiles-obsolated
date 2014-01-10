@@ -9,6 +9,9 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 
 # 補完の時にVimで言うsmartcaseにする
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# 例えばs.vでs*.v*なファイルを補完出来るようにする
+# 『zshの本』P.154
+zstyle ':completion:*' matcher-list 'r:|.=*'
 
 # sudoでも以下のディレクトリ内のコマンドは補完
 # 大抵これで事足りるがこれ以外のPATHにあるものも補完して欲しい場合以下参照
