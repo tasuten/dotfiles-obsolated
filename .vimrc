@@ -304,6 +304,7 @@ NeoBundle 'pekepeke/ref-javadoc'
 " neocomplete
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'neco-look'
 
 " unite.vimとそのsource類
