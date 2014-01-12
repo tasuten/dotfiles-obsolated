@@ -260,7 +260,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'nishigori/vim-sunday'
+NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
@@ -742,14 +742,17 @@ nnoremap [eregex]g* :<C-u>execute 'M/' . expand('<cword>') <CR>
 nnoremap mm m
 nnoremap m/ g/
 
-" sunday.vim
-let g:sunday_pairs = [
+" increment-activator
+let g:increment_activator#config = {
+      \ '_' : [
+      \   ['private', 'protected', 'public'],
       \   ['right', 'left'],
       \   ['up', 'down'],
       \   ['top', 'bottom'],
       \   ['max', 'min'],
       \   ['width', 'height']
       \ ]
+      \ }
 
 " quickhl.vim
 " カーソル下の単語のハイライトをトグル
