@@ -58,7 +58,7 @@ bindkey "^[[Z" reverse-menu-complete
 setopt prompt_subst
 # ビープを鳴らさない
 setopt nobeep
-# 内部コマンドjobsの出力を長い形式にする
+# 内部コマンドjobsの出力にPIDを含める
 setopt long_list_jobs
 # 補完候補一覧でファイルの種別をマーク表示
 setopt list_types
