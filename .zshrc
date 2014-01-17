@@ -140,12 +140,7 @@ colors
 PROMPT="%U%B%F{cyan}%m: %n%(!.#.$)%u %f%b"
 PROMPT2="%_> "
 SPROMPT="correct: %R -> %r [nyae]? "
-# RPROMPT="[%~]"
-# RPROMTは
-# git のブランチ名 *と作業状態* を zsh の右プロンプトに表示＋ status に応じて色もつけてみた - Yarukidenized:ヤルキデナイズド
-# http://d.hatena.ne.jp/uasi/20091025/1256458798
-# をsubmoduleで
-source ~/dotfiles/214109/gistfile1.txt
+RPROMPT="[%~]"
 
 # ターミナルのタイトル
 #  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
