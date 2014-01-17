@@ -140,7 +140,11 @@ colors
 PROMPT="%U%B%F{cyan}%m: %n%(!.#.$)%u %f%b"
 PROMPT2="%_> "
 SPROMPT="correct: %R -> %r [nyae]? "
-RPROMPT="[%~]"
+source git_current_branch.zsh
+# RPROMPTの右辺はシングルクォーテーションにしないと
+# ``が展開されてしまい.zshrcを読み込んだタイミングでの
+# git-current-branchのままになってしまう
+RPROMPT='[`git-current-branch`%~]'
 
 # ターミナルのタイトル
 #  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
