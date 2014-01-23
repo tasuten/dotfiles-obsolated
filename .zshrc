@@ -53,6 +53,10 @@ bindkey '^B' backward-word
 bindkey '^D' kill-word
 # Shift-Tabで補完一覧候補を逆順に辿る
 bindkey "^[[Z" reverse-menu-complete
+# Ctrl-R/Sの検索でワイルドカードなどを使えるように
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
+
 
 # PROMPT変数で変数展開などを行う
 setopt prompt_subst
