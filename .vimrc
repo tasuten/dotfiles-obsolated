@@ -744,7 +744,7 @@ nnoremap mm m
 nnoremap m/ g/
 
 " increment-activator
-let g:increment_activator#config = {
+let g:increment_activator_filetype_candidates = {
       \ '_' : [
       \   ['private', 'protected', 'public'],
       \   ['right', 'left'],
