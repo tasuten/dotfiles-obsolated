@@ -652,7 +652,7 @@ nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer fi
 " Unite grep
 nnoremap [unite]g :<C-u>Unite grep -buffer-name=grep -no-quit -auto-preview<CR>
 " バッファ内の行検索
-nnoremap [unite]l :<C-u>Unite -buffer-name=search line/fast -start-insert<CR>
+nnoremap [unite]l :<C-u>Unite -buffer-name=search line -start-insert<CR>
 
 " Unite outline
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
