@@ -398,11 +398,10 @@ let g:quickrun_config.html = { 'command' : 'open', 'exec' : ['%c %s'] }
 " Javaの文字化け対策
 let g:quickrun_config.java = { 'exec': ['javac -J-Dfile.encoding=UTF-8 %o %s', '%c -Dfile.encoding=UTF-8 %s:t:r %a', ':call delete("%S:t:r.class")'] }
 " Markdown
-" markdownではvimprocによる非同期実行が遅いので無効化
+" markdownではvimprocによる非同期実行が遅いのでその設定を無効化
 let g:quickrun_config.markdown = {
       \ 'runner' : 'system',
-      \ 'type' : 'markdown/bluecloth',
-      \ 'cmdopt' : '-f',
+      \ 'type' : 'markdown/redcarpet',
       \ 'outputter' : 'browser'
       \ }
 " (La)TeX
