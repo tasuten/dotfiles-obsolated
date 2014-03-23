@@ -286,14 +286,16 @@ NeoBundle 'kana/vim-textobj-datetime'
 NeoBundle 'thinca/vim-textobj-comment'
 " 日本語の括弧類。（）はjbかj(かj)、「」はjk、『』はjK、【】はjs
 NeoBundle 'kana/vim-textobj-jabraces'
-" Rubyのブロック。r
-NeoBundle 'rhysd/vim-textobj-ruby'
 " あるsyntaxと、またあるsyntaxで囲まれた範囲。q
 " 例としてRubyやPerlの正規表現リテラルなど
 " 詳しくはhttp://d.hatena.ne.jp/deris/20121209/1355048075 参照
 NeoBundle 'deris/vim-textobj-enclosedsyntax'
 " URL。u
 NeoBundle 'mattn/vim-textobj-url'
+" Rubyのブロック。r
+NeoBundle 'rhysd/vim-textobj-ruby'
+" PHPのタグ内。例えば<?から?>まで。P
+NeoBundle 'akiyan/vim-textobj-php'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
 " 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
 NeoBundle 'tpope/vim-surround'
