@@ -343,6 +343,8 @@ NeoBundle 'javacomplete', {
     \ },
   \ }
 NeoBundle 'Rip-Rip/clang_complete'
+" vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
+NeoBundle 'amdt/vim-niji'
 
 " colorscheme類
 NeoBundle 'Wombat'
