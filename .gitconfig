@@ -1,0 +1,13 @@
+[user]
+	name = tasuten
+	email = heliopause64@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
+
+[alias]
+	amend = commit --amend -C HEAD
+	current-branch = rev-parse --abbrev-ref HEAD
+[push]
+	default = simple

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 手動管理
-DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .vim/template .vim/snippets .vim/ftplugin .vim/after/ftplugin )
+DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .gitconfig .vim/template .vim/snippets .vim/ftplugin .vim/after/ftplugin )
 
 # このディレクトリを原点に環境を構築する
 # ので、スクリプトのテストする時はテスト用のディレクトリに変えて

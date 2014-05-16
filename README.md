@@ -4,5 +4,6 @@
 * .zshrc
 * .zprofile
 * .tmux.conf
+* .gitconfig
 * other
 
