@@ -325,6 +325,10 @@ NeoBundle 'ujihisa/unite-colorscheme'
 " GVim限定だがフォントを変更するsource
 NeoBundle 'ujihisa/unite-font'
 NeoBundle 'mattn/unite-remotefile'
+" Codicというソフトウェア開発者用和英辞書サービスにアクセスする
+" プラグインとsource
+NeoBundle 'koron/codic-vim'
+NeoBundle 'rhysd/unite-codic.vim'
 " unite.vimでVim Hacksを閲覧するプラグイン
 " webapi-vimとvim-openbufに依存
 NeoBundleLazy 'thinca/vim-openbuf'
@@ -630,6 +634,8 @@ nnoremap [doc]je :<C-u>Ref<Space>webdict<Space>je<Space>
 nnoremap [doc]ej :<C-u>Ref<Space>webdict<Space>ej<Space>
 " ref.vimでは無いけどUnite + vim-gdevでgaucheのシンボル検索
 nnoremap [doc]ga :<C-u>Unite<Space>gosh_all_symbol<CR>
+" 同じくref.vimではないけどcodic-vimのunite source
+nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
 " unite.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin を参考にした
