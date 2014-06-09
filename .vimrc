@@ -364,25 +364,33 @@ NeoBundleLazy 'mattn/learn-vimscript'
 NeoBundle 'tasuten/gcalc.vim'
 
 " リポジトリを持たないプラグイン
+" 自作プラグインを neobundle.vim で管理する - C++でゲームプログラミング
+" http://d.hatena.ne.jp/osyo-manga/20131022/1382426403
 let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
-" neobundleでpathogenと同等の機能を使用する方法 | karakaram-blog
-" http://www.karakaram.com/vim/neobundle120421/
-" NeoBundle 'plugin1', {'type' : 'nosync', 'base' : '~/.vim/bundle/local'}
-" => .vim/bundle/local/plugin1/(plugin|doc|autoload|...)
+command! -nargs=1 NeoBundleLocalPlugin
+      \   NeoBundle <args>, {
+      \       "base" : g:local_plugin_base_path,
+      \       "type" : "nosync",
+      \   }
+command! -nargs=1 NeoBundleLocalPluginLazy
+      \   NeoBundleLazy <args>, {
+      \       "base" : g:local_plugin_base_path,
+      \       "type" : "nosync",
+      \   }
 " rsense.vim
-NeoBundleLazy 'rsense.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLocalPluginLazy 'rsense.vim'
 " eregex.vim
-NeoBundle 'eregex.vim', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLocalPlugin 'eregex.vim'
 " vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
 " Gauche用シンタックスファイル
-NeoBundle 'gauche-syntax', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLocalPlugin 'gauche-syntax'
 " https://github.com/sophacles/vim-processing を自分用に弄ったもの
-NeoBundle 'vim-processing', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLocalPlugin 'vim-processing'
 
 " 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
 " 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
-NeoBundle 'myplugin', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
-NeoBundle 'scripts', {'type' : 'nosync', 'base' : g:local_plugin_base_path}
+NeoBundleLocalPlugin 'myplugin'
+NeoBundleLocalPlugin 'scripts'
 
 filetype plugin indent on
 
