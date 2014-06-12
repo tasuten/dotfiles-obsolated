@@ -232,7 +232,6 @@ function AddExecmod()
 endfunction
 
 
-
 " ここからプラグイン設定
 
 " NeoBundle
