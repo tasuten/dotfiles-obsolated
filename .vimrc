@@ -387,11 +387,6 @@ NeoBundleLocalPlugin 'gauche-syntax'
 " https://github.com/sophacles/vim-processing を自分用に弄ったもの
 NeoBundleLocalPlugin 'vim-processing'
 
-" 今のところ雑多な自作プラグイン等は全部まとめてmypluginに、
-" 他の方が書いたちょっとしたスクリプトなんかはscriptsに放り込んでる
-NeoBundleLocalPlugin 'myplugin'
-NeoBundleLocalPlugin 'scripts'
-
 filetype plugin indent on
 
 " Uniteを用いたNeoBundleのUpdateの非同期実行
