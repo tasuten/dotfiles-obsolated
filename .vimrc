@@ -221,6 +221,17 @@ let g:netrw_liststyle = 3
 " netrwの画面ではqqqで閉じる
 autocmd FileType netrw nnoremap <buffer> qqq :q<CR>
 
+" Vimで shebang 付ファイルを保存時に実行権限を自動で付加する
+" http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
+autocmd BufWritePost * :call AddExecmod()
+function AddExecmod()
+    let line = getline(1)
+    if strpart(line, 0, 2) == "#!"
+        call system("chmod +x ". expand("%"))
+    endif
+endfunction
+
+
 
 " ここからプラグイン設定
 
