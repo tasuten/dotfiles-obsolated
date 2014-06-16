@@ -779,12 +779,11 @@ let g:increment_activator_filetype_candidates = {
 
 " quickhl.vim
 " カーソル下の単語のハイライトをトグル
-nmap <Leader>m <Plug>(quickhl-toggle)
-xmap <Leader>m <Plug>(quickhl-toggle)
+nmap <Leader>m <Plug>(quickhl-manual-this)
+xmap <Leader>m <Plug>(quickhl-manual-this)
 " 全てのハイライトをクリア
-nmap <Leader>M <Plug>(quickhl-reset)
-xmap <Leader>M <Plug>(quickhl-reset)
-" nmap <Leader>j <Plug>(quickhl-match)
+nmap <Leader>M <Plug>(quickhl-manual-reset)
+xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 " capslock.vim
 imap <C-l> <Plug>CapsLockToggle
