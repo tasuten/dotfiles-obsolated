@@ -557,8 +557,7 @@ let g:clang_complete_auto = 0
 let g:clang_close_preview = 1
 " libclangを用いる
 let g:clang_use_library = 1
-let g:clang_library_path = '/usr/lib'
-
+let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/' " f**kin' path
 " neocompleteここまで
 
 " neosnippet
