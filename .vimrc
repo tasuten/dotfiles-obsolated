@@ -808,14 +808,14 @@ nnoremap U :<C-u>GundoToggle<CR>
 " 背景色を濃い灰色ではなく黒にする
 let g:jellybeans_background_color_256 = 0
 let g:jellybeans_background_color = "000000"
-" 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はlightblueで
+" 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
 " 2.CursorLineの行の行番号は、CursorLineと同じ感じに
 " 3.対応する括弧の色を？山吹色背景黒文字に変更
 " 不思議な事にCUIのVimでも何故かgui*の方が適用されてる
 let g:jellybeans_overrides = {
       \    'SpecialKey' : {
-      \              'guifg': 'add8e6', 'guibg': '000000',
-      \              'ctermfg': 'lighblue', 'ctermbg': 'black',
+      \              'guifg': '707070', 'guibg': '000000',
+      \              'ctermfg': 'gray', 'ctermbg': 'black',
       \              'attr': ''} ,
       \   'CursorLineNr' : {
       \               'guifg' : '707070', 'guibg' : '222222',
