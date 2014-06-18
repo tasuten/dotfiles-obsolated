@@ -324,10 +324,6 @@ NeoBundle 'ujihisa/unite-colorscheme'
 " プラグインとsource
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
-" unite.vimでVim Hacksを閲覧するプラグイン
-" webapi-vimとvim-openbufに依存
-NeoBundleLazy 'thinca/vim-openbuf'
-NeoBundleLazy 'choplin/unite-vim_hacks'
 " これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
 " Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
 
