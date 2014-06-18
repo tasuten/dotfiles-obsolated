@@ -328,8 +328,6 @@ NeoBundle 'rhysd/unite-codic.vim'
 " Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
 
 " filetype類
-NeoBundle 'html5.vim'
-NeoBundle 'HTML5-Syntax-File'
 NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'javacomplete', {
     \ 'build' : {
