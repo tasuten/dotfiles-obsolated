@@ -262,7 +262,6 @@ NeoBundle 'Shougo/vimproc', {
   \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'YankRing.vim'
-NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'yuratomo/w3m.vim'
