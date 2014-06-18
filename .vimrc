@@ -403,7 +403,7 @@ let g:quickrun_config.processing = {
       \ }
 
 " caw.vim
-" <Leader>cでその行のコメントイン/アウトを切り替え
+" <Leader>cでその行のコメントを切り替え
 nmap <Leader>c <Plug>(caw:i:toggle)
 vmap <Leader>c <Plug>(caw:i:toggle)
 
