@@ -247,7 +247,6 @@ endif
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'endwise.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'tyru/open-browser.vim'
