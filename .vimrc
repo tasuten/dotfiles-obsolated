@@ -320,7 +320,6 @@ NeoBundle 'osyo-manga/unite-filetype'
 " colorschemeを変更するsource
 " -auto-previewと組み合わせると便利かもしれない、とのこと
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'mattn/unite-remotefile'
 " Codicというソフトウェア開発者用和英辞書サービスにアクセスする
 " プラグインとsource
 NeoBundle 'koron/codic-vim'
