@@ -303,7 +303,6 @@ NeoBundle 'tpope/vim-surround'
 
 " ref
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'taka84u9/vim-ref-ri'
 NeoBundle 'pekepeke/ref-javadoc'
 
 " neocomplete
