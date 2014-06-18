@@ -283,8 +283,6 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'kana/vim-textobj-user'
 " 以下i, a以降のキーのみ示す。ちなみにaはオブジェクト全体、iはその"内側"
 " 例（削除の例）: da → dida/dada
-" 時刻リテラル。da等
-NeoBundle 'kana/vim-textobj-datetime'
 " コメント。c
 NeoBundle 'thinca/vim-textobj-comment'
 " 日本語の括弧類。（）はjbかj(かj)、「」はjk、『』はjK、【】はjs
