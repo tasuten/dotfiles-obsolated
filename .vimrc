@@ -239,7 +239,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'matchit.zip'
-NeoBundle 'The-NERD-Commenter'
+NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 " vimprocはvimshellとquickrunの非同期実行に必要
@@ -402,13 +402,10 @@ let g:quickrun_config.processing = {
       \ 'exec': '%c --sketch=$PWD/ --output=$PWD/quickrun --run --force'
       \ }
 
-
-" NERD_Commenter
-" コメントの間にスペースを入れる
-let NERDSpaceDelims = 1
-" schemeがサポートされてないのでschemeについて
-" （commentstringはNERD_Commenterのみに限らないVim標準？の変数？）
-autocmd FileType scheme setlocal commentstring=;\ %s
+" caw.vim
+" <Leader>cでその行のコメントイン/アウトを切り替え
+nmap <Leader>c <Plug>(caw:i:toggle)
+vmap <Leader>c <Plug>(caw:i:toggle)
 
 " neocomplete
 " Disable AutoComplPop.
