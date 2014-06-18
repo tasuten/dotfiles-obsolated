@@ -264,7 +264,6 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'YankRing.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
-NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
@@ -705,11 +704,6 @@ nnoremap <silent> <Leader>vs :<C-u>VimShellPop -toggle<CR>
 " という感じのファイルに保存される。この設定なら~/.vim/.yankring_history_v2.txt
 let g:yankring_history_dir = $HOME.'/.vim/'
 let g:yankring_history_file = '.yankring_history'
-
-" w3m.vim
-let g:w3m#external_browser = 'open -a Firefox'
-let g:w3m#homepage = 'http://www.google.co.jp/'
-
 
 " template.vim
 " execute内は<>で囲まれたテキストオブジェクト全体(a>)を
