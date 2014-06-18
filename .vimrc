@@ -262,8 +262,6 @@ NeoBundle 'Shougo/vimproc', {
   \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'YankRing.vim'
-" Google翻訳APIの有料化により利用不可
-" NeoBundle 'mattn/googletranslate-vim'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
