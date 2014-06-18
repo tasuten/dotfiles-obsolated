@@ -115,6 +115,7 @@ let g:yankring_n_keys = 'Y D'
 
 " クリップボードからの貼り付け
 inoremap <silent> <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
+inoremap <silent> <C-r>+ <C-o>:set paste<CR><C-r>+<C-o>:set nopaste<CR>
 
 " 検索結果のハイライトを<C-g>でトグル(C-gにしたのはhの1つ左にあったから)
 " http://stackoverflow.com/questions/99161/how-do-you-make-vim-unhighlight-what-you-searched-for
