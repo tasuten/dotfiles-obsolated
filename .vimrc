@@ -639,6 +639,8 @@ nnoremap [unite]l :<C-u>Unite -buffer-name=search line -start-insert<CR>
 
 " Unite outline
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
+" Unite help
+nnoremap <silent> [unite]h :<C-u>Unite help<CR>
 " Unite filetype
 nnoremap <silent> [unite]t :<C-u>Unite filetype<CR>
 " Unite colorscheme
