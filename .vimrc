@@ -269,7 +269,6 @@ NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
-NeoBundle 'capslock.vim'
 " なお、smartinputは<BS>や<Enter>にマッピングを行うが
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
@@ -772,9 +771,6 @@ xmap <Leader>m <Plug>(quickhl-manual-this)
 " 全てのハイライトをクリア
 nmap <Leader>M <Plug>(quickhl-manual-reset)
 xmap <Leader>M <Plug>(quickhl-manual-reset)
-
-" capslock.vim
-imap <C-l> <Plug>CapsLockToggle
 
 " vim-smartinput
 " <や>に関する設定
