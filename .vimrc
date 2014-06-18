@@ -344,9 +344,6 @@ NeoBundle 'nanotech/jellybeans.vim'
 " statusline
 NeoBundle 'itchyny/lightline.vim'
 
-" 文書類
-NeoBundleLazy 'mattn/learn-vimscript'
-
 " 自作プラグイン
 NeoBundle 'tasuten/gcalc.vim'
 
