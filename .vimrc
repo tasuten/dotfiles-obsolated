@@ -340,8 +340,6 @@ NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'amdt/vim-niji'
 
 " colorscheme類
-NeoBundle 'Wombat'
-NeoBundle 'wombat256.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 " statusline
 NeoBundle 'itchyny/lightline.vim'
