@@ -300,7 +300,7 @@ NeoBundle 'pekepeke/ref-javadoc'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'neco-look'
+NeoBundle 'ujihisa/neco-look'
 
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
