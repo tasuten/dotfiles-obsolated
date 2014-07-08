@@ -173,15 +173,16 @@ nnoremap <F1> <Nop>
 " <ESC>CTRL-Wをi_CTRL-Wに誤爆して挿入データを消してしまうことがあるので
 inoremap <C-w> <ESC><C-w>
 
-" 誤爆しやすいq:等をqq:に割り当て(Vimテクニックバイブル P.124より)
-" qqは「qというレジスタにレコーディング」というコマンドと衝突するが
-" その時はtimeoutlenだけ待ちましょう
+" 誤爆しやすいq:等をqq:等に割り当て(Vimテクニックバイブル P.124より)
 nnoremap qq: <ESC>q:
 nnoremap qq/ <ESC>q/
 nnoremap qq? <ESC>q?
 nnoremap q: <Nop>
 nnoremap q/ <Nop>
 nnoremap q? <Nop>
+
+" 同じく誤爆しやすいqq(レジスタqにレコーディング)はいっそ無効化
+nnoremap qq <Nop>
 
 " helpをブラウズ時なんかに、CTRL-]から戻るのにCTRL-OやCTRL-Tは少し打ちにくいので、
 " CTRL-_に。本当はCTRL-:にしたかったけど、そんなキーコードはASCII的に無い
