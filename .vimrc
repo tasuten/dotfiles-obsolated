@@ -614,21 +614,17 @@ nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
 " The prefix key.
 nnoremap [unite] <Nop>
-nmap f [unite]
+nmap s [unite]
 
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
 
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-" ファイル一覧
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " レジスタ一覧
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 " source一覧
-nnoremap <silent> [unite]s :<C-u>Unite source<CR>
-" 全部乗せ
-nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer bookmark file<CR>
+nnoremap <silent> [unite]e :<C-u>Unite source<CR>
 
 " Unite grep
 nnoremap [unite]g :<C-u>Unite grep -buffer-name=grep -no-quit -auto-preview<CR>
@@ -642,7 +638,7 @@ nnoremap <silent> [unite]h :<C-u>Unite help<CR>
 " Unite filetype
 nnoremap <silent> [unite]t :<C-u>Unite filetype<CR>
 " Unite colorscheme
-nnoremap <silent> [unite]cs :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent> [unite]cm :<C-u>Unite colorscheme -auto-preview<CR>
 
 " file選択時でのデフォルトアクション（<CR>の時とかの挙動）をopenではなくsplitに
 call unite#custom_default_action('file', 'split')
