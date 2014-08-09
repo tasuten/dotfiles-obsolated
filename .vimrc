@@ -167,6 +167,10 @@ nnoremap <Space>s :Scratch<CR>
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 
+" ZZやZQも確認なしで誤爆のリスクがあるのでnop
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+
 " <ESC>CTRL-Wをi_CTRL-Wに誤爆して挿入データを消してしまうことがあるので
 inoremap <C-w> <ESC><C-w>
 
