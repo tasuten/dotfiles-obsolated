@@ -217,7 +217,7 @@ options     head
 snippet     public_class
 abbr        public class
 options     head
-        public class ${1:ClassName} {
+        public class `expand('%:t:r')` {
                 ${0}
         }
 
