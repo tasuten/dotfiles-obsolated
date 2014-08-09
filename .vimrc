@@ -266,6 +266,7 @@ NeoBundle 't9md/vim-quickhl'
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundleLazy 'mattn/lisper-vim'
 " neocomplete, vimproc必須。uniteは有った方が良い
 " また、Gauche必須
@@ -743,6 +744,10 @@ let g:clever_f_smart_case = 1
 let g:clever_f_fix_key_direction = 1
 " f;で任意の記号にマッチする
 let g:clever_f_chars_match_any_signs = ';'
+
+" ctrlp.vim
+" 隠しファイルも表示する
+let g:ctrlp_show_hidden = 1
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
