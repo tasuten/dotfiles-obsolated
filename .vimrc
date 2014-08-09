@@ -329,6 +329,7 @@ NeoBundle 'javacomplete', {
     \ },
   \ }
 NeoBundle 'Rip-Rip/clang_complete'
+NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
 NeoBundle 'amdt/vim-niji'
 
@@ -468,7 +469,7 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -740,6 +741,10 @@ let g:clever_f_chars_match_any_signs = ';'
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
+
+" jscomplete-vim
+" DOM APIも補完対象に
+let g:jscomplete_use = ['dom']
 
 " プラグイン設定ここまで
 
