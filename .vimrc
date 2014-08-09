@@ -109,9 +109,6 @@ noremap # #zz
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
-" YankRingでも同じように
-" http://d.hatena.ne.jp/yano3/20090526/1243350033
-let g:yankring_n_keys = 'Y D'
 
 " クリップボードからの貼り付け
 inoremap <silent> <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
@@ -253,7 +250,7 @@ NeoBundle 'Shougo/vimproc', {
     \ },
   \ }
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'YankRing.vim'
+NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'nishigori/increment-activator'
@@ -663,12 +660,16 @@ au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " VimShell
 nnoremap <silent> <Leader>vs :<C-u>VimShellPop -toggle<CR>
 
-" YankRing.vim
-" 履歴ファイルは
-" g:yankring_history_dir.g:yankring_history_file.'_v2.txt'
-" という感じのファイルに保存される。この設定なら~/.vim/.yankring_history_v2.txt
-let g:yankring_history_dir = $HOME.'/.vim/'
-let g:yankring_history_file = '.yankring_history'
+" yankround.vim
+" YankRing likeなキーバインド
+" <C-p/n>は<C-u/d>に変更してる
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-u> <Plug>(yankround-prev)
+nmap <C-d> <Plug>(yankround-next)
+" キャッシュの保存先
+let g:yankround_dir = '~/.cache/yankround'
 
 " template.vim
 " execute内は<>で囲まれたテキストオブジェクト全体(a>)を
