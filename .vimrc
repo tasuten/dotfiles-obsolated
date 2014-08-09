@@ -720,6 +720,9 @@ let g:increment_activator_filetype_candidates = {
       \   ['top', 'bottom'],
       \   ['max', 'min'],
       \   ['width', 'height']
+      \ ],
+      \ 'gitrebase': [
+      \   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec']
       \ ]
       \ }
 
