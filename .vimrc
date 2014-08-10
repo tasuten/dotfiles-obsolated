@@ -670,12 +670,11 @@ nnoremap <silent> <Leader>vs :<C-u>VimShellPop -toggle<CR>
 
 " yankround.vim
 " YankRing likeなキーバインド
-" <C-p/n>は<C-u/d>に変更してる
 nmap p <Plug>(yankround-p)
 xmap p <Plug>(yankround-p)
 nmap P <Plug>(yankround-P)
-nmap <C-u> <Plug>(yankround-prev)
-nmap <C-d> <Plug>(yankround-next)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
 " キャッシュの保存先
 let g:yankround_dir = '~/.cache/yankround'
 
@@ -752,6 +751,8 @@ let g:clever_f_fix_key_direction = 1
 let g:clever_f_chars_match_any_signs = ';'
 
 " ctrlp.vim
+" <C-p>はyankroundに使うので代わりに<C-e>を使う
+let g:ctrlp_map = "<C-e>"
 " 隠しファイルも表示する
 let g:ctrlp_show_hidden = 1
 
