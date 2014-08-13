@@ -269,7 +269,7 @@ NeoBundle 't9md/vim-quickhl'
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundleLazy 'mattn/lisper-vim'
 " neocomplete, vimproc必須。uniteは有った方が良い
 " また、Gauche必須
