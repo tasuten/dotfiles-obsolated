@@ -191,6 +191,8 @@ nnoremap <C-_> <C-o>
 
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd BufNewFile,BufRead *.md setfiletype markdown
+" *.pdeなファイルをArduinoではなくProcessingとみなす
+autocmd BufNewFile,BufRead *.pde setfiletype processing
 
 " TeXは全てLaTeXと見做す
 let g:tex_flavor = "latex"
