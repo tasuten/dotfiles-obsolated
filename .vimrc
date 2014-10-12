@@ -239,7 +239,7 @@ filetype plugin indent off     " required!
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -369,6 +369,8 @@ NeoBundleLocalPluginLazy 'rsense.vim'
 NeoBundleLocalPlugin 'gauche-syntax'
 " https://github.com/sophacles/vim-processing を自分用に弄ったもの
 NeoBundleLocalPlugin 'vim-processing'
+
+call neobundle#end()
 
 filetype plugin indent on
 
