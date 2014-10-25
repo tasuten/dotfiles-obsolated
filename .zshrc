@@ -268,7 +268,7 @@ chpwd() {
 }
 
 # tmuxを自動で起動
-if [ "$TMUX" = "" ]; then
+if [[ "$TMUX" = "" ]]; then
   tmux
 fi
 
