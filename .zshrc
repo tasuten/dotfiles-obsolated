@@ -140,8 +140,9 @@ disable r
 # プロンプトの設定
 autoload colors
 colors
-# 太字シアンの文字に、アンダーバーを付ける
-PROMPT="%U%B%F{cyan}%m: %n%(!.#.$)%u %f%b"
+# 太字(%B %b)で青色(%F{blue} %f)、プロンプトは$ のみ
+# （正確にはrootなら# になるが、OS Xの場合rootは/bin/shなので無問題）
+PROMPT="%B%F{blue}%(!.#.$)%f%b "
 PROMPT2="%_> "
 SPROMPT="correct: %R -> %r [nyae]? "
 source ~/dotfiles/git_current_branch.zsh
