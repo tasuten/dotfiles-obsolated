@@ -165,6 +165,8 @@ esac
 # zの代わりにより打ちやすいjキーに
 export _Z_CMD=j
 . `brew --prefix`/etc/profile.d/z.sh
+# 補完関数を有効にする
+compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 # v
 export vim=env\ LANG=ja_JP.UTF-8\ /Applications/MacVim.app/Contents/MacOS/Vim "$@"
 
