@@ -1,13 +1,6 @@
 " .vimrcのエンコーディング指定
 scriptencoding utf-8
 
-" Vim特有の設定とかすると思うのでvi互換をオフに
-" 実はこの値はvimrcかgvimrcが見つかった時点でcompatibleがオフになるので
-" vimrcなどで書いても余り意味はないらしい
-" http://vim-users.jp/2010/10/hack179/
-" が、非互換モードであるのが分かるように明示的に書いておく
-set nocompatible
-
 " バックアップファイルやスワップファイルをtmp以下に
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
