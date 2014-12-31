@@ -130,8 +130,8 @@ nnoremap <C-l> <C-w>l
 nnoremap [tab] <Nop>
 nmap t [tab]
 " n番タブにジャンプ
-for n in range(1, 9)
-  execute 'nnoremap <silent> [tab]'.n  ':<C-u>tabnext '.n.'<CR>'
+for s:n in range(1, 9)
+  execute 'nnoremap <silent> [tab]'.s:n  ':<C-u>tabnext '.s:n.'<CR>'
 endfor
 " 一番右にタブを開く
 nnoremap <silent> [tab]c :<C-u>tablast <bar> tabnew<CR>
