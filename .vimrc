@@ -190,6 +190,9 @@ autocmd BufNewFile,BufRead *.pde setfiletype processing
 " TeXは全てLaTeXと見做す
 let g:tex_flavor = "latex"
 
+" Vimファイルでの行継続の\の位置を指定
+let g:vim_indent_cont = 0
+
 " gitのコミットメッセージ編集時にDでdiffをプレビュー
 autocmd FileType gitcommit nnoremap D :DiffGitCached<CR>
 
