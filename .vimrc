@@ -219,10 +219,10 @@ autocmd FileType netrw nnoremap <buffer> qqq :q<CR>
 " http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
 autocmd BufWritePost * :call AddExecmod()
 function AddExecmod()
-    let line = getline(1)
-    if strpart(line, 0, 2) == "#!"
-        call system("chmod +x ". expand("%"))
-    endif
+  let line = getline(1)
+  if strpart(line, 0, 2) == "#!"
+    call system("chmod +x ". expand("%"))
+  endif
 endfunction
 
 
@@ -247,13 +247,13 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 " vimprocはvimshellとquickrunの非同期実行に必要
 NeoBundle 'Shougo/vimproc', {
-    \ 'build' : {
-    \ 'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-    \ },
-  \ }
+\ 'build' : {
+\ 'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+\ 'cygwin' : 'make -f make_cygwin.mak',
+\ 'mac' : 'make -f make_mac.mak',
+\ 'unix' : 'make -f make_unix.mak',
+\ },
+\ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
@@ -326,11 +326,11 @@ NeoBundle 'rhysd/unite-codic.vim'
 " filetype類
 NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'javacomplete', {
-    \ 'build' : {
-    \ 'mac' : 'javac autoload/Reflection.java',
-    \ 'unix' : 'javac autoload/Reflection.java',
-    \ },
-  \ }
+\ 'build' : {
+\ 'mac' : 'javac autoload/Reflection.java',
+\ 'unix' : 'javac autoload/Reflection.java',
+\ },
+\ }
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
@@ -349,15 +349,15 @@ NeoBundle 'tasuten/gcalc.vim'
 " http://d.hatena.ne.jp/osyo-manga/20131022/1382426403
 let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 command! -nargs=1 NeoBundleLocalPlugin
-      \   NeoBundle <args>, {
-      \       "base" : g:local_plugin_base_path,
-      \       "type" : "nosync",
-      \   }
+\   NeoBundle <args>, {
+\       "base" : g:local_plugin_base_path,
+\       "type" : "nosync",
+\   }
 command! -nargs=1 NeoBundleLocalPluginLazy
-      \   NeoBundleLazy <args>, {
-      \       "base" : g:local_plugin_base_path,
-      \       "type" : "nosync",
-      \   }
+\   NeoBundleLazy <args>, {
+\       "base" : g:local_plugin_base_path,
+\       "type" : "nosync",
+\   }
 " rsense.vim
 NeoBundleLocalPluginLazy 'rsense.vim'
 " vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
@@ -394,10 +394,10 @@ let g:quickrun_config.java = { 'exec': ['javac -J-Dfile.encoding=UTF-8 %o %s', '
 " Markdown
 " markdownではvimprocによる非同期実行が遅いのでその設定を無効化
 let g:quickrun_config.markdown = {
-      \ 'runner' : 'system',
-      \ 'type' : 'markdown/redcarpet',
-      \ 'outputter' : 'browser'
-      \ }
+\ 'runner' : 'system',
+\ 'type' : 'markdown/redcarpet',
+\ 'outputter' : 'browser'
+\ }
 " (La)TeX
 "LaTeXをquickrunで楽に処理する - プログラムモグモグ
 " http://d.hatena.ne.jp/itchyny/20121001/1349094989
@@ -406,9 +406,9 @@ let g:quickrun_config.tex = { 'command' : 'viewtex' }
 " Processing
 " http://kazuph.hateblo.jp/entry/2013/03/20/211336
 let g:quickrun_config.processing = {
-      \ 'command' : 'processing-java',
-      \ 'exec': '%c --sketch=$PWD/ --output=$PWD/quickrun --run --force'
-      \ }
+\ 'command' : 'processing-java',
+\ 'exec': '%c --sketch=$PWD/ --output=$PWD/quickrun --run --force'
+\ }
 
 " caw.vim
 " <Leader>cでその行のコメントを切り替え
@@ -430,9 +430,9 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " \  'vimshell' : $HOME.'/.vimshell_hist',
 " の行を少し書き換えた
 let g:neocomplete#sources#dictionary#dictionaries = {
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell/command-history'
-      \ }
+\ 'default' : '',
+\ 'vimshell' : $HOME.'/.vimshell/command-history'
+\ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -505,8 +505,8 @@ let g:neocomplete#sources#include#paths.c  =  '/usr/include,'.'/usr/local/includ
 " endif
 " let g:rsenseUseOmniFunc = 1
 " if filereadable(expand('/usr/local/bin/rsense'))
-  " let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
-  " let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
+" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " endif
 
 " clang_completeの補完をneocompleteで
@@ -514,7 +514,7 @@ let g:neocomplete#sources#include#paths.c  =  '/usr/include,'.'/usr/local/includ
 " neocomplete 側の設定
 let g:neocomplete#force_overwrite_completefunc=1
 if !exists("g:neocomplete#force_omni_input_patterns")
-    let g:neocomplete#force_omni_input_patterns = {}
+  let g:neocomplete#force_omni_input_patterns = {}
 endif
 let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
 " clang_complete 側の設定
@@ -537,8 +537,8 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
 " Runtime snippetsを無効化したいfiletype。1で無効化
 let g:neosnippet#disable_runtime_snippets = {
-      \   'java' : 1,
-      \ }
+\   'java' : 1,
+\ }
 
 " emmet-vim
 if !exists('g:user_emmet_settings')
@@ -558,38 +558,38 @@ autocmd FileType scheme :let is_gauche=1
 let g:ref_javadoc_path = '/usr/local/java6_ja_apidocs/'
 " webdictソースについて
 if !exists('g:ref_source_webdict_sites')
- let g:ref_source_webdict_sites = {}
+  let g:ref_source_webdict_sites = {}
 endif
 " Wikipedia（日本語版）
 let g:ref_source_webdict_sites.wikipedia = {
-      \  'url' : 'http://ja.wikipedia.org/wiki/%s',
-      \ 'keyword_encoding' : 'utf-8',
-      \ 'cache' : 1
-      \ }
+\  'url' : 'http://ja.wikipedia.org/wiki/%s',
+\ 'keyword_encoding' : 'utf-8',
+\ 'cache' : 1
+\ }
 " Wiktionary
 " 15行目（あたり）に適当にフォーカス
 let g:ref_source_webdict_sites.wiktionary = {
-      \  'url' : 'http://ja.wiktionary.org/wiki/%s',
-      \ 'keyword_encoding' : 'utf-8',
-      \ 'cache' : 1,
-      \ 'line' : 15
-      \ }
+\  'url' : 'http://ja.wiktionary.org/wiki/%s',
+\ 'keyword_encoding' : 'utf-8',
+\ 'cache' : 1,
+\ 'line' : 15
+\ }
 " Infoseekマルチ辞書
 " http://www.karakaram.com/vim/ref-webdict/ 参考
 " 最初の数行を削除している
 " 和英
 let g:ref_source_webdict_sites.je = {
-      \  'url' : 'http://dictionary.infoseek.ne.jp/jeword/%s',
-      \ 'keyword_encoding' : 'utf-8',
-      \ }
+\  'url' : 'http://dictionary.infoseek.ne.jp/jeword/%s',
+\ 'keyword_encoding' : 'utf-8',
+\ }
 function! g:ref_source_webdict_sites.je.filter(output)
   return join(split(a:output, "\n")[15 :], "\n")
 endfunction
 " 英和
 let g:ref_source_webdict_sites.ej = {
-      \  'url' : 'http://dictionary.infoseek.ne.jp/ejword/%s',
-      \ 'keyword_encoding' : 'utf-8',
-      \ }
+\  'url' : 'http://dictionary.infoseek.ne.jp/ejword/%s',
+\ 'keyword_encoding' : 'utf-8',
+\ }
 function! g:ref_source_webdict_sites.ej.filter(output)
   return join(split(a:output, "\n")[15 :], "\n")
 endfunction
@@ -684,9 +684,9 @@ let g:yankround_dir = '~/.cache/yankround'
 " つまり<Cursor>を消去している
 " 最終的にカーソルは<Cursor>の有った場所の一つ前にある
 autocmd User plugin-template-loaded
-      \ if search('<Cursor>')
-      \ | execute 'normal! "_da>'
-      \ | endif
+\ if search('<Cursor>')
+\ | execute 'normal! "_da>'
+\ | endif
 
 " camelcasemotion
 " :h camelcasemotion-configuration より
@@ -712,18 +712,18 @@ nnoremap m/ g/
 
 " increment-activator
 let g:increment_activator_filetype_candidates = {
-      \ '_' : [
-      \   ['private', 'protected', 'public'],
-      \   ['right', 'left'],
-      \   ['up', 'down'],
-      \   ['top', 'bottom'],
-      \   ['max', 'min'],
-      \   ['width', 'height']
-      \ ],
-      \ 'gitrebase': [
-      \   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec']
-      \ ]
-      \ }
+\ '_' : [
+\   ['private', 'protected', 'public'],
+\   ['right', 'left'],
+\   ['up', 'down'],
+\   ['top', 'bottom'],
+\   ['max', 'min'],
+\   ['width', 'height']
+\ ],
+\ 'gitrebase': [
+\   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec']
+\ ]
+\ }
 
 " quickhl.vim
 " カーソル下の単語のハイライトをトグル
@@ -777,17 +777,17 @@ let g:jellybeans_background_color = "000000"
 " 3.対応する括弧の色を？山吹色背景黒文字に変更
 " 不思議な事にCUIのVimでも何故かgui*の方が適用されてる
 let g:jellybeans_overrides = {
-      \    'SpecialKey' : {
-      \              'guifg': '707070', 'guibg': '000000',
-      \              'ctermfg': 'gray', 'ctermbg': 'black',
-      \              'attr': ''} ,
-      \   'CursorLineNr' : {
-      \               'guifg' : '707070', 'guibg' : '222222',
-      \               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'},
-      \   'MatchParen' : {
-      \               'guifg' : '222222', 'guibg' : 'fad07a',
-      \               'ctermfg' : 'darkgray', 'ctermbg' : 'yellow'}
-      \ }
+\    'SpecialKey' : {
+\              'guifg': '707070', 'guibg': '000000',
+\              'ctermfg': 'gray', 'ctermbg': 'black',
+\              'attr': ''} ,
+\   'CursorLineNr' : {
+\               'guifg' : '707070', 'guibg' : '222222',
+\               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'},
+\   'MatchParen' : {
+\               'guifg' : '222222', 'guibg' : 'fad07a',
+\               'ctermfg' : 'darkgray', 'ctermbg' : 'yellow'}
+\ }
 
 " ユーザ定義のハイライト
 " 1.全角スペースを視覚化
@@ -831,33 +831,33 @@ let g:lightline.subseparator = { 'left' : '', 'right' : '' }
 " fileformat（改行コード）の表示だけ気に入らなかったので変更
 let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
 let g:lightline.component = {
-      \   'fileformat' : '%{ff_table[&fileformat]}',
-      \ }
+\   'fileformat' : '%{ff_table[&fileformat]}',
+\ }
 
 " UniteやVimShell、Netrw、Gundoの時modeやfilenameをちょっと細工する
 let g:lightline.component_function = {
-      \ 'mode'     : 'MyMode',
-      \ 'filename' : 'MyFilename',
-      \ }
+\ 'mode'     : 'MyMode',
+\ 'filename' : 'MyFilename',
+\ }
 
 function! MyMode()
   let fname = expand('%:t')
   return  &ft == 'unite' ? 'Unite' :
-        \ &ft == 'vimshell' ? 'VimShell' :
-        \ &ft == 'netrw' ? 'Netrw' :
-        \ &ft == 'gundo' ? 'Gundo' :
-        \ fname == '__Gundo_Preview__' ? 'Gundo-P' :
-        \ lightline#mode()
+  \ &ft == 'vimshell' ? 'VimShell' :
+  \ &ft == 'netrw' ? 'Netrw' :
+  \ &ft == 'gundo' ? 'Gundo' :
+  \ fname == '__Gundo_Preview__' ? 'Gundo-P' :
+  \ lightline#mode()
 endfunction
 
 function! MyFilename()
   let fname = expand('%:t')
   " netrwでは開いているディレクトリを表示
   return  &ft == 'unite' ? unite#get_status_string() :
-        \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ &ft == 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
-        \ (fname == '__Gundo__' || fname == '__Gundo_Preview__') ? '' :
-        \ '' != fname ? fname : '[No Name]'
+  \ &ft == 'vimshell' ? vimshell#get_status_string() :
+  \ &ft == 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
+  \ (fname == '__Gundo__' || fname == '__Gundo_Preview__') ? '' :
+  \ '' != fname ? fname : '[No Name]'
 endfunction
 
 let g:unite_force_overwrite_statusline = 0
@@ -865,8 +865,8 @@ let g:vimshell_force_overwrite_statusline = 0
 
 " readonlyがfilenameより左に表示されるのが気になったので
 let g:lightline.active = {
-      \ 'left' : [['mode', 'paste'], ['filename', 'modified', 'readonly']]
-      \ }
+\ 'left' : [['mode', 'paste'], ['filename', 'modified', 'readonly']]
+\ }
 
 
 let g:hatena_user = 'tasuten'
