@@ -362,9 +362,6 @@ command! -nargs=1 NeoBundleLocalPluginLazy
 \   }
 " rsense.vim
 NeoBundleLocalPluginLazy 'rsense.vim'
-" vim:scheme.vim http://legacy.e.tir.jp/wiliki?vim%3ascheme.vim#H-xl1p5w の
-" Gauche用シンタックスファイル
-NeoBundleLocalPlugin 'gauche-syntax'
 " https://github.com/sophacles/vim-processing を自分用に弄ったもの
 NeoBundleLocalPlugin 'vim-processing'
 
@@ -546,10 +543,6 @@ endif
 let g:user_emmet_settings.indentation = '  '
 let g:user_emmet_settings.lang = 'ja'
 " let g:user_emmet_complete_tag = 1
-
-" scheme.vim（Gauche向けシンタックスファイル。~/.vim/syntax/scheme.vim）
-" http://legacy.e.tir.jp/wiliki?vim%3Ascheme.vim
-autocmd vimrc FileType scheme :let is_gauche=1
 
 " ref.vim
 " ref-javadoc
