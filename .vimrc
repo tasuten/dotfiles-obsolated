@@ -272,7 +272,6 @@ NeoBundle 't9md/vim-quickhl'
 " なお、smartinputは<BS>や<Enter>にマッピングを行うが
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
-NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundleLazy 'mattn/lisper-vim'
 " neocomplete, vimproc必須。uniteは有った方が良い
@@ -747,14 +746,6 @@ call smartinput#map_to_trigger('i', '>', '>', '>')
 call smartinput#define_rule({'at': '<\%#', 'char': '>', 'input': '><Left>'})
 " <>内にいる時>で<>の外に脱出
 call smartinput#define_rule({'at': '\%#\_s*>', 'char': '>', 'input': '<C-r>=smartinput#_leave_block(''>'')<Enter><Right>'})
-
-" clever-f.vim
-" f{小文字}では両方に、f{大文字}では大文字のみにヒットする
-let g:clever_f_smart_case = 1
-" F{char}の時でもfは右方向に、Fは左方向に移動する
-let g:clever_f_fix_key_direction = 1
-" f;で任意の記号にマッチする
-let g:clever_f_chars_match_any_signs = ';'
 
 " ctrlp.vim
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
