@@ -375,9 +375,6 @@ call neobundle#end()
 
 filetype plugin indent on
 
-" Uniteを用いたNeoBundleのUpdateの非同期実行
-command! -nargs=0 NeoBundleUpdateUnite Unite neobundle/update -auto-quit
-
 " NeoBundleここまで
 
 
