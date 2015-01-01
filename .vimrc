@@ -226,7 +226,7 @@ autocmd vimrc FileType netrw nnoremap <buffer> qqq :q<CR>
 autocmd vimrc BufWritePost * :call AddExecmod()
 function AddExecmod()
   let line = getline(1)
-  if strpart(line, 0, 2) == '#!'
+  if strpart(line, 0, 2) ==# '#!'
     call system('chmod +x '. expand('%'))
   endif
 endfunction
@@ -848,22 +848,22 @@ let g:lightline.component_function = {
 
 function! MyMode()
   let fname = expand('%:t')
-  return  &ft == 'unite' ? 'Unite' :
-  \ &ft == 'vimshell' ? 'VimShell' :
-  \ &ft == 'netrw' ? 'Netrw' :
-  \ &ft == 'gundo' ? 'Gundo' :
-  \ fname == '__Gundo_Preview__' ? 'Gundo-P' :
+  return  &ft ==# 'unite' ? 'Unite' :
+  \ &ft ==# 'vimshell' ? 'VimShell' :
+  \ &ft ==# 'netrw' ? 'Netrw' :
+  \ &ft ==# 'gundo' ? 'Gundo' :
+  \ fname ==# '__Gundo_Preview__' ? 'Gundo-P' :
   \ lightline#mode()
 endfunction
 
 function! MyFilename()
   let fname = expand('%:t')
   " netrwでは開いているディレクトリを表示
-  return  &ft == 'unite' ? unite#get_status_string() :
-  \ &ft == 'vimshell' ? vimshell#get_status_string() :
-  \ &ft == 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
-  \ (fname == '__Gundo__' || fname == '__Gundo_Preview__') ? '' :
-  \ '' != fname ? fname : '[No Name]'
+  return  &ft ==# 'unite' ? unite#get_status_string() :
+  \ &ft ==# 'vimshell' ? vimshell#get_status_string() :
+  \ &ft ==# 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
+  \ (fname ==# '__Gundo__' || fname ==# '__Gundo_Preview__') ? '' :
+  \ '' !=# fname ? fname : '[No Name]'
 endfunction
 
 let g:unite_force_overwrite_statusline = 0
