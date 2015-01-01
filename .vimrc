@@ -149,12 +149,12 @@ nnoremap [tab]N :tabnew<Space>
 " http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
 command -bang -nargs=? QFixToggle call QFixToggle(<bang>0)
 function! QFixToggle(forced)
-  if exists("g:qfix_win") && a:forced == 0
+  if exists('g:qfix_win') && a:forced == 0
     cclose
     unlet g:qfix_win
   else
     copen
-    let g:qfix_win = bufnr("$")
+    let g:qfix_win = bufnr('$')
   endif
 endfunction
 nnoremap <silent> <Space>q :QFixToggle<CR>
@@ -194,7 +194,7 @@ autocmd vimrc BufNewFile,BufRead *.md setfiletype markdown
 autocmd vimrc BufNewFile,BufRead *.pde setfiletype processing
 
 " TeXは全てLaTeXと見做す
-let g:tex_flavor = "latex"
+let g:tex_flavor = 'latex'
 
 " Vimファイルでの行継続の\の位置を指定
 let g:vim_indent_cont = 0
@@ -226,8 +226,8 @@ autocmd vimrc FileType netrw nnoremap <buffer> qqq :q<CR>
 autocmd vimrc BufWritePost * :call AddExecmod()
 function AddExecmod()
   let line = getline(1)
-  if strpart(line, 0, 2) == "#!"
-    call system("chmod +x ". expand("%"))
+  if strpart(line, 0, 2) == '#!'
+    call system('chmod +x '. expand('%'))
   endif
 endfunction
 
@@ -356,13 +356,13 @@ NeoBundle 'tasuten/gcalc.vim'
 let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
 command! -nargs=1 NeoBundleLocalPlugin
 \   NeoBundle <args>, {
-\       "base" : g:local_plugin_base_path,
-\       "type" : "nosync",
+\       'base' : g:local_plugin_base_path,
+\       'type' : 'nosync',
 \   }
 command! -nargs=1 NeoBundleLocalPluginLazy
 \   NeoBundleLazy <args>, {
-\       "base" : g:local_plugin_base_path,
-\       "type" : "nosync",
+\       'base' : g:local_plugin_base_path,
+\       'type' : 'nosync',
 \   }
 " rsense.vim
 NeoBundleLocalPluginLazy 'rsense.vim'
@@ -519,7 +519,7 @@ let g:neocomplete#sources#include#paths.c  =  '/usr/include,'.'/usr/local/includ
 " http://d.hatena.ne.jp/osyo-manga/20120911/1347354707 より
 " neocomplete 側の設定
 let g:neocomplete#force_overwrite_completefunc=1
-if !exists("g:neocomplete#force_omni_input_patterns")
+if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
 let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
@@ -758,7 +758,7 @@ let g:clever_f_chars_match_any_signs = ';'
 
 " ctrlp.vim
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
-let g:ctrlp_map = "<C-e>"
+let g:ctrlp_map = '<C-e>'
 " 隠しファイルも表示する
 let g:ctrlp_show_hidden = 1
 
@@ -777,7 +777,7 @@ let g:jscomplete_use = ['dom']
 " jellybeans
 " 背景色を濃い灰色ではなく黒にする
 let g:jellybeans_background_color_256 = 0
-let g:jellybeans_background_color = "000000"
+let g:jellybeans_background_color = '000000'
 " 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
 " 2.CursorLineの行の行番号は、CursorLineと同じ感じに
 " 3.対応する括弧の色を？山吹色背景黒文字に変更
