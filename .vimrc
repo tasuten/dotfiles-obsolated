@@ -1,6 +1,12 @@
 " .vimrcのエンコーディング指定
 scriptencoding utf-8
 
+" autocmd vimrcはgroupに属させたほうが良い
+" http://rbtnn.hateblo.jp/entry/2014/11/30/174749
+augroup vimrc
+  autocmd!
+augroup END
+
 " バックアップファイルやスワップファイルをtmp以下に
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
@@ -183,9 +189,9 @@ nnoremap qq <Nop>
 nnoremap <C-_> <C-o>
 
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
-autocmd BufNewFile,BufRead *.md setfiletype markdown
+autocmd vimrc BufNewFile,BufRead *.md setfiletype markdown
 " *.pdeなファイルをArduinoではなくProcessingとみなす
-autocmd BufNewFile,BufRead *.pde setfiletype processing
+autocmd vimrc BufNewFile,BufRead *.pde setfiletype processing
 
 " TeXは全てLaTeXと見做す
 let g:tex_flavor = "latex"
@@ -194,7 +200,7 @@ let g:tex_flavor = "latex"
 let g:vim_indent_cont = 0
 
 " gitのコミットメッセージ編集時にDでdiffをプレビュー
-autocmd FileType gitcommit nnoremap D :DiffGitCached<CR>
+autocmd vimrc FileType gitcommit nnoremap D :DiffGitCached<CR>
 
 " Vimバンドルのnetrw.vimをファイラとしても使う
 " http://blog.tojiru.net/article/234400966.html 参考
@@ -213,11 +219,11 @@ let g:netrw_home = $HOME.'/.vim/'
 " デフォルトでツリー表示にする
 let g:netrw_liststyle = 3
 " netrwの画面ではqqqで閉じる
-autocmd FileType netrw nnoremap <buffer> qqq :q<CR>
+autocmd vimrc FileType netrw nnoremap <buffer> qqq :q<CR>
 
 " Vimで shebang 付ファイルを保存時に実行権限を自動で付加する
 " http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
-autocmd BufWritePost * :call AddExecmod()
+autocmd vimrc BufWritePost * :call AddExecmod()
 function AddExecmod()
   let line = getline(1)
   if strpart(line, 0, 2) == "#!"
@@ -472,12 +478,12 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 " inoremap <expr><CR>  neocomplete#smart_close_popup() . "\<CR>"
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd vimrc FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd vimrc FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd vimrc FileType javascript setlocal omnifunc=jscomplete#CompleteJS
+autocmd vimrc FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd vimrc FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd vimrc FileType java setlocal omnifunc=javacomplete#Complete
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -485,7 +491,7 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
 endif
 " let g:neocomplete#sources#omni#input_patterns.ruby = ''
 " let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+" autocmd vimrc FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
@@ -550,7 +556,7 @@ let g:user_emmet_settings.lang = 'ja'
 
 " scheme.vim（Gauche向けシンタックスファイル。~/.vim/syntax/scheme.vim）
 " http://legacy.e.tir.jp/wiliki?vim%3Ascheme.vim
-autocmd FileType scheme :let is_gauche=1
+autocmd vimrc FileType scheme :let is_gauche=1
 
 " ref.vim
 " ref-javadoc
@@ -683,7 +689,7 @@ let g:yankround_dir = '~/.cache/yankround'
 " 削除レジスタ("_)へ削除(d)の意味
 " つまり<Cursor>を消去している
 " 最終的にカーソルは<Cursor>の有った場所の一つ前にある
-autocmd User plugin-template-loaded
+autocmd vimrc User plugin-template-loaded
 \ if search('<Cursor>')
 \ | execute 'normal! "_da>'
 \ | endif
@@ -797,7 +803,7 @@ let g:jellybeans_overrides = {
 " http://d.hatena.ne.jp/piropiropiroshki/20100321/1269119181
 " http://mugijiru.seesaa.net/article/203066121.html
 " http://vim-users.jp/2009/07/hack40/
-autocmd ColorScheme * call s:my_highlights()
+autocmd vimrc ColorScheme * call s:my_highlights()
 function! s:my_highlights()
   highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
   highlight WhitespaceEOL ctermbg=red guibg=red
