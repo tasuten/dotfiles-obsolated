@@ -274,9 +274,6 @@ NeoBundle 't9md/vim-quickhl'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundleLazy 'mattn/lisper-vim'
-" neocomplete, vimproc必須。uniteは有った方が良い
-" また、Gauche必須
-NeoBundle 'aharisu/vim-gdev'
 " 要python
 NeoBundle 'sjl/gundo.vim'
 
@@ -613,8 +610,6 @@ nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
 nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
 nnoremap [doc]je :<C-u>Ref<Space>webdict<Space>je<Space>
 nnoremap [doc]ej :<C-u>Ref<Space>webdict<Space>ej<Space>
-" ref.vimでは無いけどUnite + vim-gdevでgaucheのシンボル検索
-nnoremap [doc]ga :<C-u>Unite<Space>gosh_all_symbol<CR>
 " 同じくref.vimではないけどcodic-vimのunite source
 nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
