@@ -184,6 +184,16 @@ nnoremap qq <Nop>
 " CTRL-_に。本当はCTRL-:にしたかったけど、そんなキーコードはASCII的に無い
 nnoremap <C-_> <C-o>
 
+" コマンドラインモードでEmacsライクなキーバインド
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-e> <End>
+" http://stackoverflow.com/questions/26310401/
+" 既知の問題として、incsearch.vimの/や?では効かないことに注意
+cnoremap <C-k> <C-\>e
+\getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
+
 " *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
 autocmd vimrc BufNewFile,BufRead *.md setfiletype markdown
 " *.pdeなファイルをArduinoではなくProcessingとみなす
@@ -259,7 +269,6 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'camelcasemotion'
