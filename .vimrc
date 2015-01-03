@@ -113,10 +113,6 @@ nnoremap X "_X
 inoremap <silent> <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
 inoremap <silent> <C-r>+ <C-o>:set paste<CR><C-r>+<C-o>:set nopaste<CR>
 
-" 検索結果のハイライトを<C-g>でトグル(C-gにしたのはhの1つ左にあったから)
-" http://stackoverflow.com/questions/99161/how-do-you-make-vim-unhighlight-what-you-searched-for
-nnoremap <silent> <C-g> :set hlsearch!<CR>
-
 " <C-hjkl>でウィンドウ移動
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
