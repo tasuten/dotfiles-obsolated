@@ -427,7 +427,8 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " の行を少し書き換えた
 let g:neocomplete#sources#dictionary#dictionaries = {
 \ 'default' : '',
-\ 'vimshell' : $HOME.'/.vimshell/command-history'
+\ 'vimshell' : $HOME.'/.vimshell/command-history',
+\ 'scheme' : $HOME.'/.gosh_completions'
 \ }
 
 " Define keyword.
