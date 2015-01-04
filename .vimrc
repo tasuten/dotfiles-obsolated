@@ -206,7 +206,7 @@ let g:tex_flavor = 'latex'
 let g:vim_indent_cont = 0
 
 " gitのコミットメッセージ編集時にDでdiffをプレビュー
-autocmd vimrc FileType gitcommit nnoremap D :DiffGitCached<CR>
+autocmd vimrc FileType gitcommit nnoremap <buffer> D :DiffGitCached<CR>
 
 " Vimバンドルのnetrw.vimをファイラとしても使う
 " http://blog.tojiru.net/article/234400966.html 参考
