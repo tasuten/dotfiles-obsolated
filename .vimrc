@@ -257,7 +257,7 @@ NeoBundle 'matchit.zip'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
-" vimprocはvimshellとquickrunの非同期実行に必要
+" vimprocはquickrunの非同期実行に必要
 NeoBundle 'Shougo/vimproc', {
 \ 'build' : {
 \ 'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -266,7 +266,6 @@ NeoBundle 'Shougo/vimproc', {
 \ 'unix' : 'make -f make_unix.mak',
 \ },
 \ }
-NeoBundle 'Shougo/vimshell'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nishigori/increment-activator'
@@ -429,11 +428,8 @@ let g:neocomplete#sources#syntax#min_syntax_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
-" \  'vimshell' : $HOME.'/.vimshell_hist',
-" の行を少し書き換えた
 let g:neocomplete#sources#dictionary#dictionaries = {
 \ 'default' : '',
-\ 'vimshell' : $HOME.'/.vimshell/command-history',
 \ 'scheme' : $HOME.'/.gosh_completions'
 \ }
 
@@ -648,9 +644,6 @@ au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 
 " unite.vimここまで
 
-" VimShell
-nnoremap <silent> <Leader>vs :<C-u>VimShellPop -toggle<CR>
-
 " yankround.vim
 " YankRing likeなキーバインド
 nmap p <Plug>(yankround-p)
@@ -823,7 +816,7 @@ let g:lightline.component = {
 \   'fileformat' : '%{ff_table[&fileformat]}',
 \ }
 
-" UniteやVimShell、Netrw、Gundoの時modeやfilenameをちょっと細工する
+" UniteやNetrw、Gundoの時modeやfilenameをちょっと細工する
 let g:lightline.component_function = {
 \ 'mode'     : 'MyMode',
 \ 'filename' : 'MyFilename',
@@ -832,7 +825,6 @@ let g:lightline.component_function = {
 function! MyMode()
   let fname = expand('%:t')
   return  &ft ==# 'unite' ? 'Unite' :
-  \ &ft ==# 'vimshell' ? 'VimShell' :
   \ &ft ==# 'netrw' ? 'Netrw' :
   \ &ft ==# 'gundo' ? 'Gundo' :
   \ fname ==# '__Gundo_Preview__' ? 'Gundo-P' :
@@ -843,14 +835,12 @@ function! MyFilename()
   let fname = expand('%:t')
   " netrwでは開いているディレクトリを表示
   return  &ft ==# 'unite' ? unite#get_status_string() :
-  \ &ft ==# 'vimshell' ? vimshell#get_status_string() :
   \ &ft ==# 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
   \ (fname ==# '__Gundo__' || fname ==# '__Gundo_Preview__') ? '' :
   \ '' !=# fname ? fname : '[No Name]'
 endfunction
 
 let g:unite_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
 
 " readonlyがfilenameより左に表示されるのが気になったので
 let g:lightline.active = {
