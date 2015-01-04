@@ -745,6 +745,8 @@ let g:ctrlp_show_hidden = 1
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
+autocmd vimrc FileType gundo nnoremap <buffer> :q :<C-u>GundoHide<CR>
+autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>GundoHide<CR>
 
 " jscomplete-vim
 " DOM APIも補完対象に
