@@ -207,6 +207,7 @@ let g:vim_indent_cont = 0
 
 " gitのコミットメッセージ編集時にDでdiffをプレビュー
 autocmd vimrc FileType gitcommit nnoremap <buffer> D :DiffGitCached<CR>
+autocmd vimrc FileType git nnoremap <buffer> D :q<CR>
 
 " Vimバンドルのnetrw.vimをファイラとしても使う
 " http://blog.tojiru.net/article/234400966.html 参考
