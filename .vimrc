@@ -440,6 +440,9 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 " 英字のみキャッシュする
 let g:neocomplete#keyword_patterns.default = '\h\w*'
+" Schemeの識別子はちょっと特殊
+let g:neocomplete#keyword_patterns.scheme =
+\'[[:alpha:]!$%&*+/:<=>?@\^_~\-][[:alnum:]!$%&*./:<=>?@\^_~\-]*'
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
