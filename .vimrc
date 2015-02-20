@@ -318,18 +318,10 @@ NeoBundle 'ujihisa/neco-look'
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'tsukkee/unite-help'
-NeoBundle 'osyo-manga/unite-filetype'
-" colorschemeを変更するsource
-" -auto-previewと組み合わせると便利かもしれない、とのこと
-NeoBundle 'ujihisa/unite-colorscheme'
 " Codicというソフトウェア開発者用和英辞書サービスにアクセスする
 " プラグインとsource
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
-" これ以外にもvim-refにもuniteのsourceが付属。:Unite ref/refeのように使用
-" Uniteについては、Unite本体についてくるUnite-findやUnite-grepがすごく便利そう
 
 " filetype類
 NeoBundle 'thinca/vim-ft-clojure'
