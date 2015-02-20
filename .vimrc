@@ -597,53 +597,8 @@ nnoremap [doc]ej :<C-u>Ref<Space>webdict<Space>ej<Space>
 nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
 " unite.vim
-" http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin を参考にした
-
-" The prefix key.
-nnoremap [unite] <Nop>
-nmap s [unite]
-
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
-
-" バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-" レジスタ一覧
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
-" source一覧
-nnoremap <silent> [unite]e :<C-u>Unite source<CR>
-
-" Unite grep
-nnoremap [unite]g :<C-u>Unite grep -buffer-name=grep -no-quit -auto-preview<CR>
-" バッファ内の行検索
-nnoremap [unite]l :<C-u>Unite -buffer-name=search line -start-insert<CR>
-
-" Unite outline
-nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
-" Unite help
-nnoremap <silent> [unite]h :<C-u>Unite help<CR>
-" Unite filetype
-nnoremap <silent> [unite]t :<C-u>Unite filetype<CR>
-" Unite colorscheme
-nnoremap <silent> [unite]cm :<C-u>Unite colorscheme -auto-preview<CR>
-
-" file選択時でのデフォルトアクション（<CR>の時とかの挙動）をopenではなくsplitに
-call unite#custom_default_action('file', 'split')
-
-" そのウィンドウに直に開く(open。:eな感じ？)
-au FileType unite nnoremap <silent> <buffer> <expr> <C-e> unite#do_action('open')
-au FileType unite inoremap <silent> <buffer> <expr> <C-e> unite#do_action('open')
-" ウィンドウを分割して開く
-" au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-" au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-" ウィンドウを縦に分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-" au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-" ESCキーを2回押すと終了する
-" au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
-" au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
-
-" unite.vimここまで
 
 " yankround.vim
 " YankRing likeなキーバインド
