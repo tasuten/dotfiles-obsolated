@@ -616,17 +616,17 @@ autocmd vimrc User plugin-template-loaded
 " :h camelcasemotion-configuration より
 map w <Plug>CamelCaseMotion_w
 map b <Plug>CamelCaseMotion_b
-map e <Plug>CamelCaseMotion_e
+" map e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
-sunmap e
+" sunmap e
 " テキストオブジェクト
 omap iw <Plug>CamelCaseMotion_iw
 xmap iw <Plug>CamelCaseMotion_iw
 omap ib <Plug>CamelCaseMotion_ib
 xmap ib <Plug>CamelCaseMotion_ib
-omap ie <Plug>CamelCaseMotion_ie
-xmap ie <Plug>CamelCaseMotion_ie
+" omap ie <Plug>CamelCaseMotion_ie
+" xmap ie <Plug>CamelCaseMotion_ie
 
 " MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
 " デフォルトではg/なのが思い出せないのでm/にも
