@@ -331,7 +331,7 @@ NeoBundle 'endel/ctrlp-filetype.vim'
 NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'javacomplete', {
 \ 'build' : {
-\ 'mac' : 'javac autoload/Reflection.java',
+\ 'mac' : 'javac -J-Dfile.encoding=UTF-8 autoload/Reflection.java',
 \ 'unix' : 'javac autoload/Reflection.java',
 \ },
 \ }
