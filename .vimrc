@@ -325,6 +325,7 @@ NeoBundle 'rhysd/unite-codic.vim'
 " ctrlp.vim
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tacahiroy/ctrlp-funky'
+NeoBundle 'endel/ctrlp-filetype.vim'
 
 " filetype類
 NeoBundle 'thinca/vim-ft-clojure'
@@ -693,6 +694,8 @@ nmap e [ctrlp]
 nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 " アウトライン(ctrlp-funky)
 nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
+" ファイルタイプ
+nnoremap <silent> [ctrlp]t :CtrlPFiletype<CR>
 
 
 " gundo.vim
