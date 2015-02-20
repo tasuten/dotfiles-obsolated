@@ -278,7 +278,6 @@ NeoBundle 'haya14busa/incsearch.vim'
 " なお、smartinputは<BS>や<Enter>にマッピングを行うが
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
-NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundleLazy 'mattn/lisper-vim'
 " 要python
 NeoBundle 'sjl/gundo.vim'
@@ -322,6 +321,10 @@ NeoBundle 'Shougo/unite.vim'
 " プラグインとsource
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
+
+" ctrlp.vim
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'tacahiroy/ctrlp-funky'
 
 " filetype類
 NeoBundle 'thinca/vim-ft-clojure'
@@ -688,6 +691,8 @@ nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
 " 行
 nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
+" アウトライン(ctrlp-funky)
+nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
 
 
 " gundo.vim
