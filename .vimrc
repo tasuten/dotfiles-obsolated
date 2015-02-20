@@ -683,6 +683,12 @@ call smartinput#define_rule({'at': '\%#\_s*>', 'char': '>', 'input': '<C-r>=smar
 let g:ctrlp_map = '<C-e>'
 " 隠しファイルも表示する
 let g:ctrlp_show_hidden = 1
+" The prefix key
+nnoremap [ctrlp] <Nop>
+nmap e [ctrlp]
+" 行
+nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
+
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
