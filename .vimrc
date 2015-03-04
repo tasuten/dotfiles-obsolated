@@ -254,7 +254,6 @@ endif
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'matchit.zip'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
@@ -368,6 +367,9 @@ NeoBundleLocalPluginLazy 'rsense.vim'
 NeoBundleLocalPlugin 'vim-processing'
 
 call neobundle#end()
+
+" matchitはVimバンドルのモノを使う
+source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
 
