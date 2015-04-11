@@ -1,9 +1,4 @@
-"タブ関連
-"インデントの類はTABを使う
-"setlocal noexpandtab
-
-"以下タブ関連はEmacsに合わせた
-setlocal expandtab
+" インデント関連
 setlocal shiftwidth=4
 setlocal softtabstop=4
 

@@ -28,6 +28,18 @@ set backspace=indent,eol,start
 set noignorecase
 set nosmartcase
 
+" インデントは基本スペースを使う
+set expandtab
+
+" スマートインデント
+set autoindent
+set smartindent
+
+" インデント幅は基本スペース2個
+" 明示的に指定する時はftplugin/[filetype].vimで
+set softtabstop=2
+set shiftwidth=2
+
 " <C-p><C-n>の補完でincludeファイル(requireとか#includeしたファイル)からも
 " 補完されるのが邪魔だったのでそうしないように
 " デフォルトは.,w,b,u,t,i

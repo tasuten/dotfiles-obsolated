@@ -1,9 +1,4 @@
-"タブ関連
-setlocal expandtab
+" インデント関連
 setlocal shiftwidth=2
 setlocal softtabstop=2
-
-"スマートインデント
-setlocal autoindent
-setlocal smartindent
 

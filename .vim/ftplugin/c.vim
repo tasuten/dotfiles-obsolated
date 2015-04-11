@@ -1,9 +1,8 @@
-"タブ関連
-"インデントの類はTABを使う
-"setlocal noexpandtab
+" インデント関連
+" Tabを使う
+" setlocal noexpandtab
 
-"以下タブ関連はEmacsに合わせた
-setlocal expandtab
+" Emacs準拠
 setlocal shiftwidth=2
 setlocal softtabstop=2
 
