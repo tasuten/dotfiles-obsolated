@@ -349,7 +349,7 @@ NeoBundle 'javacomplete', {
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
-NeoBundle 'amdt/vim-niji'
+NeoBundle 'spinningarrow/vim-niji'
 
 " colorscheme類
 NeoBundle 'nanotech/jellybeans.vim'
