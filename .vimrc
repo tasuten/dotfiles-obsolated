@@ -476,9 +476,6 @@ autocmd vimrc FileType java setlocal omnifunc=javacomplete#Complete
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-" let g:neocomplete#sources#omni#input_patterns.ruby = ''
-" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" autocmd vimrc FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
