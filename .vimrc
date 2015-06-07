@@ -374,8 +374,6 @@ command! -nargs=1 NeoBundleLocalPluginLazy
 \       'base' : g:local_plugin_base_path,
 \       'type' : 'nosync',
 \   }
-" rsense.vim
-NeoBundleLocalPluginLazy 'rsense.vim'
 
 call neobundle#end()
 
@@ -491,18 +489,6 @@ if !exists('g:neocomplete#sources#include#paths')
   let g:neocomplete#sources#include#paths = {}
 endif
 let g:neocomplete#sources#include#paths.c  =  '/usr/include,'.'/usr/local/include'
-
-" rsense
-" 補記:neocompleteで補完されない時は
-" 何度かやってみるかオムニ補完(<C-x><C-o>)でやるといいかも
-" if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-" endif
-" let g:rsenseUseOmniFunc = 1
-" if filereadable(expand('/usr/local/bin/rsense'))
-" let g:rsenseHome = expand(substitute(system('brew --prefix rsense'), '\n', '', 'g').'/libexec')
-" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" endif
 
 " clang_completeの補完をneocompleteで
 " http://d.hatena.ne.jp/osyo-manga/20120911/1347354707 より
