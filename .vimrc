@@ -348,6 +348,7 @@ NeoBundle 'javacomplete', {
 \ }
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
+NeoBundle 'sophacles/vim-processing'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
 NeoBundle 'spinningarrow/vim-niji'
 
@@ -375,8 +376,6 @@ command! -nargs=1 NeoBundleLocalPluginLazy
 \   }
 " rsense.vim
 NeoBundleLocalPluginLazy 'rsense.vim'
-" https://github.com/sophacles/vim-processing を自分用に弄ったもの
-NeoBundleLocalPlugin 'vim-processing'
 
 call neobundle#end()
 
