@@ -184,9 +184,7 @@ alias jar='jar -J-Dfile.encoding=UTF-8'
 
 # opencでopen .（カレントディレクトリを開く）
 alias openc='open .'
-# emacsコマンドでCarbon Emacsを起動
-alias emacs='open -a Emacs'
-# 他にもGUIなソフトウェアをいくつかコマンドラインでも起動できるように
+# GUIなソフトウェアをいくつかコマンドラインでも起動できるように
 alias coteditor='open -a CotEditor'
 alias firefox='open -a Firefox'
 
