@@ -4,7 +4,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
 # w3mのスタートページをwww.google.co.jpに
-# W3M FAQ http://homepage2.nifty.com/aito/w3m/FAQ.html 参照
 export WWW_HOME='www.google.co.jp'
 
 # GMT(http://gmt.soest.hawaii.edu/ )向け設定

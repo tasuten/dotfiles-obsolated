@@ -1,7 +1,5 @@
 # 環境変数は原則~/.zprofileの方に書いた
 
-# 『zshの本』がほぼ日本語版マニュアルという感じで詳しい
-
 # lsのディレクトリの色が黒バックの場合デフォルトでは青で見難いのでシアンに
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # 補完の方の色はこっち
@@ -24,9 +22,6 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 fpath=(~/.zsh/functions $fpath)
 
 
-# http://blog.blueblack.net/item_204 等ベースにした
-# zsh使用に際して1つ注意。bashとかの.profileはzshは読まないので
-# .zprofileにmv又はcp
 export LANG=ja_JP.UTF-8
 
 # 履歴の保存先
@@ -136,8 +131,6 @@ typeset -U path cdpath fpath manpath
 disable r
 
 # プロンプト
-# http://blog.blueblack.net/item_207 参考
-# プロンプトの設定
 autoload colors
 colors
 # 太字(%B %b)で青色(%F{blue} %f)、プロンプトは$ のみ
