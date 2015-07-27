@@ -481,12 +481,6 @@ let g:neocomplete#sources#omni#input_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.java = '\%(\.\)\h\w*'
 
-" include補完
-if !exists('g:neocomplete#sources#include#paths')
-  let g:neocomplete#sources#include#paths = {}
-endif
-let g:neocomplete#sources#include#paths.c  =  '/usr/include,'.'/usr/local/include'
-
 " clang_completeの補完をneocompleteで
 " http://d.hatena.ne.jp/osyo-manga/20120911/1347354707 より
 " neocomplete 側の設定
