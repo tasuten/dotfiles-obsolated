@@ -574,6 +574,7 @@ nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
+nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
 " ref.vim/webdict
 nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
 nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
