@@ -59,7 +59,6 @@ set listchars=tab:»\
 " highlight SpecialKey ctermfg=lightblue guibg=lightblue
 
 " 行番号を濃い灰色で表示
-" highlightの色とかは:so $VIMRUNTIME/syntax/colortest.vim 参照
 set number
 " highlight LineNr ctermfg=darkgray
 
@@ -88,7 +87,6 @@ set shiftround
 inoremap , ,<Space>
 
 " カーソル移動を物理行でなくレイアウト行で
-" 物理行で移動するにはC-pやC-nで
 nnoremap j gj
 nnoremap k gk
 nnoremap <Up> gk
@@ -167,9 +165,6 @@ function! QFixToggle(forced)
 endfunction
 nnoremap <silent> <Space>q :QFixToggle<CR>
 
-" <Space>sでスクラッチファイルを開く。:ScratchはKaoriYa同梱
-nnoremap <Space>s :Scratch<CR>
-
 " <ESC>と誤爆しやすい<F1>でヘルプが表示されないように
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
@@ -220,25 +215,6 @@ let g:vim_indent_cont = 0
 " gitのコミットメッセージ編集時にDでdiffをプレビュー
 autocmd vimrc FileType gitcommit nnoremap <buffer> D :DiffGitCached<CR>
 autocmd vimrc FileType git nnoremap <buffer> D :q<CR>
-
-" Vimバンドルのnetrw.vimをファイラとしても使う
-" http://blog.tojiru.net/article/234400966.html 参考
-" 簡易な操作説明としては、<CR>で現在のバッファに、tで新しいタブに
-" oでsplitしてそのファイルを開く、vでvsplitしてそのファイルを開く
-" iで表示スタイルの切り替え
-" splitしてnetrwを開くキーバインド。大文字だとプロンプトを出す
-nnoremap <Space>n :Sexplore<CR>
-nnoremap <Space>N :Sexplore<Space>
-" oで下側にsplit、vで右側にvsplitする（デフォルトは逆方向）
-" ちなみに<CR>の挙動はg:netrw_browse_splitで変更可能
-let g:netrw_alto = 1
-let g:netrw_altv = 1
-" ブックマークと履歴の保存先
-let g:netrw_home = $HOME.'/.vim/'
-" デフォルトでツリー表示にする
-let g:netrw_liststyle = 3
-" netrwの画面ではqqqで閉じる
-autocmd vimrc FileType netrw nnoremap <buffer> qqq :q<CR>
 
 " Vimで shebang 付ファイルを保存時に実行権限を自動で付加する
 " http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
@@ -295,22 +271,10 @@ NeoBundle 'sjl/gundo.vim'
 
 " text-object
 NeoBundle 'kana/vim-textobj-user'
-" 以下i, a以降のキーのみ示す。ちなみにaはオブジェクト全体、iはその"内側"
-" 例（削除の例）: da → dida/dada
 " コメント。c
 NeoBundle 'thinca/vim-textobj-comment'
-" 日本語の括弧類。（）はjbかj(かj)、「」はjk、『』はjK、【】はjs
-NeoBundle 'kana/vim-textobj-jabraces'
-" あるsyntaxと、またあるsyntaxで囲まれた範囲。q
-" 例としてRubyやPerlの正規表現リテラルなど
-" 詳しくはhttp://d.hatena.ne.jp/deris/20121209/1355048075 参照
-NeoBundle 'deris/vim-textobj-enclosedsyntax'
 " URL。u
 NeoBundle 'mattn/vim-textobj-url'
-" Rubyのブロック。r
-NeoBundle 'rhysd/vim-textobj-ruby'
-" PHPのタグ内。例えば<?から?>まで。P
-NeoBundle 'akiyan/vim-textobj-php'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
 " 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
 NeoBundle 'tpope/vim-surround'
@@ -408,10 +372,6 @@ let g:quickrun_config.markdown = {
 \ 'outputter' : 'browser'
 \ }
 " (La)TeX
-"LaTeXをquickrunで楽に処理する - プログラムモグモグ
-" http://d.hatena.ne.jp/itchyny/20121001/1349094989
-" 等参考。viewtexは~/bin/に
-let g:quickrun_config.tex = { 'command' : 'viewtex' }
 " Processing
 " http://kazuph.hateblo.jp/entry/2013/03/20/211336
 let g:quickrun_config.processing = {
@@ -524,43 +484,6 @@ let g:user_emmet_settings.lang = 'ja'
 " ref-javadoc
 " ローカルのパスでないとダメ
 let g:ref_javadoc_path = '/usr/local/java6_ja_apidocs/'
-" webdictソースについて
-if !exists('g:ref_source_webdict_sites')
-  let g:ref_source_webdict_sites = {}
-endif
-" Wikipedia（日本語版）
-let g:ref_source_webdict_sites.wikipedia = {
-\  'url' : 'http://ja.wikipedia.org/wiki/%s',
-\ 'keyword_encoding' : 'utf-8',
-\ 'cache' : 1
-\ }
-" Wiktionary
-" 15行目（あたり）に適当にフォーカス
-let g:ref_source_webdict_sites.wiktionary = {
-\  'url' : 'http://ja.wiktionary.org/wiki/%s',
-\ 'keyword_encoding' : 'utf-8',
-\ 'cache' : 1,
-\ 'line' : 15
-\ }
-" Infoseekマルチ辞書
-" http://www.karakaram.com/vim/ref-webdict/ 参考
-" 最初の数行を削除している
-" 和英
-let g:ref_source_webdict_sites.je = {
-\  'url' : 'http://dictionary.infoseek.ne.jp/jeword/%s',
-\ 'keyword_encoding' : 'utf-8',
-\ }
-function! g:ref_source_webdict_sites.je.filter(output)
-  return join(split(a:output, "\n")[15 :], "\n")
-endfunction
-" 英和
-let g:ref_source_webdict_sites.ej = {
-\  'url' : 'http://dictionary.infoseek.ne.jp/ejword/%s',
-\ 'keyword_encoding' : 'utf-8',
-\ }
-function! g:ref_source_webdict_sites.ej.filter(output)
-  return join(split(a:output, "\n")[15 :], "\n")
-endfunction
 
 " ドキュメントを引くキーバインドのプレフィックスを_で統一
 " ちなみに元の機能は__で使えるようにしておいた
@@ -575,11 +498,6 @@ nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
-" ref.vim/webdict
-nnoremap [doc]wp :<C-u>Ref<Space>webdict<Space>wikipedia<Space>
-nnoremap [doc]wt :<C-u>Ref<Space>webdict<Space>wiktionary<Space>
-nnoremap [doc]je :<C-u>Ref<Space>webdict<Space>je<Space>
-nnoremap [doc]ej :<C-u>Ref<Space>webdict<Space>ej<Space>
 " 同じくref.vimではないけどcodic-vimのunite source
 nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
@@ -742,13 +660,6 @@ endfunction
 
 " colorschemeの適用
 colorscheme jellybeans
-
-" colorschemeを弄るときに便利なコマンドを設定
-" カラーパレット
-command! -nargs=0 ColorTest runtime syntax/colortest.vim
-" 現在のハイライト一覧
-command! -nargs=0 HiTest runtime syntax/hitest.vim
-
 
 " statusline
 " statuslineを常に表示
