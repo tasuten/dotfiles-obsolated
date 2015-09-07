@@ -6,13 +6,6 @@ export PATH=/usr/local/sbin:$PATH
 # w3mのスタートページをwww.google.co.jpに
 export WWW_HOME='www.google.co.jp'
 
-# GMT(http://gmt.soest.hawaii.edu/ )向け設定
-# ※Greenwich Mean Timeのことではない
-export NETCDFHOME=/usr/local/netcdf3.6.x
-export GMTHOME=/usr/local/gmt
-export PATH=$GMTHOME/bin:$PATH
-export MANPATH=$GMTHOME/man:$MANPATH
-
 # MacTeX
 export TEXBIN=/usr/texbin
 export PATH=$TEXBIN:$PATH
