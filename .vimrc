@@ -289,10 +289,6 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'ujihisa/neco-look'
 
-" unite.vimとそのsource類
-" https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
-NeoBundle 'Shougo/unite.vim'
-
 " ctrlp.vim
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tacahiroy/ctrlp-funky'
@@ -495,10 +491,6 @@ nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
 
-" unite.vim
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-
 " yankround.vim
 " YankRing likeなキーバインド
 nmap p <Plug>(yankround-p)
@@ -674,7 +666,7 @@ let g:lightline.component = {
 \   'fileformat' : '%{ff_table[&fileformat]}',
 \ }
 
-" UniteやNetrw、Gundoの時modeやfilenameをちょっと細工する
+" Netrw、Gundoの時modeやfilenameをちょっと細工する
 let g:lightline.component_function = {
 \ 'mode'     : 'MyMode',
 \ 'filename' : 'MyFilename',
@@ -682,8 +674,7 @@ let g:lightline.component_function = {
 
 function! MyMode()
   let fname = expand('%:t')
-  return  &ft ==# 'unite' ? 'Unite' :
-  \ &ft ==# 'netrw' ? 'Netrw' :
+  return  &ft ==# 'netrw' ? 'Netrw' :
   \ &ft ==# 'gundo' ? 'Gundo' :
   \ fname ==# '__Gundo_Preview__' ? 'Gundo-P' :
   \ lightline#mode()
@@ -692,13 +683,10 @@ endfunction
 function! MyFilename()
   let fname = expand('%:t')
   " netrwでは開いているディレクトリを表示
-  return  &ft ==# 'unite' ? unite#get_status_string() :
-  \ &ft ==# 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
+  return &ft ==# 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
   \ (fname ==# '__Gundo__' || fname ==# '__Gundo_Preview__') ? '' :
   \ '' !=# fname ? fname : '[No Name]'
 endfunction
-
-let g:unite_force_overwrite_statusline = 0
 
 " readonlyがfilenameより左に表示されるのが気になったので
 let g:lightline.active = {
