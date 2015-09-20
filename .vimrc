@@ -292,10 +292,6 @@ NeoBundle 'ujihisa/neco-look'
 " unite.vimとそのsource類
 " https://github.com/Shougo/unite.vim/wiki/unite-plugins とか参考になるかと
 NeoBundle 'Shougo/unite.vim'
-" Codicというソフトウェア開発者用和英辞書サービスにアクセスする
-" プラグインとsource
-NeoBundle 'koron/codic-vim'
-NeoBundle 'rhysd/unite-codic.vim'
 
 " ctrlp.vim
 NeoBundle 'ctrlpvim/ctrlp.vim'
@@ -498,8 +494,6 @@ nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
-" 同じくref.vimではないけどcodic-vimのunite source
-nnoremap [doc]co :<C-u>Unite<Space>codic<CR>
 
 " unite.vim
 " 入力モードで開始する
