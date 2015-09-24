@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 手動管理
-DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .gitconfig .vim/template .vim/snippets .vim/ftplugin .vim/after/ftplugin )
+DOTFILES=(.vimrc .zshrc .zprofile .tmux.conf .gitconfig .rbenv/default-gems .vim/template .vim/snippets .vim/ftplugin .vim/after/ftplugin)
 
 # このディレクトリを原点に環境を構築する
 # ので、スクリプトのテストする時はテスト用のディレクトリに変えて
@@ -13,6 +13,10 @@ if [ ! -e $ROOT_DIR/.vim ]; then
 fi
 if [ ! -e $ROOT_DIR/.vim/after ]; then
   mkdir $ROOT_DIR/.vim/after
+fi
+
+if [ ! -e $ROOT_DIR/.rbenv ]; then
+  mkdir $ROOT_DIR/.rbenv
 fi
 
 for file in ${DOTFILES[@]}; do

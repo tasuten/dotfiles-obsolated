@@ -1,0 +1,7 @@
+bundle
+pry
+redcarpet
+rcodetools
+# After install, execute `bitclust setup`
+refe2
+
