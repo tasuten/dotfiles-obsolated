@@ -83,9 +83,6 @@ set splitbelow
 " >や<をshiftwidthの倍数倍に丸めるようにする
 set shiftround
 
-" カンマ(,)の後に自動的にスペースを入れる
-inoremap , ,<Space>
-
 " カーソル移動を物理行でなくレイアウト行で
 nnoremap j gj
 nnoremap k gk
@@ -582,7 +579,11 @@ call lexima#add_rule({'char': '>', 'at': '<\%#', 'input': '', 'input_after': '>'
 " <#>で>を入力すると<>の外に出る
 call lexima#add_rule({'char': '>', 'at': '\%#>',  'leave': '>'})
 " <#>で<BS>で<>自体を削除
-call lexima#add_rule({'char': '<BS>',  'at': '<\%#>', 'input': '<BS>', 'delete': 2})
+call lexima#add_rule({'char': '<BS>',  'at': '<\%#>', 'input': '<BS>', 'delete': 1})
+" コンマを入力した時に後ろにスペースを付ける
+call lexima#add_rule({'char': ',', 'input': ',<Space>'})
+" ただし、そのまま改行する場合, の後ろのスペースを削除する
+call lexima#add_rule({'char': '<CR>',  'at': ', \%#', 'input': '<BS><CR>'})
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
