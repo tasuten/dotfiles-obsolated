@@ -262,9 +262,7 @@ NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'haya14busa/incsearch.vim'
-" なお、smartinputは<BS>や<Enter>にマッピングを行うが
-" 多くの場合他のプラグインで上書きされてて無効になってる
-NeoBundle 'kana/vim-smartinput'
+NeoBundle 'cohama/lexima.vim'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundleLazy 'mattn/lisper-vim'
 " 要python
@@ -576,14 +574,15 @@ map #  <Plug>(incsearch-nohl-#)zz
 map g* <Plug>(incsearch-nohl-g*)zz
 map g# <Plug>(incsearch-nohl-g#)zz
 
-" vim-smartinput
-" <や>に関する設定
-" >をトリガとして設定
-call smartinput#map_to_trigger('i', '>', '>', '>')
-" <> で<><Left>。<で>を補完しないのは不等号の入力時などを考え
-call smartinput#define_rule({'at': '<\%#', 'char': '>', 'input': '><Left>'})
-" <>内にいる時>で<>の外に脱出
-call smartinput#define_rule({'at': '\%#\_s*>', 'char': '>', 'input': '<C-r>=smartinput#_leave_block(''>'')<Enter><Right>'})
+" lexima.vim
+" <と>に関するルール
+" <>と入力すると<#>とカーソルを真ん中に
+" <と入力しただけで>を補完しないのは不等号入力を考えて
+call lexima#add_rule({'char': '>', 'at': '<\%#', 'input': '', 'input_after': '>'})
+" <#>で>を入力すると<>の外に出る
+call lexima#add_rule({'char': '>', 'at': '\%#>',  'leave': '>'})
+" <#>で<BS>で<>自体を削除
+call lexima#add_rule({'char': '<BS>',  'at': '<\%#>', 'input': '<BS>', 'delete': 2})
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
