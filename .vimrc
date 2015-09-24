@@ -265,6 +265,7 @@ NeoBundle 'haya14busa/incsearch.vim'
 " なお、smartinputは<BS>や<Enter>にマッピングを行うが
 " 多くの場合他のプラグインで上書きされてて無効になってる
 NeoBundle 'kana/vim-smartinput'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundleLazy 'mattn/lisper-vim'
 " 要python
 NeoBundle 'sjl/gundo.vim'
@@ -583,6 +584,9 @@ call smartinput#map_to_trigger('i', '>', '>', '>')
 call smartinput#define_rule({'at': '<\%#', 'char': '>', 'input': '><Left>'})
 " <>内にいる時>で<>の外に脱出
 call smartinput#define_rule({'at': '\%#\_s*>', 'char': '>', 'input': '<C-r>=smartinput#_leave_block(''>'')<Enter><Right>'})
+
+" vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
 
 " ctrlp.vim
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
