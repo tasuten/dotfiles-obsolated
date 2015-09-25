@@ -262,7 +262,7 @@ NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundleLazy 'mattn/lisper-vim'
-" 要python
+" 要Python
 NeoBundle 'sjl/gundo.vim'
 
 " text-object
@@ -300,12 +300,13 @@ NeoBundle 'javacomplete', {
 \ }
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
-NeoBundle 'osyo-manga/vim-monster' " completion for Ruby, require rcodetools
+" Completion for Ruby, requires rcodetools
+NeoBundle 'osyo-manga/vim-monster'
 NeoBundle 'sophacles/vim-processing'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
 NeoBundle 'spinningarrow/vim-niji'
 
-" colorscheme類
+" colorscheme
 NeoBundle 'nanotech/jellybeans.vim'
 " statusline
 NeoBundle 'itchyny/lightline.vim'
@@ -339,7 +340,7 @@ filetype plugin indent on
 
 
 " open-browser.vim
-" wはWebから''
+" wはWebから
 nmap <Leader>w <Plug>(openbrowser-open)
 vmap <Leader>w <Plug>(openbrowser-open)
 
@@ -360,7 +361,6 @@ let g:quickrun_config.markdown = {
 \ 'type' : 'markdown/redcarpet',
 \ 'outputter' : 'browser'
 \ }
-" (La)TeX
 " Processing
 " http://kazuph.hateblo.jp/entry/2013/03/20/211336
 let g:quickrun_config.processing = {
@@ -401,7 +401,7 @@ let g:neocomplete#keyword_patterns.default = '\h\w*'
 inoremap <expr><C-g>     neocomplete#undo_completion()
 
 " Recommended key-mappings.
-"" <CR>: close popup and save indent.
+" <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return neocomplete#close_popup() . "\<CR>"
@@ -458,8 +458,6 @@ let g:monster#completion#rcodetools#backend = "async_rct_complete"
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" SuperTab like snippets behavior.
-" imap <expr><TAB> neosippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 " ユーザ定義のsnippetsの保存先ディレクトリ
 let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
 " Runtime snippetsを無効化したいfiletype。1で無効化
@@ -629,8 +627,7 @@ let g:jellybeans_background_color = '000000'
 let g:jellybeans_overrides = {
 \    'SpecialKey' : {
 \              'guifg': '707070', 'guibg': '000000',
-\              'ctermfg': 'gray', 'ctermbg': 'black',
-\              'attr': ''} ,
+\              'ctermfg': 'gray', 'ctermbg': 'black'} ,
 \   'CursorLineNr' : {
 \               'guifg' : '707070', 'guibg' : '222222',
 \               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'},
