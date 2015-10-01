@@ -7,7 +7,7 @@ export PATH=/usr/local/sbin:$PATH
 export WWW_HOME='www.google.co.jp'
 
 # MacTeX
-export TEXBIN=/usr/texbin
+export TEXBIN=/Library/TeX/texbin/
 export PATH=$TEXBIN:$PATH
 
 # rbenv
