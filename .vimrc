@@ -476,7 +476,7 @@ let g:user_emmet_settings.lang = 'ja'
 " ref.vim
 " ref-javadoc
 " ローカルのパスでないとダメ
-let g:ref_javadoc_path = '/usr/local/java6_ja_apidocs/'
+let g:ref_javadoc_path = '/usr/local/share/doc/java8_ja_apidocs/'
 
 " ドキュメントを引くキーバインドのプレフィックスを_で統一
 " ちなみに元の機能は__で使えるようにしておいた
