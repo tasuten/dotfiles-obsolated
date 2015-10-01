@@ -277,7 +277,6 @@ NeoBundle 'tpope/vim-surround'
 
 " ref
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'pekepeke/ref-javadoc'
 
 " neocomplete
 NeoBundle 'Shougo/neocomplete'
@@ -474,10 +473,6 @@ let g:user_emmet_settings.lang = 'ja'
 " let g:user_emmet_complete_tag = 1
 
 " ref.vim
-" ref-javadoc
-" ローカルのパスでないとダメ
-let g:ref_javadoc_path = '/usr/local/share/doc/java8_ja_apidocs/'
-
 " ドキュメントを引くキーバインドのプレフィックスを_で統一
 " ちなみに元の機能は__で使えるようにしておいた
 nnoremap __ _
@@ -489,7 +484,6 @@ nnoremap [doc]h :<C-u>h<Space>
 nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
-nnoremap [doc]jd :<C-u>Ref<Space>javadoc<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
 
 " yankround.vim
