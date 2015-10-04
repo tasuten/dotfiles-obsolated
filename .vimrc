@@ -255,7 +255,6 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
-NeoBundle 'camelcasemotion'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'haya14busa/incsearch.vim'
@@ -312,6 +311,7 @@ NeoBundle 'itchyny/lightline.vim'
 
 " 自作プラグイン
 NeoBundle 'tasuten/gcalc.vim'
+NeoBundle 'tasuten/motor.vim'
 
 " リポジトリを持たないプラグイン
 " 自作プラグインを neobundle.vim で管理する - C++でゲームプログラミング
@@ -506,22 +506,6 @@ autocmd vimrc User plugin-template-loaded
 \ | execute 'normal! "_da>'
 \ | endif
 
-" camelcasemotion
-" :h camelcasemotion-configuration より
-map w <Plug>CamelCaseMotion_w
-map b <Plug>CamelCaseMotion_b
-" map e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-" sunmap e
-" テキストオブジェクト
-omap iw <Plug>CamelCaseMotion_iw
-xmap iw <Plug>CamelCaseMotion_iw
-omap ib <Plug>CamelCaseMotion_ib
-xmap ib <Plug>CamelCaseMotion_ib
-" omap ie <Plug>CamelCaseMotion_ie
-" xmap ie <Plug>CamelCaseMotion_ie
-
 " MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
 " デフォルトではg/なのが思い出せないのでm/にも
 " 元のmは一応mmに
@@ -604,6 +588,25 @@ autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>Gu
 " jscomplete-vim
 " DOM APIも補完対象に
 let g:jscomplete_use = ['dom']
+
+" motor.vim
+let g:motor#default_word_pattern = [
+\ '\l+',
+\ '\u\l+',
+\ '\u+',
+\ '\d+',
+\ '%(\s+|\_^)\zs[!-@:-?\[-`{-~]+\ze%(\s+|$)',
+\ '[ぁ-んー〜]+',
+\ '[ァ-ンヴヵヶー〜]+',
+\ '[一-龠々〇]+'
+\]
+
+map  w  <Plug>(motor-w)
+map  b  <Plug>(motor-b)
+" map  e  <Plug>(motor-e)
+map  ge <Plug>(motor-ge)
+omap iw <Plug>(motor-textobj-w)
+xmap iw <Plug>(motor-textobj-w)
 
 " プラグイン設定ここまで
 
