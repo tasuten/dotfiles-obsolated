@@ -177,9 +177,6 @@ alias jar='jar -J-Dfile.encoding=UTF-8'
 
 # opencでopen .（カレントディレクトリを開く）
 alias openc='open .'
-# GUIなソフトウェアをいくつかコマンドラインでも起動できるように
-alias coteditor='open -a CotEditor'
-alias firefox='open -a Firefox'
 
 # diffの代わりにcolordiffを使う。Homebrewでインストール可能
 # ついでにunified形式で出力するようにする
@@ -200,9 +197,6 @@ export GREP_COLOR='00;36'
 # 隠しファイル(.vimrc等)を検索対象に入れるが、.git/は無視する
 alias ag='ag --hidden --ignore .git/'
 
-# cdがpushdなのでpopdをpdにalias
-alias pd='popd'
-
 # git周りのalias
 # gitレポジトリのルートに移動する
 alias cd_git='cd $(git rev-parse --show-toplevel)'
@@ -212,7 +206,6 @@ alias cd_git='cd $(git rev-parse --show-toplevel)'
 alias gst='git status -s -b && git stash list'
 alias gca='git commit -a'
 alias gdf='git diff --word-diff'
-alias glo='git log --oneline --decorate --graph'
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
@@ -233,15 +226,6 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
 alias -g C='| pbcopy' # クリップボードへコピー
-
-# zshのcorrectのお節介を少し改善
-# coreutilsパッケージのGNU版lsとか向け
-# 一応使いそうなのだけ。また適時追加
-alias gcat="nocorrect gcat"
-alias gcp="nocorrect gcp"
-alias gls="nocorrect gls"
-alias gmv="nocorrect gmv"
-# お節介のここまで
 
 # exit周り
 alias q='exit'
