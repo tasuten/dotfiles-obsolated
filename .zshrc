@@ -130,6 +130,11 @@ typeset -U path cdpath fpath manpath
 # zshのビルトインコマンドのr（直前に実行したコマンドを実行）を無効化
 disable r
 
+# zplug, plugin manager
+source ~/.zplug/zplug
+
+zplug load
+
 # プロンプト
 autoload colors
 colors
