@@ -131,7 +131,7 @@ disable r
 source ~/.zplug/zplug
 
 # zは_Z_CMDをスクリプト中で参照して設定するので、
-# loadより前に書く必要がある
+# sourceより前に書く必要がある
 # zの代わりにより打ちやすいjキーに
 export _Z_CMD=j
 # 補完関数を有効にする
