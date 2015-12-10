@@ -133,7 +133,21 @@ disable r
 # zplug, plugin manager
 source ~/.zplug/zplug
 
+# plugin config
+# z
+# zは_Z_CMDをスクリプト中で参照して設定するので、
+# loadより前に書く必要がある
+# zの代わりにより打ちやすいjキーに
+export _Z_CMD=j
+# 補完関数を有効にする
+compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
+
+# commands
+zplug 'rupa/z', of:z.sh
+
+# zplugここまで
 zplug load
+
 
 # プロンプト
 autoload colors
@@ -159,12 +173,6 @@ case "${TERM}" in
     ;;
 esac
 
-# z
-# zの代わりにより打ちやすいjキーに
-export _Z_CMD=j
-. `brew --prefix`/etc/profile.d/z.sh
-# 補完関数を有効にする
-compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 
 # 以下alias周り
 
