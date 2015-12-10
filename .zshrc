@@ -18,9 +18,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 # ../とした時に今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
-# zshの補完関数ファイル等の保存先
-fpath=(~/.zsh/functions $fpath)
-
 
 export LANG=ja_JP.UTF-8
 
@@ -146,6 +143,8 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 zplug 'b4b4r07/zplug'
 zplug 'rupa/z', of:z.sh
 zplug 'mollifier/cd-gitroot'
+# completion
+zplug 'tpope/1175742', from:gist
 
 # zplugここまで
 zplug load
