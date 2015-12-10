@@ -144,6 +144,7 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 
 # commands
 zplug 'rupa/z', of:z.sh
+zplug 'mollifier/cd-gitroot'
 
 # zplugここまで
 zplug load
@@ -210,10 +211,7 @@ export GREP_COLOR='00;36'
 # 隠しファイル(.vimrc等)を検索対象に入れるが、.git/は無視する
 alias ag='ag --hidden --ignore .git/'
 
-# git周りのalias
-# gitレポジトリのルートに移動する
-alias cd_git='cd $(git rev-parse --show-toplevel)'
-# 短縮コマンド
+# git周りの短縮コマンド
 # gstでgit statusを短縮表示(-s)かつブランチ名を表示(-b)し
 # stashのリストも表示
 alias gst='git status -s -b && git stash list'
