@@ -130,8 +130,6 @@ disable r
 # zplug, plugin manager
 source ~/.zplug/zplug
 
-# plugin config
-# z
 # zは_Z_CMDをスクリプト中で参照して設定するので、
 # loadより前に書く必要がある
 # zの代わりにより打ちやすいjキーに
@@ -143,11 +141,17 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 zplug 'b4b4r07/zplug'
 zplug 'rupa/z', of:z.sh
 zplug 'mollifier/cd-gitroot'
+zplug 'm4i/cdd', of:cdd
 # completion
 zplug 'tpope/1175742', from:gist
 
 # zplugここまで
 zplug load
+
+# plugin config
+# cdd
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd _cdd_chpwd
 
 
 # プロンプト
@@ -243,16 +247,6 @@ alias q='exit'
 alias quit='exit'
 
 # alias周りここまで
-
-# cdd を tmux, bash, multi session +α に対応した - カワイイはつくれる
-# http://m4i.hatenablog.com/entry/2012/01/26/064329
-autoload -Uz compinit
-compinit
-. ~/bin/cdd
-
-chpwd() {
-  _cdd_chpwd
-}
 
 # tmuxを自動で起動
 if [[ "$TMUX" = "" ]]; then
