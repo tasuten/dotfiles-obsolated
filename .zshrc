@@ -104,6 +104,8 @@ setopt auto_param_keys
 setopt auto_param_slash
 # ↑でスラッシュが補完された後、;やスペースを入力したら自動的にそのスラッシュを消す
 setopt auto_remove_slash
+# **/*.cのようなパターンを**.cと書けるようにする
+setopt glob_star_short
 # スペルチェック
 setopt correct
 # {a-c}や{cba}を a b c に展開する機能を使えるようにする
