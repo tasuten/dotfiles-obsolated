@@ -69,6 +69,9 @@ set number
 " カーソルがある行をハイライト
 set cursorline
 
+" showcmdは個人的には画面に頻繁にちらつくのが気に入らなかったので
+set noshowcmd
+
 " statuslineはプラグイン設定の後で
 
 " インデントに関する設定も反映させるためにindentもonに
