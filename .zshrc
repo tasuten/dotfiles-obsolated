@@ -28,10 +28,6 @@ HISTSIZE=100000
 # 保存する履歴の数
 SAVEHIST=100000
 
-# 補完機能の強化
-autoload -U compinit
-compinit
-
 # コアダンプサイズを制限
 limit coredumpsize 102400
 # 出力の文字列末尾に改行コードが無い場合でも表示
@@ -154,6 +150,11 @@ zplug load
 # cdd
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd _cdd_chpwd
+
+# zplugでインストールした補完ファイルを読み込むには
+# zplug loadの後にcompinitする必要があるっぽい
+autoload -U compinit
+compinit
 
 
 # プロンプト
