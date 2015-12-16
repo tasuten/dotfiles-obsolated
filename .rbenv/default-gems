@@ -2,6 +2,6 @@ bundle
 pry
 redcarpet
 rcodetools
-# After install, execute `bitclust setup`
+# After install of refe2, execute `bitclust setup`
 refe2
 
