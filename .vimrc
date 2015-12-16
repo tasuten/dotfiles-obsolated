@@ -301,8 +301,6 @@ NeoBundle 'javacomplete', {
 \ }
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
-" Completion for Ruby, requires rcodetools
-NeoBundle 'osyo-manga/vim-monster'
 NeoBundle 'sophacles/vim-processing'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
 NeoBundle 'spinningarrow/vim-niji'
@@ -452,9 +450,6 @@ let g:clang_use_library = 1
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/' " f**kin' path
 " neocompleteここまで
 
-" vim-monster
-" Set async completion with vimproc.vim
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
 
 " neosnippet
 " Plugin key-mappings.
