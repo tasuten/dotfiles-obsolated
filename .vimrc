@@ -261,7 +261,6 @@ NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'junegunn/vim-easy-align'
-NeoBundleLazy 'mattn/lisper-vim'
 " 要Python
 NeoBundle 'sjl/gundo.vim'
 
