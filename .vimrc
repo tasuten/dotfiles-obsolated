@@ -255,7 +255,6 @@ NeoBundle 'Shougo/vimproc', {
 \ },
 \ }
 NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'thinca/vim-prettyprint'
@@ -461,14 +460,6 @@ let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
 let g:neosnippet#disable_runtime_snippets = {
 \   'java' : 1,
 \ }
-
-" emmet-vim
-if !exists('g:user_emmet_settings')
-  let g:user_emmet_settings = {}
-endif
-let g:user_emmet_settings.indentation = '  '
-let g:user_emmet_settings.lang = 'ja'
-" let g:user_emmet_complete_tag = 1
 
 " ref.vim
 " ドキュメントを引くキーバインドのプレフィックスを_で統一
