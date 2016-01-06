@@ -6,21 +6,20 @@ function git-current-branch {
 
   local branch_name status_message color
 
-  # .gitディレクトリ直下かサブディレクトリ名なら
-  if [[ "$PWD/" =~ '/.git/' ]]; then
+  # gitワークツリー内かどうか。そうで無ければ何も返さない
+  # このコマンドはワークツリー内なら'true'、
+  # .git/内などワークツリー外なら'false'を返して、
+  # .gitレポジトリ外ならエラーメッセージを吐いて死ぬ
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) != 'true' ]];
+  then
     return
   fi
 
   # ブランチ名
-  # gitレポジトリ外だと標準エラー出力にメッセージが吐かれるので無視
+  # エラーメッセージは無視
   branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
 
-
-  # ブランチ名が空、つまりレポジトリ外なら
-  if [[ -z $branch_name ]]; then
-    return
-  fi
-
+  # ステータス
   status_message=`git status 2> /dev/null`
 
   if [[ $status_message =~ 'nothing to commit' ]]; then # clean
