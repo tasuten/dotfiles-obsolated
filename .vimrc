@@ -258,7 +258,6 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'thinca/vim-prettyprint'
-NeoBundle 't9md/vim-quickhl'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'junegunn/vim-easy-align'
@@ -515,14 +514,6 @@ let g:increment_activator_filetype_candidates = {
 \   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec']
 \ ]
 \ }
-
-" quickhl.vim
-" カーソル下の単語のハイライトをトグル
-nmap <Leader>m <Plug>(quickhl-manual-this)
-xmap <Leader>m <Plug>(quickhl-manual-this)
-" 全てのハイライトをクリア
-nmap <Leader>M <Plug>(quickhl-manual-reset)
-xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
