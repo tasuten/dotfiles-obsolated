@@ -296,6 +296,10 @@ call plug#end()
 " matchitはVimバンドルのモノを使う
 source $VIMRUNTIME/macros/matchit.vim
 
+" vim-plug
+" アップデートウィンドウは下に開く
+let g:plug_window = 'belowright new'
+
 " open-browser.vim
 " wはWebから
 nmap <Leader>w <Plug>(openbrowser-open)
