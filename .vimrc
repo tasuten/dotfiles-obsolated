@@ -279,7 +279,8 @@ Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
 Plug 'sophacles/vim-processing', { 'for' : 'processing' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
-Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
+" 本当は{ 'for' : 'elixir' } 付けたいけどつけるとrefのが読まれないっぽい
+Plug 'liquidz/vivi.vim'
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
@@ -423,6 +424,7 @@ nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
+nnoremap [doc]el :<C-u>Ref<Space>vivi<Space>
 
 " yankround.vim
 " YankRing likeなキーバインド
@@ -518,6 +520,8 @@ autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>Gu
 let g:jscomplete_use = ['dom']
 
 " vivi.vim
+" iexを立ち上げとく。refやomni補完を使うときに便利
+let g:vivi_enable_auto_warm_up_iex = 1
 " omni補完
 let g:vivi_enable_omni_completion = 1
 
