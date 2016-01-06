@@ -271,7 +271,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
 " filetype類
-Plug 'thinca/vim-ft-clojure', { 'for' : 'clojure' }
 Plug 'javacomplete', {
 \ 'do' : 'javac -J-Dfile.encoding=UTF-8 autoload/Reflection.java',
 \ 'for' : 'java'
@@ -279,7 +278,6 @@ Plug 'javacomplete', {
 Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
 Plug 'sophacles/vim-processing', { 'for' : 'processing' }
-" vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
