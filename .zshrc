@@ -251,6 +251,12 @@ alias quit='exit'
 
 # alias周りここまで
 
+
+# rcmdnk/homebrew-file
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 # tmuxを自動で起動
 if [[ "$TMUX" = "" ]]; then
   tmux
