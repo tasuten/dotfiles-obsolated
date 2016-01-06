@@ -293,7 +293,6 @@ NeoBundle 'javacomplete', {
 \ 'unix' : 'javac autoload/Reflection.java',
 \ },
 \ }
-NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
 NeoBundle 'sophacles/vim-processing'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
@@ -425,23 +424,6 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w
 let g:neocomplete#sources#omni#input_patterns.java = '\%(\.\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
-
-" clang_completeの補完をneocompleteで
-" http://d.hatena.ne.jp/osyo-manga/20120911/1347354707 より
-" neocomplete 側の設定
-let g:neocomplete#force_overwrite_completefunc=1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
-" clang_complete 側の設定
-" clang_complete の自動呼び出しは切っておく
-let g:clang_complete_auto = 0
-" プレビューウィンドウを自動的に閉じる
-let g:clang_close_preview = 1
-" libclangを用いる
-let g:clang_use_library = 1
-let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/' " f**kin' path
 " neocompleteここまで
 
 
