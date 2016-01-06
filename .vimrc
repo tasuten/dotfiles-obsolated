@@ -229,108 +229,72 @@ endfunction
 
 " ここからプラグイン設定
 
-" NeoBundle
-" set nocompatible               " be iMproved
-filetype off                   " required!
-filetype plugin indent off     " required!
+" vim-plug
+" vim-plugそのもののアップデートはPlugUpgradeで
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
-endif
+call plug#begin('~/.vim/plugged')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/caw.vim'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'Shougo/vimproc', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'nishigori/increment-activator'
-NeoBundle 'thinca/vim-template'
-NeoBundle 'thinca/vim-prettyprint'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'cohama/lexima.vim'
-NeoBundle 'junegunn/vim-easy-align'
+Plug 'thinca/vim-quickrun'
+Plug 'tyru/caw.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'mattn/webapi-vim'
+Plug 'Shougo/vimproc', { 'do' : 'make' }
+Plug 'LeafCage/yankround.vim'
+Plug 'nishigori/increment-activator'
+Plug 'thinca/vim-template'
+Plug 'thinca/vim-prettyprint'
+Plug 'haya14busa/incsearch.vim'
+Plug 'cohama/lexima.vim'
+Plug 'junegunn/vim-easy-align'
 " 要Python
-NeoBundle 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " text-object
-NeoBundle 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-user'
 " URL。u
-NeoBundle 'mattn/vim-textobj-url'
+Plug 'mattn/vim-textobj-url'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
 " 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " ref
-NeoBundle 'thinca/vim-ref'
+Plug 'thinca/vim-ref'
 
 " neocomplete
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'ujihisa/neco-look'
+Plug 'Shougo/neocomplete'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'ujihisa/neco-look'
 
 " ctrlp.vim
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'tacahiroy/ctrlp-funky'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
 
 " filetype類
-NeoBundle 'thinca/vim-ft-clojure'
-NeoBundle 'javacomplete', {
-\ 'build' : {
-\ 'mac' : 'javac -J-Dfile.encoding=UTF-8 autoload/Reflection.java',
-\ 'unix' : 'javac autoload/Reflection.java',
-\ },
+Plug 'thinca/vim-ft-clojure'
+Plug 'javacomplete', {
+\ 'do' : 'javac -J-Dfile.encoding=UTF-8 autoload/Reflection.java'
 \ }
-NeoBundle 'https://bitbucket.org/teramako/jscomplete-vim.git'
-NeoBundle 'sophacles/vim-processing'
+Plug 'https://bitbucket.org/teramako/jscomplete-vim.git'
+Plug 'sophacles/vim-processing'
 " vim-ft-clojureの方にも虹色ハイライトあるけど読み込み順的にこっちが有効か
-NeoBundle 'spinningarrow/vim-niji'
+Plug 'spinningarrow/vim-niji'
 
 " colorscheme
-NeoBundle 'nanotech/jellybeans.vim'
+Plug 'nanotech/jellybeans.vim'
 " statusline
-NeoBundle 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 
 " 自作プラグイン
-NeoBundle 'tasuten/gcalc.vim'
-NeoBundle 'tasuten/motor.vim'
+Plug 'tasuten/gcalc.vim'
+Plug 'tasuten/motor.vim'
 
-" リポジトリを持たないプラグイン
-" 自作プラグインを neobundle.vim で管理する - C++でゲームプログラミング
-" http://d.hatena.ne.jp/osyo-manga/20131022/1382426403
-let g:local_plugin_base_path = $HOME.'/.vim/local_bundle/'
-command! -nargs=1 NeoBundleLocalPlugin
-\   NeoBundle <args>, {
-\       'base' : g:local_plugin_base_path,
-\       'type' : 'nosync',
-\   }
-command! -nargs=1 NeoBundleLocalPluginLazy
-\   NeoBundleLazy <args>, {
-\       'base' : g:local_plugin_base_path,
-\       'type' : 'nosync',
-\   }
+call plug#end()
 
-call neobundle#end()
+" vim-plugここまで
 
 " matchitはVimバンドルのモノを使う
 source $VIMRUNTIME/macros/matchit.vim
-
-filetype plugin indent on
-
-" NeoBundleここまで
-
 
 " open-browser.vim
 " wはWebから
