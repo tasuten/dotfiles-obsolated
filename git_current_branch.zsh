@@ -17,10 +17,10 @@ function git-current-branch {
 
   # ブランチ名
   # エラーメッセージは無視
-  branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
+  branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
   # ステータス
-  status_message=`git status 2> /dev/null`
+  status_message=$(git status 2> /dev/null)
 
   if [[ $status_message =~ 'nothing to commit' ]]; then # clean
     color='green'
