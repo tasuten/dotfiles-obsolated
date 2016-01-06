@@ -266,8 +266,6 @@ NeoBundle 'sjl/gundo.vim'
 
 " text-object
 NeoBundle 'kana/vim-textobj-user'
-" コメント。c
-NeoBundle 'thinca/vim-textobj-comment'
 " URL。u
 NeoBundle 'mattn/vim-textobj-url'
 " surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
