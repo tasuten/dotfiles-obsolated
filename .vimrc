@@ -278,6 +278,8 @@ Plug 'javacomplete', {
 Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
 Plug 'sophacles/vim-processing', { 'for' : 'processing' }
+Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
+Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
@@ -381,6 +383,7 @@ autocmd vimrc FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 autocmd vimrc FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd vimrc FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd vimrc FileType java setlocal omnifunc=javacomplete#Complete
+autocmd vimrc FileType elixir setlocal omnifunc=vivi#complete#omni
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -391,6 +394,7 @@ let g:neocomplete#sources#omni#input_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.java = '\%(\.\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.elixir = '[^.[:digit:] *\t]\.'
 
 " neocompleteここまで
 
@@ -512,6 +516,10 @@ autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>Gu
 " jscomplete-vim
 " DOM APIも補完対象に
 let g:jscomplete_use = ['dom']
+
+" vivi.vim
+" omni補完
+let g:vivi_enable_omni_completion = 1
 
 " motor.vim
 let g:motor#default_word_pattern = [
