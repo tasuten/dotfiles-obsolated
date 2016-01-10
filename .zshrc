@@ -53,7 +53,7 @@ bindkey '^S' history-incremental-pattern-search-forward
 # PROMPT変数で変数展開などを行う
 setopt prompt_subst
 # ビープを鳴らさない
-setopt nobeep
+setopt no_beep
 # 内部コマンドjobsの出力にPIDを含める
 setopt long_list_jobs
 # 補完候補一覧でファイルの種別をマーク表示
