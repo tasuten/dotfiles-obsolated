@@ -119,6 +119,8 @@ setopt correct
 setopt brace_ccl
 # Ctrl-S/Ctrl-Qによるフロー制御を使わないようにする
 setopt no_flow_control
+# Ctrl-Dでzshを終了しない
+setopt ignore_eof
 # コマンドラインの先頭がスペースで始まる場合ヒストリに追加しない
 setopt hist_ignore_space
 # コマンドラインでも # 以降をコメントと見なす
