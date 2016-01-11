@@ -7,6 +7,12 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 # lsに色を付ける（-G指定と同じ）
 export CLICOLOR=true
 
+# 単語のデリミタを指定
+autoload -Uz select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars ' _-=/;@'
+zstyle ':zle:*' word-style unspecified
+
 # 1: 補完の時にVimで言うsmartcaseにする
 # 2: 例えばs.vでs*.v*なファイルを補完出来るようにする （『zshの本』P.154）
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|.=*'
