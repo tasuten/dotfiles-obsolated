@@ -38,11 +38,12 @@ limit coredumpsize 102400
 # unsetopt promptcr
 # Emacsライクキーバインド設定
 bindkey -e
-# Ctrl-F, Ctrl-Bでワード単位
+# Ctrl-F, Ctrl-Bでワード単位移動
 bindkey '^F' forward-word
 bindkey '^B' backward-word
-# Ctrl-Dでワードを削除
+# Ctrl-Dでforward方向にワード削除
 bindkey '^D' kill-word
+# backward-kill-wordはEmacsキーバインドではCtrl-Wに割当済み
 # Shift-Tabで補完一覧候補を逆順に辿る
 bindkey "^[[Z" reverse-menu-complete
 # Ctrl-R/Sの検索でワイルドカードなどを使えるように
