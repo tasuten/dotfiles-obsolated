@@ -1,0 +1,26 @@
+snippet     if
+abbr        if [[ ]]
+options     head
+        if [[ ${1:#:condition} ]]; then
+                ${0:TARGET}
+        fi
+
+snippet     else
+abbr        else
+options     head
+        else
+                ${0:TARGET}
+
+snippet     elif
+abbr        elif [[  ]]
+options     head
+        elif [[ ${1:#:condition} ]]; then
+                ${0:TARGET}
+
+snippet     function
+abbr        function
+options     head
+        function ${1:#:function-name} () {
+                ${0:TARGET}
+        }
+
