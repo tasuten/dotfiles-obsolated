@@ -2,28 +2,6 @@ snippet     require
 options     head
         require '${1}'${0}
 
-snippet     class
-abbr       class end
-options     head
-        class ${1:ClassName}
-            ${0}
-        end
-
-snippet     unless
-abbr        unless end
-options     head
-        unless ${1:condition}
-            ${0}
-        end
-
-snippet     case
-abbr        case when end
-options     head
-        case ${1:var}
-        when ${2:val}
-            ${0}
-        end
-
 snippet     when
 options     head
         when ${1:val}
@@ -42,13 +20,6 @@ options     head
         until ${1:condition}
             ${0}
         end
-
-# snippet     for
-# abbr        for end
-# options     head
-#         for ${1:var} in ${2:expression}
-#             ${0}
-#         end
 
 snippet     elsif
 options     head

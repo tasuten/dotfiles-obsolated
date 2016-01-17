@@ -1,9 +1,5 @@
 # EclipseのJava > エディター > テンプレート参考
 
-snippet     import
-options     head
-        import ${1:package};${0}
-
 snippet     sysout
 abbr        sysout.println
         System.out.println(${1});${0}
@@ -13,22 +9,10 @@ abbr        syserr.println
         System.err.println(${1});${0}
 
 
-snippet     if
-abbr        if
-options     head
-        if (${1:condition}) {
-                ${0}
-        }
 
 snippet     else
 abbr        else
         else {
-                ${0}
-        }
-
-snippet elseif
-abbr else if
-        else if (${1:condition}) {
                 ${0}
         }
 
@@ -50,13 +34,6 @@ snippet     foreach
 abbr        for-each
 options     head
         for ( ${1:type} ${2:elem} : ${3:set}) {
-                ${0}
-        }
-
-snippet     while
-abbr        while
-options     head
-        while (${1:condition}) {
                 ${0}
         }
 
@@ -85,7 +62,6 @@ options     head
                 break;
 
 
-
 snippet     new
 abbr        new
 options     head
@@ -94,27 +70,6 @@ options     head
 snippet     method
 abbr        method
         ${1:void} ${2:methodName}(${3}) {
-                ${0}
-        }
-
-
-snippet     try
-abbr        try
-options     head
-        try {
-                ${0}
-        } //TODO:catch
-
-
-snippet     catch
-abbr        catch
-        catch (${1:Exception} ${2:e}) {
-                ${0}
-        }
-
-snippet     finally
-abbr        finally
-        finally {
                 ${0}
         }
 
@@ -154,30 +109,11 @@ snippet     synchro_modefier
 abbr        synchronized modefier
         synchronized ${0}
 
-snippet     extends
-abbr        extends
-        extends ${0:Class} 
-
-snippet     implements
-abbr        implements
-        implements ${0:Interface} 
 
 snippet     throws
 abbr        throws
         throws ${0:Exception} 
 
-
-snippet     class
-abbr        class
-        class ${1:ClassName} ${2}{
-                ${0}
-        }
-
-snippet     interface
-abbr        interface
-        interface ${1:InterfaceName} {
-                ${0}
-        }
 
 
 snippet     constant
@@ -206,13 +142,6 @@ abbr        throw Exception
 options     head
         throw new ${1:Exception()};
 
-
-snippet     main
-abbr        main
-options     head
-        public static void main(String[] args) {
-                ${0}
-        }
 
 snippet     public_class
 abbr        public class
