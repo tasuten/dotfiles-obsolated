@@ -179,16 +179,6 @@ source ~/dotfiles/git_current_branch.zsh
 # git-current-branchのままになってしまう
 RPROMPT='[`git-current-branch`%~]'
 
-# ターミナルのタイトル
-#  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
-case "${TERM}" in
-  kterm*|xterm*)
-    precmd() {
-      echo -ne "\033]0;${USER}@${HOST%%.*}: ${PWD}\007"
-    }
-    ;;
-esac
-
 
 # 以下alias周り
 
