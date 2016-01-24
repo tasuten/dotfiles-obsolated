@@ -182,7 +182,7 @@ RPROMPT='[`git-current-branch`%~]'
 # ターミナルのタイトル
 #  http://journal.mycom.co.jp/column/zsh/002/index.html 参考
 case "${TERM}" in
-  kterm*|xterm|xterm-256color)
+  kterm*|xterm*)
     precmd() {
       echo -ne "\033]0;${USER}@${HOST%%.*}: ${PWD}\007"
     }
