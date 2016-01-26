@@ -152,17 +152,11 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 zplug 'b4b4r07/zplug'
 zplug 'rupa/z', of:z.sh
 zplug 'mollifier/cd-gitroot'
-zplug 'm4i/cdd', of:cdd
 # completion
 zplug 'tpope/1175742', from:gist
 
 # zplugここまで
 zplug load
-
-# plugin config
-# cdd
-autoload -Uz add-zsh-hook
-add-zsh-hook chpwd _cdd_chpwd
 
 
 # プロンプト
