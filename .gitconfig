@@ -9,5 +9,6 @@
 [alias]
 	amend = commit --amend
 	current-branch = rev-parse --abbrev-ref HEAD
+	unstage = reset HEAD
 [push]
 	default = simple
