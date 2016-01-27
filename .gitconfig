@@ -7,7 +7,7 @@
 	ui = true
 
 [alias]
-	amend = commit --amend -C HEAD
+	amend = commit --amend
 	current-branch = rev-parse --abbrev-ref HEAD
 [push]
 	default = simple
