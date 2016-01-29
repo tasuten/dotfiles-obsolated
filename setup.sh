@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # 手動管理
-# ディレクトリ名でも最期に/を入れない
 DOTFILES="
 .vimrc
 .zshrc
@@ -9,10 +8,10 @@ DOTFILES="
 .tmux.conf
 .gitconfig
 .rbenv/default-gems
-.vim/template
-.vim/snippets
-.vim/ftplugin
-.vim/after/ftplugin
+.vim/template/
+.vim/snippets/
+.vim/ftplugin/
+.vim/after/ftplugin/
 "
 
 # 環境構築先のルートディレクトリ
@@ -24,6 +23,7 @@ ROOT_DIR=$HOME
 BASE_DIR=$(cd "$(dirname "$0")" || return 1;pwd)
 
 for file in $DOTFILES; do
+  file=${file%/} # 末尾に/があれば取り除く
   # 存在しないディレクトリの中にsymlinkを作ろうとすると怒られるので
   parent_dir=$(dirname "$ROOT_DIR/$file")
   if [ ! -d "$parent_dir" ]; then
