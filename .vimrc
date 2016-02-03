@@ -424,7 +424,7 @@ nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
 nnoremap [doc]rr :<C-u>Ref<Space>refe<Space>
 nnoremap [doc]er :<C-u>Ref<Space>erlang<Space>
-nnoremap [doc]el :<C-u>Ref<Space>vivi<Space>
+nnoremap [doc]ex :<C-u>Ref<Space>vivi<Space>
 
 " yankround.vim
 " YankRing likeなキーバインド
