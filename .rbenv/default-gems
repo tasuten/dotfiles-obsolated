@@ -3,4 +3,5 @@ pry
 redcarpet
 # After install of refe2, execute `bitclust setup`
 refe2
+rubocop
 
