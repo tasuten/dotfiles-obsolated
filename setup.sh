@@ -2,6 +2,7 @@
 
 # 手動管理
 DOTFILES="
+bin/
 .vimrc
 .zshrc
 .zprofile
