@@ -549,14 +549,16 @@ xmap iw <Plug>(motor-textobj-w)
 
 " colorscheme設定
 
-" jellybeans
-" 背景色を濃い灰色ではなく黒にする
-let g:jellybeans_background_color_256 = 0
-let g:jellybeans_background_color = '000000'
 " CUIのVimでもTERMが256colorなものだとgui*の方が適用される
 if !exists('g:jellybeans_overrides')
   let g:jellybeans_overrides = {}
 endif
+
+" 背景色を濃い灰色ではなく黒にする
+let g:jellybeans_overrides.background = {
+\ 'guibg': '000000', '256ctermbg': 0
+\ }
+
 " [Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
 let g:jellybeans_overrides.SpecialKey = {
 \ 'guifg': '707070', 'guibg': '000000',
