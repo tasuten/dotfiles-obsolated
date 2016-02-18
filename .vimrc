@@ -172,10 +172,12 @@ nnoremap ZQ <Nop>
 " <ESC>CTRL-Wをi_CTRL-Wに誤爆して挿入データを消してしまうことがあるので
 inoremap <C-w> <ESC><C-w>
 
-" 誤爆しやすいq:等をqq:等に割り当て(Vimテクニックバイブル P.124より)
-nnoremap qq: <ESC>q:
-nnoremap qq/ <ESC>q/
-nnoremap qq? <ESC>q?
+" 誤爆しやすいq[:/?]関連をQ[:/?]に割り当て
+" JISキーボードだとShift押したままだとQ:の際に誤爆しそうなQ*もQ:に
+nnoremap Q: <ESC>q:
+nnoremap Q* <ESC>q:
+nnoremap Q/ <ESC>q/
+nnoremap Q? <ESC>q?
 nnoremap q: <Nop>
 nnoremap q/ <Nop>
 nnoremap q? <Nop>
