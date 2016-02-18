@@ -553,20 +553,24 @@ xmap iw <Plug>(motor-textobj-w)
 " 背景色を濃い灰色ではなく黒にする
 let g:jellybeans_background_color_256 = 0
 let g:jellybeans_background_color = '000000'
-" 1.[Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
-" 2.CursorLineの行の行番号は、CursorLineと同じ感じに
-" 3.対応する括弧の色を？山吹色背景黒文字に変更
 " CUIのVimでもTERMが256colorなものだとgui*の方が適用される
-let g:jellybeans_overrides = {
-\    'SpecialKey' : {
-\              'guifg': '707070', 'guibg': '000000',
-\              'ctermfg': 'gray', 'ctermbg': 'black'} ,
-\   'CursorLineNr' : {
-\               'guifg' : '707070', 'guibg' : '222222',
-\               'ctermfg' : 'gray', 'ctermbg' : 'darkgray'},
-\   'MatchParen' : {
-\               'guifg' : '222222', 'guibg' : 'fad07a',
-\               'ctermfg' : 'darkgray', 'ctermbg' : 'yellow'}
+if !exists('g:jellybeans_overrides')
+  let g:jellybeans_overrides = {}
+endif
+" [Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
+let g:jellybeans_overrides.SpecialKey = {
+\ 'guifg': '707070', 'guibg': '000000',
+\ 'ctermfg': 'gray', 'ctermbg': 'black'
+\ }
+" CursorLineの行の行番号は、CursorLineと同じ感じに
+let g:jellybeans_overrides.CursorLineNr = {
+\ 'guifg': '707070', 'guibg': '222222',
+\ 'ctermfg': 'gray', 'ctermbg': 'darkgray'
+\ }
+" 対応する括弧の色を山吹色背景黒文字に変更
+let g:jellybeans_overrides.MatchParen = {
+\ 'guifg': '222222', 'guibg': 'fad07a',
+\ 'ctermfg': 'darkgray', 'ctermbg': 'yellow'
 \ }
 
 " ユーザ定義のハイライト
