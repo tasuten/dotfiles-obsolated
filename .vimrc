@@ -280,8 +280,7 @@ Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
 Plug 'sophacles/vim-processing', { 'for' : 'processing' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
-" 本当は{ 'for' : 'elixir' } 付けたいけどそうするとrefのが読まれないっぽい
-Plug 'liquidz/vivi.vim'
+Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
