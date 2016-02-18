@@ -37,10 +37,9 @@ set smartindent
 set softtabstop=2
 set shiftwidth=2
 
-" <C-p><C-n>の補完でincludeファイル(requireとか#includeしたファイル)からも
+" <C-p><C-n>の補完でincludeしたファイル内の単語も
 " 補完されるのが邪魔だったのでそうしないように
-" デフォルトは.,w,b,u,t,i
-set complete=.,w,b,u,t
+set complete-=i
 
 " コマンドライン補完。最長共通部分を補完しつつ候補をstatuslineに表示した後、
 " 候補を順に回る
