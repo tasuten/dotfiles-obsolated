@@ -276,7 +276,6 @@ Plug 'javacomplete', {
 \ }
 Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
-Plug 'sophacles/vim-processing', { 'for' : 'processing' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji'
@@ -322,12 +321,6 @@ let g:quickrun_config.markdown = {
 \ 'runner' : 'system',
 \ 'type' : 'markdown/redcarpet',
 \ 'outputter' : 'browser'
-\ }
-" Processing
-" http://kazuph.hateblo.jp/entry/2013/03/20/211336
-let g:quickrun_config.processing = {
-\ 'command' : 'processing-java',
-\ 'exec': '%c --sketch=$PWD/ --output=$PWD/quickrun --run --force'
 \ }
 
 " caw.vim
