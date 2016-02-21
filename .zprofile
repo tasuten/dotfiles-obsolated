@@ -13,11 +13,6 @@ export PATH=$TEXBIN:$PATH
 # rbenv
 eval "$(rbenv init -)"
 
-# golang
-export GOPATH=$HOME/.go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
 # ~/binにパスを通す
 export PATH=$HOME/bin:$PATH
 
