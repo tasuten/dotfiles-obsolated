@@ -215,6 +215,9 @@ export GREP_COLOR='00;36'
 # 隠しファイル(.vimrc等)を検索対象に入れるが、.git/は無視する
 alias ag='ag --hidden --ignore .git/'
 
+# pdでauto_pushdでpushされた1つ前のディレクトリへ移動
+alias pd='popd'
+
 # git周りの短縮コマンド
 # gstでgit statusを短縮表示(-s)かつブランチ名を表示(-b)し
 # stashのリストも表示
