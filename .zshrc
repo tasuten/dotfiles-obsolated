@@ -188,6 +188,11 @@ alias java='java -Dfile.encoding=UTF-8'
 alias javadoc='javadoc -J-Dfile.encoding=UTF-8'
 alias jar='jar -J-Dfile.encoding=UTF-8'
 
+# Gaucheのgoshをrlwrap経由で起動するようにする
+# なお、-bで設定する単語の区切り文字の設定がデフォルトだと
+# Schemeの文法では少し困るので明示的に指定
+alias gosh='rlwrap -b "(){}[],#\";| " gosh'
+
 # opencでopen .（カレントディレクトリを開く）
 alias openc='open .'
 
