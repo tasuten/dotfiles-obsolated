@@ -325,8 +325,8 @@ let g:quickrun_config.markdown = {
 
 " caw.vim
 " <Leader>cでその行のコメントを切り替え
-nmap <Leader>c <Plug>(caw:i:toggle)
-vmap <Leader>c <Plug>(caw:i:toggle)
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
 
 " neocomplete
 " Disable AutoComplPop.
