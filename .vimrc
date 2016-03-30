@@ -293,9 +293,6 @@ call plug#end()
 
 " vim-plugここまで
 
-" matchitはVimバンドルのモノを使う
-source $VIMRUNTIME/macros/matchit.vim
-
 " vim-plug
 " アップデートウィンドウは下に開く
 let g:plug_window = 'belowright new'
