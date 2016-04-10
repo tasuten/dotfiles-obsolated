@@ -245,6 +245,7 @@ Plug 'thinca/vim-prettyprint'
 Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'Yggdroot/indentLine'
 " 要Python
 Plug 'sjl/gundo.vim'
 
@@ -490,6 +491,10 @@ call lexima#add_rule({'char': '<CR>',  'at': ', \%#', 'input': '<BS><CR>'})
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
+
+" indentLine
+" See: https://github.com/Yggdroot/indentLine/issues/125
+let g:indentLine_concealcursor = ''
 
 " ctrlp.vim
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
