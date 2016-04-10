@@ -495,6 +495,8 @@ vmap <Enter> <Plug>(EasyAlign)
 " indentLine
 " See: https://github.com/Yggdroot/indentLine/issues/125
 let g:indentLine_concealcursor = ''
+" helpでは無効にする
+let g:indentLine_fileTypeExclude = [ 'help' ]
 
 " ctrlp.vim
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
