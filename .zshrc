@@ -153,6 +153,7 @@ zplug 'b4b4r07/zplug'
 zplug 'rupa/z', of:z.sh
 zplug 'mollifier/cd-gitroot'
 # completion
+# rubygems
 zplug 'tpope/1175742', from:gist
 
 # zplugここまで
@@ -227,6 +228,11 @@ alias gdf='git diff --word-diff'
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
+# -a ドットで始まるファイルも表示する
+# -A -aとほぼ同じだが.と..を除外する
+# -C 標準出力以外に出力するときでも複数列で表示
+# -F ファイルタイプに応じてファイル名に/や@や*をsuffixする
+# -l ファイルの詳細情報を表示する
 alias ll='ls -alF'
 alias l='ls -CF'
 alias la='ls -A'
