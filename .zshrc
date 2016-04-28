@@ -150,7 +150,7 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 
 # commands
 zplug 'b4b4r07/zplug'
-zplug 'rupa/z', of:z.sh
+zplug 'rupa/z', use:z.sh
 zplug 'mollifier/cd-gitroot'
 # completion
 # rubygems
