@@ -139,7 +139,7 @@ typeset -U path cdpath fpath manpath
 disable r
 
 # zplug, plugin manager
-source ~/.zplug/zplug
+source ~/.zplug/init.zsh
 
 # zは_Z_CMDをスクリプト中で参照して設定するので、
 # sourceより前に書く必要がある
