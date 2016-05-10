@@ -149,7 +149,7 @@ export _Z_CMD=j
 compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 
 # commands
-zplug 'b4b4r07/zplug'
+zplug 'zplug/zplug'
 zplug 'rupa/z', use:z.sh
 zplug 'mollifier/cd-gitroot'
 # completion
