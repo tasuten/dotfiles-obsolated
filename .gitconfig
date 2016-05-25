@@ -3,6 +3,7 @@
 	email = heliopause64@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
 [color]
 	ui = true
 
