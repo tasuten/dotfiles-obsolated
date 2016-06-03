@@ -489,6 +489,19 @@ call lexima#add_rule({'char': ',', 'input': ',<Space>'})
 " ただし、そのまま改行する場合, の後ろのスペースを削除する
 call lexima#add_rule({'char': '<CR>',  'at': ', \%#', 'input': '<BS><CR>'})
 
+" Markdown
+" 箇条書きでビュレットの-や*の後ろにスペースを付ける
+call lexima#add_rule({'char': '-',  'at': '^\s*\%#$',  'input': '- ', 'filetype': 'markdown'})
+call lexima#add_rule({'char': '*',  'at': '^\s*\%#$',  'input': '* ', 'filetype': 'markdown'})
+" <BS>で一緒に削除
+call lexima#add_rule({'char': '<BS>',  'at': '^\s*- \%#$', 'input': '<BS><BS>', 'filetype': 'markdown'})
+call lexima#add_rule({'char': '<BS>',  'at': '^\s*\* \%#$', 'input': '<BS><BS>', 'filetype': 'markdown'})
+" -に関しては連続する場合はヘッダの区切り行なので細工
+call lexima#add_rule({'char': '-',  'at': '^- \%#$',  'input': '<BS>-', 'filetype': 'markdown'})
+" *についても強調で使うので細工
+call lexima#add_rule({'char': '*',  'at': '^\s*\* \%#$',  'input': '<BS>*', 'filetype': 'markdown'})
+
+
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 
