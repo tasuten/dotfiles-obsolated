@@ -218,12 +218,9 @@ alias ag='ag --hidden --ignore .git/'
 # pdでauto_pushdでpushされた1つ前のディレクトリへ移動
 alias pd='popd'
 
-# git周りの短縮コマンド
-# gstでgit statusを短縮表示(-s)かつブランチ名を表示(-b)し
-# stashのリストも表示
-alias gst='git status -s -b && git stash list'
-alias gca='git commit -a'
-alias gdf='git diff --word-diff'
+# gitはよく使うのでgにalias
+alias g='git'
+compdef g=git
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
