@@ -82,6 +82,10 @@ set splitbelow
 " >や<をshiftwidthの倍数倍に丸めるようにする
 set shiftround
 
+" USキーボードでは:がShift-;で押しにくいので;と入れ替え
+noremap ; :
+noremap : ;
+
 " カーソル移動を物理行でなくレイアウト行で
 nnoremap j gj
 nnoremap k gk
@@ -185,9 +189,12 @@ nnoremap q? <Nop>
 " 同じく誤爆しやすいqq(レジスタqにレコーディング)はいっそ無効化
 nnoremap qq <Nop>
 
-" helpをブラウズ時なんかに、CTRL-]から戻るのにCTRL-OやCTRL-Tは少し打ちにくいので、
-" CTRL-_に。本当はCTRL-:にしたかったけど、そんなキーコードはASCII的に無い
-nnoremap <C-_> <C-o>
+" helpをブラウズ時なんかに、
+" CTRL-]から戻るのにCTRL-OやCTRL-Tは少し打ちにくいので、
+" キー配置が近いCTRL-\に。
+" 本当はJISではCTRL-:にしたかったけどそんなキーコードはASCII的に無い
+" またUSではCTRL-[にしたかったけどESCと等価なので使えない
+nnoremap <C-\> <C-o>
 
 " コマンドラインモードでEmacsライクなキーバインド
 cnoremap <C-a> <Home>
@@ -408,11 +415,11 @@ let g:neosnippet#disable_runtime_snippets = {
 \ }
 
 " ref.vim
-" ドキュメントを引くキーバインドのプレフィックスを_で統一
-" ちなみに元の機能は__で使えるようにしておいた
-nnoremap __ _
+" ドキュメントを引くキーバインドのプレフィックスを-で統一
+" ちなみに元の機能は-で使えるようにしておいた
+nnoremap -- -
 nnoremap [doc] <Nop>
-nmap _ [doc]
+nmap - [doc]
 " _hでVimのhelpを引く
 nnoremap [doc]h :<C-u>h<Space>
 " ref.vim
