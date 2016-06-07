@@ -224,6 +224,9 @@ alias pd='popd'
 alias gst='git status -s -b && git stash list'
 alias gca='git commit -a'
 alias gdf='git diff --word-diff'
+# gitはよく使うのでgにalias
+alias g='git'
+compdef g=git
 
 # ls関連エイリアス
 # Ubutnuのデフォルトのaliasと同じにした
