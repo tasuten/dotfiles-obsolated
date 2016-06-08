@@ -4,7 +4,6 @@
 export LSCOLORS=gxhxcxdxbxaeagabafacad
 # 補完の方の色はこっち
 export LS_COLORS='di=36:ln=37:so=32:pi=33:ex=31:bd=30;44:cd=30;46:su=30;41:sg=30;45:tw=30;42:ow=30;43'
-
 # lsに色を付ける（-G指定と同じ）
 export CLICOLOR=true
 
