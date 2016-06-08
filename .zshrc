@@ -1,9 +1,10 @@
 # 環境変数は原則~/.zprofileの方に書いた
 
-# lsのディレクトリの色が黒バックの場合デフォルトでは青で見難いのでシアンに
-export LSCOLORS=gxfxcxdxbxegedabagacad
+# lsの結果のハイライト
+export LSCOLORS=gxhxcxdxbxaeagabafacad
 # 補完の方の色はこっち
-export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LS_COLORS='di=36:ln=37:so=32:pi=33:ex=31:bd=30;44:cd=30;46:su=30;41:sg=30;45:tw=30;42:ow=30;43'
+
 # lsに色を付ける（-G指定と同じ）
 export CLICOLOR=true
 
