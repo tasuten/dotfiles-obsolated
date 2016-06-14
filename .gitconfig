@@ -1,34 +1,35 @@
 [user]
-	name = tasuten
-	email = heliopause64@gmail.com
+  name = tasuten
+  email = heliopause64@gmail.com
 [core]
-	excludesfile = ~/.gitignore_global
-	autocrlf = input
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
 [color]
-	ui = true
+  ui = true
 
 [alias]
-	amend = commit --amend
-	create-branch = checkout -b
-	# Instead of git reset --hard HEAD
-	destroy = !git commit -a -m 'Temporary commit for git-destroy' && git reset --hard HEAD~
-	# diff aliases
-	# last commit(HEAD) <-[staged]-> index <-[unstaged]-> work tree
-	#     ^-----------------------[changed]-------------------^
-	diff-staged = diff --cached --word-diff
-	diff-unstaged = diff --word-diff
-	diff-changed = diff --word-diff HEAD
-	merge-commit = merge --no-ff
-	unstage = reset HEAD
-	a = add
-	c = commit
-	d = diff --word-diff
-	l = log --graph --date=short --pretty=format:'%C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s'
-	s = status -s -b
-	cl = clone
-	co = checkout
-	gr = grep
-	rbi = rebase -i
+  amend = commit --amend
+  create-branch = checkout -b
+  # Instead of git reset --hard HEAD
+  destroy = !git commit -a -m 'Temporary commit for git-destroy' && git reset --hard HEAD~
+  # diff aliases
+  # last commit(HEAD) <-[staged]-> index <-[unstaged]-> work tree
+  #     ^-----------------------[changed]-------------------^
+  diff-staged = diff --cached --word-diff
+  diff-unstaged = diff --word-diff
+  diff-changed = diff --word-diff HEAD
+  merge-commit = merge --no-ff
+  unstage = reset HEAD
+  a = add
+  c = commit
+  d = diff --word-diff
+  l = log --graph --date=short --pretty=format:'%C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s'
+  s = status -s -b
+  cl = clone
+  co = checkout
+  gr = grep
+  rbi = rebase -i
 
 [push]
-	default = simple
+  default = simple
+
