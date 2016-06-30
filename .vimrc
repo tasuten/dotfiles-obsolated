@@ -289,7 +289,7 @@ Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
-Plug 'nanotech/jellybeans.vim'
+Plug 'tasuten/Fugaku'
 " statusline
 Plug 'itchyny/lightline.vim'
 
@@ -571,50 +571,29 @@ xmap iw <Plug>(motor-textobj-w)
 
 " colorscheme設定
 
-" CUIのVimでもTERMが256colorなものだとgui*の方が適用される
-if !exists('g:jellybeans_overrides')
-  let g:jellybeans_overrides = {}
-endif
-
-" 背景色を濃い灰色ではなく黒にする
-let g:jellybeans_overrides.background = {
-\ 'guibg': '000000', '256ctermbg': 0
-\ }
-
-" [Tab]なんかの色(SpecialKey)も背景黒、文字はgrayで
-let g:jellybeans_overrides.SpecialKey = {
-\ 'guifg': '707070', 'guibg': '000000',
-\ 'ctermfg': 'gray', 'ctermbg': 'black'
-\ }
-" CursorLineの行の行番号は、CursorLineと同じ感じに
-let g:jellybeans_overrides.CursorLineNr = {
-\ 'guifg': '707070', 'guibg': '222222',
-\ 'ctermfg': 'gray', 'ctermbg': 'darkgray'
-\ }
-" 対応する括弧の色を山吹色背景黒文字に変更
-let g:jellybeans_overrides.MatchParen = {
-\ 'guifg': '222222', 'guibg': 'fad07a',
-\ 'ctermfg': 'darkgray', 'ctermbg': 'yellow'
-\ }
-
-" ユーザ定義のハイライト
-" 1.全角スペースを視覚化
-" 全角スペースをライトブルーのアンダーラインで表す
-" 2.行末の空白文字をハイライト
-" 参考:
-" http://d.hatena.ne.jp/piropiropiroshki/20100321/1269119181
-" http://mugijiru.seesaa.net/article/203066121.html
-" http://vim-users.jp/2009/07/hack40/
+" ユーザ定義のハイライトグループ
+" ZenkakuSpace: 全角スペース
+" WhitespaceEOL: 行末のスペース
 autocmd vimrc ColorScheme * call s:my_highlights()
 function! s:my_highlights()
-  highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
-  highlight WhitespaceEOL ctermbg=red guibg=red
   let w:m1 = matchadd('ZenkakuSpace', '　')
   let w:m2 = matchadd('WhitespaceEOL', '\s\+$')
 endfunction
 
+if !exists('g:fugaku_customize')
+  let g:fugaku_customize = {}
+endif
+let g:fugaku_customize.ZenkakuSpace = {
+\ 'ctermfg' : 247, 'cterm' : 'underline',
+\ 'guifg' : '#3f493e', 'gui' : 'underline'
+\ }
+let g:fugaku_customize.WhitespaceEOL = {'ctermbg' : 131, 'guifg' : '#ab4645'}
+
+" ターミナルエミュレータの背景色に合わせる
+let g:fugaku_use_terminal_background_color = 1
+
 " colorschemeの適用
-colorscheme jellybeans
+colorscheme Fugaku
 
 " statusline
 " statuslineを常に表示
@@ -625,7 +604,7 @@ if !exists('g:lightline')
   let g:lightline = {}
 endif
 " colorscheme
-let g:lightline.colorscheme = 'jellybeans'
+let g:lightline.colorscheme = 'Fugaku'
 " セパレータの指定
 let g:lightline.separator    = { 'left' : '', 'right' : '' }
 let g:lightline.subseparator = { 'left' : '', 'right' : '' }
