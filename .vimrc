@@ -618,6 +618,7 @@ let g:lightline.component_function = {
 \ 'filetype' : 'LightLineFiletype',
 \ }
 
+" Vimの今のモード
 function! LightLineMode()
   let fname = expand('%:t')
   return  &ft ==# 'netrw' ? 'Netrw' :
@@ -626,6 +627,7 @@ function! LightLineMode()
   \ lightline#mode()
 endfunction
 
+" そのファイルは「変更可能」か？
 function! LightLineFreezed()
   " 'modifiable'と'readonly'は実はいろいろ違うけど
   " http://tyru.hatenablog.com/entry/20101107/modifiable_and_readonly
@@ -638,6 +640,7 @@ function! LightLineModified()
   return &modified ? '+' : ''
 endfunction
 
+" OS名ではなくCR/LF/CR+LFで表示
 function! LightLineNewline()
   if winwidth(0) <= 70
     return ''
@@ -646,6 +649,7 @@ function! LightLineNewline()
   return l:table[&fileformat]
 endfunction
 
+" 文字エンコーディング。全部大文字で
 function! LightLineEncoding()
   if winwidth(0) <= 70
     return ''
@@ -653,11 +657,11 @@ function! LightLineEncoding()
   return toupper(&fileencoding !=# '' ? &fileencoding : &encoding)
 endfunction
 
+" Capital Caseにして少しかっこよく
 function! LightLineFiletype()
   if winwidth(0) <= 70
     return ''
   endif
-  " Titlecase
   return &filetype !=# '' ?
   \ substitute(&filetype , '\<\(\w\)\(\w*\)\>', '\u\1\L\2', 'g')
   \ : 'NONE'
