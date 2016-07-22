@@ -695,5 +695,3 @@ let g:lightline.inactive = {
 \ 'right' : []
 \ }
 
-let g:hatena_user = 'tasuten'
-
