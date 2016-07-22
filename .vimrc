@@ -608,19 +608,17 @@ let g:lightline.colorscheme = 'Fugaku'
 " セパレータの指定
 let g:lightline.separator    = { 'left' : '', 'right' : '' }
 let g:lightline.subseparator = { 'left' : '', 'right' : '' }
-" fileformat（改行コード）の表示だけ気に入らなかったので変更
-let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
-let g:lightline.component = {
-\   'fileformat' : '%{ff_table[&fileformat]}',
-\ }
-
-" Netrw、Gundoの時modeやfilenameをちょっと細工する
 let g:lightline.component_function = {
-\ 'mode'     : 'MyMode',
-\ 'filename' : 'MyFilename',
+\ 'mode'     : 'LightLineMode',
+\ 'filename' : 'LightLineFilename',
+\ 'freezed'  : 'LightLineFreezed',
+\ 'modified' : 'LightLineModified',
+\ 'newline'  : 'LightLineNewline',
+\ 'encoding' : 'LightLineEncoding',
+\ 'filetype' : 'LightLineFiletype',
 \ }
 
-function! MyMode()
+function! LightLineMode()
   let fname = expand('%:t')
   return  &ft ==# 'netrw' ? 'Netrw' :
   \ &ft ==# 'gundo' ? 'Gundo' :
@@ -628,19 +626,70 @@ function! MyMode()
   \ lightline#mode()
 endfunction
 
-function! MyFilename()
-  let fname = expand('%:t')
-  " netrwでは開いているディレクトリを表示
-  return &ft ==# 'netrw' ? substitute(getline(3), '"\s\+', '', 'g') :
-  \ (fname ==# '__Gundo__' || fname ==# '__Gundo_Preview__') ? '' :
-  \ '' !=# fname ? fname : '[No Name]'
+function! LightLineFreezed()
+  " 'modifiable'と'readonly'は実はいろいろ違うけど
+  " http://tyru.hatenablog.com/entry/20101107/modifiable_and_readonly
+  " ここではあえて一緒くたに扱うことにする
+  return ( !&modifiable || &readonly ) ? 'X' : ''
 endfunction
 
-" readonlyがfilenameより左に表示されるのが気になったので
-let g:lightline.active = {
-\ 'left' : [['mode', 'paste'], ['filename', 'modified', 'readonly']]
-\ }
+" modifiableでないときに-を表示しない
+function! LightLineModified()
+  return &modified ? '+' : ''
+endfunction
 
+function! LightLineNewline()
+  if winwidth(0) <= 70
+    return ''
+  endif
+  let l:table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
+  return l:table[&fileformat]
+endfunction
+
+function! LightLineEncoding()
+  if winwidth(0) <= 70
+    return ''
+  endif
+  return toupper(&fileencoding !=# '' ? &fileencoding : &encoding)
+endfunction
+
+function! LightLineFiletype()
+  if winwidth(0) <= 70
+    return ''
+  endif
+  " Titlecase
+  return &filetype !=# '' ?
+  \ substitute(&filetype , '\<\(\w\)\(\w*\)\>', '\u\1\L\2', 'g')
+  \ : 'NONE'
+endfunction
+
+function! LightLineFilename()
+  let l:fname = expand('%:t')
+  if &filetype ==# 'netrw'
+    " netrwでは開いているディレクトリを表示
+    return substitute(getline(3), '"\s\+', '', 'g')
+  elseif l:fname ==# '__Gundo__' || l:fname ==# '__Gundo_Preview__'
+    " Gundoでは何も表示しない
+    return ''
+  elseif l:fname ==# ''
+    return '[No Name]'
+  else
+    " 幅がある程度広い場合フルパスで表示
+    if winwidth(0) <= 100
+      return l:fname
+    else
+      return expand('%:p')
+    endif
+  endif
+endfunction
+
+let g:lightline.active = {
+\ 'left' : [['mode'], ['filename', 'freezed', 'modified']],
+\ 'right' : [['newline', 'encoding', 'filetype']]
+\ }
+let g:lightline.inactive = {
+\ 'right' : []
+\ }
 
 let g:hatena_user = 'tasuten'
 
