@@ -49,6 +49,9 @@ set wildmode=longest:full,full
 " 最後の行を出来る限り表示する（@のように略さない）
 set display=lastline
 
+" 「Vimを使ってくれてありがとう」が消えない問題
+set notitle
+
 " タブを可視化
 set list
 set listchars=tab:»\ ,
