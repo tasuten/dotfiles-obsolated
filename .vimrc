@@ -55,15 +55,9 @@ set notitle
 " タブを可視化
 set list
 set listchars=tab:»\ ,
-" highlight SpecialKey ctermfg=lightblue guibg=lightblue
 
 " 行番号を濃い灰色で表示
 set number
-" highlight LineNr ctermfg=darkgray
-
-" 補完候補の色変更
-" highlight Pmenu ctermfg=white ctermbg=magenta
-" highlight PmenuSel ctermfg=lightgray ctermbg=darkgray
 
 " カーソルがある行をハイライト
 set cursorline
