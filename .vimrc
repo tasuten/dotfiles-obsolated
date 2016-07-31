@@ -520,6 +520,12 @@ let g:indentLine_fileTypeExclude = [ 'help' ]
 let g:ctrlp_map = '<C-e>'
 " 隠しファイルも表示する
 let g:ctrlp_show_hidden = 1
+" キーマッピングの微調整
+if !exists('g:ctrlp_prompt_mappings')
+  let g:ctrlp_prompt_mappings = {}
+endif
+" CTRL-hを水平分割で開くに割当
+let g:ctrlp_prompt_mappings['AcceptSelection("h")'] = [ '<C-h>' ]
 " The prefix key
 nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
