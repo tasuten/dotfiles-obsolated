@@ -533,6 +533,8 @@ nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
 " 行
 nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
+" QuickFix
+nnoremap <silent> [ctrlp]q :CtrlPQuickfix<CR>
 " アウトライン(ctrlp-funky)
 nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
 
