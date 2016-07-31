@@ -25,6 +25,7 @@
   d = diff --word-diff
   l = log --graph --date=short --pretty=format:'%C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s'
   s = status -s -b
+  cb = checkout -b
   cl = clone
   co = checkout
   gr = grep
