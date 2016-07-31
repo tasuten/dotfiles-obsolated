@@ -526,6 +526,8 @@ if !exists('g:ctrlp_prompt_mappings')
 endif
 " CTRL-hを水平分割で開くに割当
 let g:ctrlp_prompt_mappings['AcceptSelection("h")'] = [ '<C-h>' ]
+" 表示リストの各項目の頭の文字を「> 」から変更
+let g:ctrlp_line_prefix = ' '
 " The prefix key
 nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
