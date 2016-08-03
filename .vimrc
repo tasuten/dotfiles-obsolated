@@ -637,9 +637,8 @@ function! CtrlPStatuslineMain
   let g:lightline.ctrlp_item = a:item " 今の検索モード(files, mru, lineなど)
   return lightline#statusline(0)
 endfunction
-
 function! CtrlPStatuslineProg(str)
-  return '%#Number#'. a:str . '%*%< files are scanned  under %#Directory#' . getcwd() . '%*'
+  return '%#Number#'. a:str . '%*%< files have been scanned under %#Directory#' . getcwd() . '%*'
 endfunction
 
 " Vimの今のモード
