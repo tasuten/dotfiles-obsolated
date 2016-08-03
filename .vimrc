@@ -528,6 +528,8 @@ endif
 let g:ctrlp_prompt_mappings['AcceptSelection("h")'] = [ '<C-h>' ]
 " 表示リストの各項目の頭の文字を「> 」から変更
 let g:ctrlp_line_prefix = ' '
+" core typeはファイル検索のみにする
+let g:ctrlp_types = [ 'fil' ]
 " The prefix key
 nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
