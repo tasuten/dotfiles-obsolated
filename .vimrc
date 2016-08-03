@@ -627,12 +627,29 @@ let g:lightline.component_function = {
 \ 'filetype' : 'LightLineFiletype',
 \ }
 
+" CtrlPの時もうまいことやるためにちょっと細工
+let g:ctrlp_status_func = {
+\ 'main' : 'CtrlPStatuslineMain',
+\ 'prog' : 'CtrlPStatuslineProg'
+\ }
+function! CtrlPStatuslineMain
+\                (focus, byfname, regex, prev, item, next, marked)
+  let g:lightline.ctrlp_item = a:item " 今の検索モード(files, mru, lineなど)
+  return lightline#statusline(0)
+endfunction
+
+function! CtrlPStatuslineProg(str)
+  return '%#Number#'.a:str . '%*%< files are scanned  under %#Directory#' . getcwd() . '%*'
+endfunction
+
 " Vimの今のモード
 function! LightLineMode()
   let fname = expand('%:t')
   return  &ft ==# 'netrw' ? 'Netrw' :
   \ &ft ==# 'gundo' ? 'Gundo' :
   \ fname ==# '__Gundo_Preview__' ? 'Gundo-P' :
+  \ fname ==# 'ControlP' && has_key(g:lightline, 'ctrlp_item') ?
+  \   'CtrlP/'. g:lightline.ctrlp_item :
   \ lightline#mode()
 endfunction
 
@@ -684,6 +701,8 @@ function! LightLineFilename()
   elseif l:fname ==# '__Gundo__' || l:fname ==# '__Gundo_Preview__'
     " Gundoでは何も表示しない
     return ''
+  elseif l:fname ==# 'ControlP' && has_key(g:lightline, 'ctrlp_item')
+    return getcwd()
   elseif l:fname ==# ''
     return '[No Name]'
   else
