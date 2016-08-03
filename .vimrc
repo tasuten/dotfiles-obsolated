@@ -319,7 +319,7 @@ if !exists('g:quickrun_config')
   let g:quickrun_config= {}
 endif
 " vimprocを用いて非同期に実行する
-let g:quickrun_config._ = {'runner' : 'vimproc'}
+let g:quickrun_config._ = { 'runner' : 'vimproc' }
 " HTMLの場合openで開くようにする
 let g:quickrun_config.html = { 'command' : 'open', 'exec' : ['%c %s'] }
 " Javaの文字化け対策
@@ -455,15 +455,15 @@ nnoremap m/ g/
 " increment-activator
 let g:increment_activator_filetype_candidates = {
 \ '_' : [
-\   ['private', 'protected', 'public'],
-\   ['right', 'left'],
-\   ['up', 'down'],
-\   ['top', 'bottom'],
-\   ['max', 'min'],
-\   ['width', 'height']
+\   [ 'private', 'protected', 'public' ],
+\   [ 'right', 'left' ],
+\   [ 'up', 'down' ],
+\   [ 'top', 'bottom' ],
+\   [ 'max', 'min' ],
+\   [ 'width', 'height' ]
 \ ],
 \ 'gitrebase': [
-\   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec']
+\   [ 'pick', 'reword', 'edit', 'squash', 'fixup', 'exec' ]
 \ ]
 \ }
 
@@ -548,7 +548,7 @@ autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>Gu
 
 " jscomplete-vim
 " DOM APIも補完対象に
-let g:jscomplete_use = ['dom']
+let g:jscomplete_use = [ 'dom' ]
 
 " vivi.vim
 " iexを立ち上げとく。refやomni補完を使うときに便利
@@ -596,7 +596,7 @@ let g:fugaku_customize.ZenkakuSpace = {
 \ 'ctermfg' : 247, 'cterm' : 'underline',
 \ 'guifg' : '#3f493e', 'gui' : 'underline'
 \ }
-let g:fugaku_customize.WhitespaceEOL = {'ctermbg' : 131, 'guifg' : '#ab4645'}
+let g:fugaku_customize.WhitespaceEOL = { 'ctermbg' : 131, 'guifg' : '#ab4645' }
 
 " ターミナルエミュレータの背景色に合わせる
 let g:fugaku_use_terminal_background_color = 1
@@ -639,7 +639,7 @@ function! CtrlPStatuslineMain
 endfunction
 
 function! CtrlPStatuslineProg(str)
-  return '%#Number#'.a:str . '%*%< files are scanned  under %#Directory#' . getcwd() . '%*'
+  return '%#Number#'. a:str . '%*%< files are scanned  under %#Directory#' . getcwd() . '%*'
 endfunction
 
 " Vimの今のモード
@@ -671,7 +671,7 @@ function! LightLineNewline()
   if winwidth(0) <= 70
     return ''
   endif
-  let l:table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
+  let l:table = { 'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
   return l:table[&fileformat]
 endfunction
 
@@ -716,8 +716,8 @@ function! LightLineFilename()
 endfunction
 
 let g:lightline.active = {
-\ 'left' : [['mode'], ['filename', 'freezed', 'modified']],
-\ 'right' : [['newline', 'encoding', 'filetype']]
+\ 'left' : [[ 'mode' ], [ 'filename', 'freezed', 'modified' ]],
+\ 'right' : [[ 'newline', 'encoding', 'filetype' ]]
 \ }
 let g:lightline.inactive = {
 \ 'right' : []
