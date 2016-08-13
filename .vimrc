@@ -283,6 +283,7 @@ Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
 \ { 'for' : 'javascript' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
+Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
