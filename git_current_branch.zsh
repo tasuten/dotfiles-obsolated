@@ -5,6 +5,7 @@
 function git-current-branch {
 
   local branch_name status_message color
+  local branch_status ahead_behind_mark
 
   # gitワークツリー内かどうか。そうで無ければ何も返さない
   # このコマンドはワークツリー内なら'true'、
@@ -33,7 +34,13 @@ function git-current-branch {
     color='red'
   fi
 
-  # [master ~/]みたいにする予定なので最後にスペース
-  echo "%F{$color}$branch_name%f "
+  # 追跡ブランチがない、もしくはあってもahead/behindがあれば*マーク
+  branch_status=$(git rev-list --left-right @...'@{u}' 2> /dev/null)
+  if [[ $? != 0 || -n $branch_status ]]; then
+    ahead_behind_mark='*'
+  fi
+
+  # [master* ~/]みたいにする予定なので最後にスペース
+  echo "%F{$color}$branch_name$ahead_behind_mark%f "
 }
 
