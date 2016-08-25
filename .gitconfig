@@ -23,7 +23,7 @@
   a = add
   c = commit
   d = diff --word-diff
-  l = log --graph --date=short --pretty=format:'%C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s'
+  l = log --graph --date=short --pretty=twoline
   s = status -s -b
   br = branch
   cb = checkout -b
@@ -37,6 +37,9 @@
   rl = reflog
   rv = revert
   rbi = rebase -i
+
+[pretty]
+  twoline = %C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s
 
 [push]
   default = simple
