@@ -160,7 +160,9 @@ zplug 'tpope/1175742', from:gist
 zplug load
 
 # zaw
+# リストをロテート選択出来るように
 zstyle ':filter-select' rotate-list yes
+# ESCで終了
 bindkey -M filterselect '\e' send-break
 
 # プロンプト
