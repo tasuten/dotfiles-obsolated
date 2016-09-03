@@ -166,6 +166,12 @@ zstyle ':filter-select' rotate-list yes
 zstyle ':filter-select' case-insensitive yes
 # ESCで終了
 bindkey -M filterselect '\e' send-break
+# prefixにCTRL-xを使う
+bindkey '^X^A'   zaw-applications # GUIアプリケーション
+bindkey '^X^G^B' zaw-git-branches # git-branch
+bindkey '^X^G^L' zaw-git-log      # git-log
+bindkey '^X^G^R' zaw-git-reflog   # git-log
+bindkey '^X^H'   zaw-history      # 履歴
 
 # プロンプト
 autoload colors
