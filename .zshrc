@@ -162,6 +162,8 @@ zplug load
 # zaw
 # リストをロテート選択出来るように
 zstyle ':filter-select' rotate-list yes
+# 大文字小文字無視の検索
+zstyle ':filter-select' case-insensitive yes
 # ESCで終了
 bindkey -M filterselect '\e' send-break
 
