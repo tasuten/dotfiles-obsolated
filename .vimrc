@@ -530,7 +530,7 @@ let g:ctrlp_prompt_mappings['AcceptSelection("h")'] = [ '<C-h>' ]
 " CTRL-k/jで履歴をbackward/forwardに遡る
 let g:ctrlp_prompt_mappings['PrtHistory(1)'] = [ '<C-k>' ]
 let g:ctrlp_prompt_mappings['PrtHistory(-1)'] = [ '<C-j>' ]
-" CTRL-n/pで上/下の候補の選択
+" CTRL-p/nで上/下の候補の選択
 let g:ctrlp_prompt_mappings['PrtSelectMove("j")'] = [ '<C-n>' ]
 let g:ctrlp_prompt_mappings['PrtSelectMove("k")'] = [ '<C-p>' ]
 " 表示リストの各項目の頭の文字を「> 」から変更
