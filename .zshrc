@@ -159,6 +159,9 @@ zplug 'tpope/1175742', from:gist
 # zplugここまで
 zplug load
 
+# zaw
+zstyle ':filter-select' rotate-list yes
+bindkey -M filterselect '\e' send-break
 
 # プロンプト
 autoload colors
