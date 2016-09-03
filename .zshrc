@@ -170,7 +170,7 @@ bindkey -M filterselect '\e' send-break
 bindkey '^X^A'   zaw-applications # GUIアプリケーション
 bindkey '^X^G^B' zaw-git-branches # git-branch
 bindkey '^X^G^L' zaw-git-log      # git-log
-bindkey '^X^G^R' zaw-git-reflog   # git-log
+bindkey '^X^G^R' zaw-git-reflog   # git-reflog
 bindkey '^X^H'   zaw-history      # 履歴
 
 # プロンプト
