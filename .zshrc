@@ -172,6 +172,12 @@ bindkey '^X^G^B' zaw-git-branches # git-branch
 bindkey '^X^G^L' zaw-git-log      # git-log
 bindkey '^X^G^R' zaw-git-reflog   # git-reflog
 bindkey '^X^H'   zaw-history      # 履歴
+# 見た目
+zstyle ':filter-select:highlight' selected standout
+zstyle ':filter-select:highlight' matched  fg=cyan
+zstyle ':filter-select:highlight' marked   fg=yellow
+zstyle ':filter-select:highlight' title    fg=gray
+zstyle ':filter-select:highlight' error    fg=red
 
 # プロンプト
 autoload colors
