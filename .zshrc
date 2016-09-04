@@ -152,6 +152,8 @@ compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
 zplug 'zplug/zplug'
 zplug 'rupa/z', use:z.sh
 zplug 'zsh-users/zaw'
+# zコマンドのzawソース。zawが読み込まれた後で無いと行けないのでniceで調整
+zplug 'yoshikaw/4437957', from:gist, nice:11
 # completion
 # rubygems
 zplug 'tpope/1175742', from:gist
@@ -168,6 +170,7 @@ zstyle ':filter-select' case-insensitive yes
 bindkey -M filterselect '\e' send-break
 # prefixにCTRL-xを使う
 bindkey '^X^A'   zaw-applications # GUIアプリケーション
+bindkey '^X^D'   zaw-z            # z向け
 bindkey '^X^G^B' zaw-git-branches # git-branch
 bindkey '^X^G^L' zaw-git-log      # git-log
 bindkey '^X^G^R' zaw-git-reflog   # git-reflog
