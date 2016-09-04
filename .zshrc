@@ -166,6 +166,8 @@ zplug load
 zstyle ':filter-select' rotate-list yes
 # 大文字小文字無視の検索
 zstyle ':filter-select' case-insensitive yes
+# 複数ファイルの編集を指定した時はVimで水平分割して開く
+export ZAW_EDITOR='vim -o'
 # ESCで終了
 bindkey -M filterselect '\e' send-break
 # prefixにCTRL-xを使う
