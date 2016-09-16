@@ -203,12 +203,6 @@ cnoremap <C-e> <End>
 cnoremap <C-k> <C-\>e
 \getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 
-" *.mdなファイルのfiletypeををmodula2ではなくmarkdownとする
-" 2014年10月頃に*.mdファイルもmarkdown扱いされるようになったけど
-" https://github.com/vim/vim/commit/7d76c804af900ba6dcc4b1e45373ccab3418c6b2
-" まだ過渡期な気がするのでもうしばらく書いておく
-autocmd vimrc BufNewFile,BufRead *.md setfiletype markdown
-
 " TeXは全てLaTeXと見做す
 let g:tex_flavor = 'latex'
 
