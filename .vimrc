@@ -205,6 +205,8 @@ cnoremap <C-k> <C-\>e
 
 " TeXは全てLaTeXと見做す
 let g:tex_flavor = 'latex'
+" TeXのConcealを無効化
+let g:tex_conceal = ''
 
 " Vimファイルでの行継続の\の位置を指定
 let g:vim_indent_cont = 0
