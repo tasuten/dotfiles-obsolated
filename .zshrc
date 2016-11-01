@@ -59,6 +59,8 @@ bindkey '^S' history-incremental-pattern-search-forward
 
 # PROMPT変数で変数展開などを行う
 setopt prompt_subst
+# 今のプロンプト以外のRPROMPTを消す
+setopt transient_rprompt
 # ビープを鳴らさない
 setopt no_beep
 # 内部コマンドjobsの出力にPIDを含める
