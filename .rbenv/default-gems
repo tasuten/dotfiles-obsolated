@@ -1,7 +1,0 @@
-bundle
-pry
-# After the installation of refe2, execute `bitclust setup`
-refe2
-rubocop
-redcarpet
-

@@ -8,7 +8,6 @@ bin/
 .zprofile
 .tmux.conf
 .gitconfig
-.rbenv/default-gems
 .vim/template/
 .vim/snippets/
 .vim/ftplugin/
