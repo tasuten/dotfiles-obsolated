@@ -1,3 +1,4 @@
+# comment
 [general]
 root = "$HOME/test/"
 
@@ -12,5 +13,4 @@ bin/
 .vim/snippets/
 .vim/ftplugin/
 .vim/after/ftplugin/
-
 
