@@ -1,5 +1,7 @@
 # comment
+# two row comment
 [general]
+# comment
 root = "$HOME/test/"
 
 [ignore]
@@ -7,7 +9,7 @@ README.txt
 dotfiles_config
 git_current_branch.zsh
 
-[type:directory]
+[directory]
 bin/
 .vim/template/
 .vim/snippets/
