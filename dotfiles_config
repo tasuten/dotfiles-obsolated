@@ -1,0 +1,16 @@
+[general]
+root = "$HOME/test/"
+
+[ignore]
+README.txt
+dotfiles_config
+git_current_branch.zsh
+
+[type:directory]
+bin/
+.vim/template/
+.vim/snippets/
+.vim/ftplugin/
+.vim/after/ftplugin/
+
+
