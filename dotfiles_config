@@ -6,7 +6,6 @@ README.txt
 dotfiles.pl
 dotfiles_config
 git_current_branch.zsh
-setup.sh
 
 [Directory]
 bin/
