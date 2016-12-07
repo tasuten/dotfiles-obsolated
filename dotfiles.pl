@@ -22,7 +22,16 @@ sub parse_config {
             next;
         } elsif ($line =~ /^\[(.+)\]/) {
             my $section = lc $1;
-            @{$config{$section}} = parse_section($section, *CONFIG);
+
+            if ($section eq "general") {
+                %{$config{$section}} = parse_hash(*CONFIG);
+            } else {
+                my @result = parse_list(*CONFIG);
+                if ($section eq "directory") {
+                    @result = map { normalize_dir($_) } @result;
+                }
+                @{$config{$section}} = @result;
+            }
         } else {
             die "Syntax error in $config_file";
         }
@@ -32,27 +41,13 @@ sub parse_config {
     return %config;
 }
 
-sub parse_section {
-    my ($section, $fh) = @_;
-    if ($section eq "general") {
-        return parse_hash($fh);
-    } else {
-        my @result = parse_list($fh);
-        if ($section eq "directory") {
-            @result = map { normalize_dir($_) } @result;
-        }
-        return @result;
-    }
-}
-
 sub parse_hash {
-   my ($fh) = @_;
-   my %kvs;
+    my ($fh) = @_;
+    my %kvs;
     while (my $line = readline $fh) {
         chomp $line;
         if ($line eq "") {
             return %kvs;
-            break;
         } elsif ($line =~ /^(?:\s*#.*)$/) {
             next;
         } else {
@@ -63,13 +58,12 @@ sub parse_hash {
 }
 
 sub parse_list {
-   my ($fh) = @_;
-   my @elms;
+    my ($fh) = @_;
+    my @elms;
     while (my $line = readline $fh) {
         chomp $line;
         if ($line eq "") {
             return @elms;
-            break;
         } elsif ($line =~ /^(?:\s*#.*)$/) {
             next;
         } else {
@@ -79,10 +73,13 @@ sub parse_list {
 }
 
 sub normalize_dir {
-   my ($dir) = @_;
-   if (substr($dir, -1) ne "/") {
-       $dir = "$dir/";
-   }
-   return $dir;
+    my ($dir) = @_;
+    if (substr($dir, -1) ne "/") {
+        $dir = "$dir/";
+    }
+    return $dir;
+}
+
+
 }
 
