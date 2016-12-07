@@ -12,17 +12,17 @@ if ($#ARGV == -1 || $#ARGV > 2) {
     usage() and exit 1;
 }
 our $dry = undef;
-if ($#ARGV == 2 && $ARGV[1] eq "--dry") {
-   $dry = 'true';
+if ($#ARGV == 1 && $ARGV[1] eq "--dry") {
+    $dry = 'true';
 }
 
 if ($ARGV[0] eq "link") {
-    linking();
+    links();
 } elsif ($ARGV[0] eq "unlink") {
-    unlinking();
+    unlinks();
 } elsif ($ARGV[0] eq "refresh") {
-    unlinking();
-    linking();
+    unlinks();
+    links();
 } else {
     usage() and exit 1;
 }
