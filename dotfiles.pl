@@ -9,8 +9,6 @@ use Data::Dumper;
 our %config = parse_config("./dotfiles_config");
 our %link_table = generate_table();
 
-print Dumper %link_table;
-
 # main end
 
 sub parse_config {
@@ -94,7 +92,35 @@ sub generate_table {
         $result{$entity} = $symlink;
     }
 
+    # files
+    my @files = split /\n/, `git ls-files`;
+    for my $f (@files){
+        if (is_ignore($f) || in_directory($f)) {
+            next;
+        } else {
+            my $entity = $f;
+            my $root = normalize_dir($config{"general"}{"root"});
+            my $symlink = $root . $f;
+            $result{$entity} = $symlink;
+        }
+    }
 
     return %result;
+}
+
+sub is_ignore {
+    my ($f) = @_;
+    return $f ~~ $config{"ignore"};
+}
+
+
+sub in_directory {
+    my ($f) = @_;
+    for my $dir (@{$config{directory}}){
+         if ($f =~ /^$dir/) {
+             return 'true';
+         }
+    }
+    return undef;
 }
 
