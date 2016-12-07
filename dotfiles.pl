@@ -161,3 +161,34 @@ sub usage {
     print "$0 (link|unlink|refresh) [--dry]\n"
 }
 
+sub links {
+    while (my ($entity, $symlink) = each(%link_table)) {
+        my $parent_dir = dirname($symlink);
+        if (!-d $parent_dir ) {
+            if ($dry) {
+                print "mkdir $parent_dir";
+            } else {
+            mkpath($parent_dir);
+        }
+        }
+        if ($dry) {
+            print "symlink $entity -> $symlink\n"
+        } else {
+        symlink $entity,  $symlink;
+    }
+    }
+}
+
+sub unlinks {
+    while (my ($entity, $symlink) = each(%link_table)) {
+        if (-l $symlink ) {
+            # unlinkは通常ファイルも消し飛ばすので注意
+            if ($dry) {
+                print "unlink $symlink\n"
+            } else {
+            unlink $symlink;
+        }
+        }
+    }
+}
+
