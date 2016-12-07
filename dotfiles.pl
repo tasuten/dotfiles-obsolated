@@ -3,11 +3,16 @@ use strict;
 use warnings;
 use feature ":5.10";
 
+use File::Basename;
+use File::Path;
+use Cwd;
+
 use Data::Dumper;
 
 # main
 our %config = parse_config("./dotfiles_config");
 our %link_table = generate_table();
+# print Dumper %link_table;
 if ($#ARGV == -1 || $#ARGV > 2) {
     usage() and exit 1;
 }
@@ -96,6 +101,9 @@ sub normalize_dir {
     if (substr($dir, -1) ne "/") {
         $dir = "$dir/";
     }
+
+    my $homedir = $ENV{"HOME"};
+    $dir =~ s/\$HOME/$homedir/g;
     return $dir;
 }
 
@@ -105,9 +113,10 @@ sub generate_table {
 
     # directories
     for my $dir (@{$config{directory}}){
-        my $entity = $dir;
+        my $entity = getcwd . "/" .  $dir;
         my $root = normalize_dir($config{"general"}{"root"});
         my $symlink = $root . $dir;
+        $symlink =~ s/\/+$//g;
         $result{$entity} = $symlink;
     }
 
@@ -117,7 +126,7 @@ sub generate_table {
         if (is_ignore($f) || in_directory($f)) {
             next;
         } else {
-            my $entity = $f;
+            my $entity = getcwd . "/" . $f;
             my $root = normalize_dir($config{"general"}{"root"});
             my $symlink = $root . $f;
             $result{$entity} = $symlink;
@@ -141,9 +150,9 @@ sub is_ignore {
 sub in_directory {
     my ($f) = @_;
     for my $dir (@{$config{directory}}){
-         if ($f =~ /^$dir/) {
-             return 'true';
-         }
+        if ($f =~ /^$dir/) {
+            return 'true';
+        }
     }
     return undef;
 }
