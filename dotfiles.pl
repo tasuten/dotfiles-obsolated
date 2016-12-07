@@ -110,7 +110,12 @@ sub generate_table {
 
 sub is_ignore {
     my ($f) = @_;
-    return $f ~~ $config{"ignore"};
+    for my $ignore (@{$config{ignore}}){
+        if ($f =~ /^$ignore/) {
+            return 'true';
+        }
+    }
+    return undef;
 }
 
 
