@@ -8,6 +8,25 @@ use Data::Dumper;
 # main
 our %config = parse_config("./dotfiles_config");
 our %link_table = generate_table();
+if ($#ARGV == -1 || $#ARGV > 2) {
+    usage() and exit 1;
+}
+our $dry = undef;
+if ($#ARGV == 2 && $ARGV[1] eq "--dry") {
+   $dry = 'true';
+}
+
+if ($ARGV[0] eq "link") {
+    linking();
+} elsif ($ARGV[0] eq "unlink") {
+    unlinking();
+} elsif ($ARGV[0] eq "refresh") {
+    unlinking();
+    linking();
+} else {
+    usage() and exit 1;
+}
+
 
 # main end
 
@@ -127,5 +146,9 @@ sub in_directory {
          }
     }
     return undef;
+}
+
+sub usage {
+    print "$0 (link|unlink|refresh) [--dry]\n"
 }
 
