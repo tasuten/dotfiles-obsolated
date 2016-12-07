@@ -7,7 +7,9 @@ use Data::Dumper;
 
 # main
 our %config = parse_config("./dotfiles_config");
-print Dumper %config;
+our %link_table = generate_table();
+
+print Dumper %link_table;
 
 # main end
 
@@ -81,5 +83,18 @@ sub normalize_dir {
 }
 
 
+sub generate_table {
+    my %result;
+
+    # directories
+    for my $dir (@{$config{directory}}){
+        my $entity = $dir;
+        my $root = normalize_dir($config{"general"}{"root"});
+        my $symlink = $root . $dir;
+        $result{$entity} = $symlink;
+    }
+
+
+    return %result;
 }
 
