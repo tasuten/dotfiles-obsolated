@@ -1,10 +1,6 @@
-#!/usr/bin/env perl
+#!/usr/bin/perl
 use strict;
 use warnings;
-use utf8;
-use 5.010000;
-binmode STDIN,  ":utf8";
-binmode STDOUT, ":utf8";
-binmode STDERR, ":utf8";
+use feature ':5.10';
 
 <Cursor>
