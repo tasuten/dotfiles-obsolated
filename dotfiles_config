@@ -3,6 +3,7 @@ root = $HOME
 
 [Ignore]
 README.txt
+dotfiles.pl
 dotfiles_config
 git_current_branch.zsh
 
