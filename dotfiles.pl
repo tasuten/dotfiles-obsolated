@@ -15,7 +15,7 @@ if ($#ARGV == -1 or $#ARGV > 2) {
 my %config = parse_config('dotfiles_config');
 my %link_table = generate_table(\%config);
 
-my $dry_run = undef;
+my $dry_run = ''; # false
 if ($#ARGV == 1 and $ARGV[1] eq '--dry') {
     $dry_run = 'true';
 }
@@ -149,7 +149,7 @@ sub is_ignore {
             return 'true';
         }
     }
-    return undef;
+    return ''; # false
 }
 
 
@@ -161,7 +161,7 @@ sub in_directory {
             return 'true';
         }
     }
-    return undef;
+    return ''; # false
 }
 
 sub usage {
