@@ -59,6 +59,7 @@ sub parse_config {
                 @{$config{$section}} = @result;
             }
         } else {
+            close $config_fh;
             die "Syntax error in $config_file";
         }
     }
