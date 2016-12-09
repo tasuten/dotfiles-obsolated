@@ -82,6 +82,8 @@ sub parse_hash {
             $kvs{$key} = $value;
         }
     }
+
+    return %kvs;
 }
 
 sub parse_list {
@@ -97,6 +99,8 @@ sub parse_list {
             push @elms, $line;
         }
     }
+
+    return @elms;
 }
 
 # Add tail slash and expand $HOME
@@ -166,7 +170,8 @@ sub in_directory {
 }
 
 sub usage {
-    warn "$0 (link|unlink|refresh) [--dry]\n"
+    warn "$0 (link|unlink|refresh) [--dry]\n";
+    return;
 }
 
 sub links {
@@ -189,6 +194,8 @@ sub links {
             symlink $entity,  $symlink;
         }
     }
+
+    return;
 }
 
 sub unlinks {
@@ -206,6 +213,7 @@ sub unlinks {
         }
 
     }
+    return;
 
 }
 
