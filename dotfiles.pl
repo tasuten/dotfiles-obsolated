@@ -38,7 +38,7 @@ sub parse_config {
     my ($config_file) = @_;
     my %config;
     open my $config_fh, '<', $config_file
-        or die "Can't open $config_file: $!";
+        or die "Error: Can't open $config_file; $!\n";
 
     while (my $line = readline $config_fh) {
         chomp $line;
@@ -60,7 +60,7 @@ sub parse_config {
             }
         } else {
             close $config_fh;
-            die "Syntax error in $config_file";
+            die "Error: Syntax error in $config_file\n";
         }
     }
 
@@ -184,14 +184,16 @@ sub links {
             if ($dry_run) {
                 print "mkdir $parent_dir\n";
             } else {
-                mkpath $parent_dir;
+                mkpath $parent_dir
+                    or die "Error: Can't make $parent_dir; $!\n";
             }
         }
 
         if ($dry_run) {
             print "symlink $entity -> $symlink\n"
         } else {
-            symlink $entity,  $symlink;
+            symlink $entity,  $symlink
+                or warn "WARN: $! (when linking to $symlink)\n";
         }
     }
 
@@ -208,7 +210,8 @@ sub unlinks {
             if ($dry_run) {
                 print "unlink $symlink\n"
             } else {
-                unlink $symlink;
+                unlink $symlink
+                    or warn "WARN: $! (when unlinking to $symlink)\n";
             }
         }
 
