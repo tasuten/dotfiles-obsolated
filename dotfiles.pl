@@ -171,7 +171,7 @@ sub in_directory {
 
 sub usage {
     warn "$0 (link|unlink|refresh) [--dry]\n";
-    return;
+    return 'true';
 }
 
 sub links {
@@ -185,7 +185,7 @@ sub links {
                 print "mkdir $parent_dir\n";
             } else {
                 mkpath $parent_dir
-                    or die "Error: Can't make $parent_dir; $!\n";
+                    or die "Error: Can't make $parent_dir\n";
             }
         }
 
