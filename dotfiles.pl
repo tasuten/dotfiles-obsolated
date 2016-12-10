@@ -185,7 +185,7 @@ sub links {
                 print "mkdir $parent_dir\n";
             } else {
                 mkpath $parent_dir
-                    or die "ERROR: Can't make $parent_dir\n";
+                    or die "ERROR: Can't make $parent_dir; $!\n";
             }
         }
 
