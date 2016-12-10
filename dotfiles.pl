@@ -38,7 +38,7 @@ sub parse_config {
     my ($config_file) = @_;
     my %config;
     open my $config_fh, '<', $config_file
-        or die "Error: Can't open $config_file; $!\n";
+        or die "ERROR: Can't open $config_file; $!\n";
 
     while (my $line = readline $config_fh) {
         chomp $line;
@@ -60,7 +60,7 @@ sub parse_config {
             }
         } else {
             close $config_fh;
-            die "Error: Syntax error in $config_file\n";
+            die "ERROR: Syntax error in $config_file\n";
         }
     }
 
@@ -185,7 +185,7 @@ sub links {
                 print "mkdir $parent_dir\n";
             } else {
                 mkpath $parent_dir
-                    or die "Error: Can't make $parent_dir\n";
+                    or die "ERROR: Can't make $parent_dir\n";
             }
         }
 
