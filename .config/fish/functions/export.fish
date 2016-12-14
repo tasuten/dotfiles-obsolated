@@ -6,8 +6,8 @@ set -x EDITOR /Applications/MacVim.app/Contents/MacOS/Vim
 
 # パスを通す
 # Homebrew
-set -Ux PATH /usr/local/bin $PATH
-set -Ux PATH /usr/local/sbin $PATH
+set -x PATH /usr/local/bin $PATH
+set -x PATH /usr/local/sbin $PATH
 
 # rlwrap
 set -x RLWRAP_HOME $HOME/.rlwrap/
