@@ -13,4 +13,5 @@ bin/
 .vim/snippets/
 .vim/ftplugin/
 .vim/after/ftplugin/
+.config/fish/functions/
 
