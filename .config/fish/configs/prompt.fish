@@ -34,6 +34,8 @@ function __git_prompt
     set -l branch (git rev-parse --abbrev-ref HEAD ^/dev/null )
     set -l prompt ''
 
+    # working treeと最新のコミットの間に差異がある場合、赤色
+    # これはuntrackedなファイルがある場合も含む
     if git_is_touched
         set_color red
     else
@@ -42,6 +44,7 @@ function __git_prompt
 
     set prompt $prompt $branch
 
+    # リモートブランチが存在し、かつahead/behindがある場合
     if git rev-list --left-right @...'@{u}' ^/dev/null | grep "^[<>]" >/dev/null
         set prompt $prompt '!'
     end
