@@ -24,6 +24,8 @@ set -x BSTINPUTS $BSTINPUTS $HOME/.TeX/bibtex/bst
 set -x PATH $HOME/bin $PATH
 
 # 各ソフトウェアの設定
+# lsの色
+set -x LSCOLORS 'gxhxcxdxbxaeagabafacad'
 # lessが色付きテキストを表示出来るようにする
 set -x LESS '-R'
 # grepでヒット部分をシアンで
