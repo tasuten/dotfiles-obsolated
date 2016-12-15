@@ -16,8 +16,11 @@ set -x XDG_CONFIG_DIRS /etc/xdg
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
+# homebrew-file
+set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/brewfile/Brewfile
+
 # rlwrap
-set -x RLWRAP_HOME $HOME/.rlwrap/
+set -x RLWRAP_HOME $XDG_DATA_HOME/rlwrap
 
 # MacTeX
 set -x TEXBIN /Library/TeX/texbin
@@ -36,6 +39,8 @@ set -x LSCOLORS 'gxhxcxdxbxaeagabafacad'
 set -x LS_COLORS 'di=36:ln=37:so=32:pi=33:ex=31:bd=30;44:cd=30;46:su=30;41:sg=30;45:tw=30;42:ow=30;43'
 # lessが色付きテキストを表示出来るようにする
 set -x LESS '-R'
+# lesshstファイルを作らない
+set -x LESSHISTFILE '-'
 # grepでヒット部分をシアンで
 set -x GREP_OPTIONS '--color=auto'
 set -x GREP_COLOR '00;36'
