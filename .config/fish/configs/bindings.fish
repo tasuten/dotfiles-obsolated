@@ -7,5 +7,10 @@ function fish_user_key_bindings
   # Ctrl-D, Ctrl-Wでワード削除
   bind \cw backward-kill-word
   bind \cd kill-word
+
+  # fzf
+  # prefixに\cx
+  bind \cx\cd __fzf_z # z
+  bind \cx\cf __fzf_git_tracking
 end
 
