@@ -4,6 +4,13 @@
 set -x LANG ja_JP.UTF-8
 set -x EDITOR /Applications/MacVim.app/Contents/MacOS/Vim
 
+# XDG Base Directoryを明示
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_CACHE_HOME $HOME/.cache
+set -x XDG_DATA_HOME $HOME/.local/share
+set -x XDG_DATA_DIRS /usr/local/share:/usr/share
+set -x XDG_CONFIG_DIRS /etc/xdg
+
 # パスを通す
 # Homebrew
 set -x PATH /usr/local/bin $PATH
