@@ -31,7 +31,7 @@ function fish_right_prompt -d 'Rightside prompt'
 end
 
 function __git_rprompt
-  set -l branch (git_branch_name)
+  set -l branch (git rev-parse --abbrev-ref HEAD ^/dev/null )
   set -l prompt ''
 
   if git_is_touched
