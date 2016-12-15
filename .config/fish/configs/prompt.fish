@@ -23,14 +23,33 @@ end
 
 function fish_right_prompt -d 'Rightside prompt'
   set -l rprompt ''
-  set rpompt $rpompt (__git_rprompt)
+  if git_is_repo
+    set rpompt $rpompt (__git_rprompt)
+  end
   set rpompt $rpompt (prompt_pwd)
   echo -n $rpompt (set_color normal)
 end
 
 function __git_rprompt
-  set -l branch (git rev-parse --abbrev-ref HEAD ^/dev/null)
+  set -l branch (git_branch_name)
+  set -l prompt ''
 
-  echo -n $branch
+  if git_is_touched
+    set_color red
+  else
+    set_color green
+  end
+
+  set prompt $prompt $branch
+
+  if git_is_detached_head; or [ -n (git_ahead ^/dev/null >/dev/null) ]
+    set prompt $prompt '!'
+  end
+
+  if git_untracked_files ^/dev/null >/dev/null
+    set prompt $prompt '?'
+  end
+
+  echo -n $prompt
   set_color normal
 end
