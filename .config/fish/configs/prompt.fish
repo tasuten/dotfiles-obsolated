@@ -42,7 +42,7 @@ function __git_rprompt
 
   set prompt $prompt $branch
 
-  if git_is_detached_head; or [ -n (git_ahead ^/dev/null >/dev/null) ]
+  if git rev-list --left-right @...'@{u}' ^ /dev/null | grep "^[<>]" > /dev/null
     set prompt $prompt '!'
   end
 
