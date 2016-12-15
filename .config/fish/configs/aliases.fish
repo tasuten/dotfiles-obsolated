@@ -3,7 +3,7 @@
 # MacVim-Kaoriya
 alias vim 'env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim '
 alias gvim 'env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app'
-alias g='git'
+alias g 'git'
 
 
 # opencでopen .（カレントディレクトリを開く）
@@ -16,11 +16,11 @@ alias openc 'open .'
 # -C 標準出力以外に出力するときでも複数列で表示
 # -F ファイルタイプに応じてファイル名に/や@や*をsuffixする
 # -l ファイルの詳細情報を表示する
-alias ll='ls -alF'
-alias l='ls -CF'
-alias la='ls -A'
+alias ll 'ls -alF'
+alias l 'ls -CF'
+alias la 'ls -A'
 # ついでにtypo補正も(;s -> ls)
-alias s='ls'
+alias s 'ls'
 
 # diffの代わりにcolordiffを使う。Homebrewでインストール可能
 # ついでにunified形式で出力するようにする

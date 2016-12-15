@@ -24,13 +24,13 @@ end
 function fish_right_prompt -d 'Rightside prompt'
     set -l rprompt ''
     if git_is_repo
-        set rpompt $rpompt (__git_rprompt)
+        set rpompt $rpompt (__git_prompt)
     end
     set rpompt $rpompt (prompt_pwd)
     echo -n $rpompt (set_color normal)
 end
 
-function __git_rprompt
+function __git_prompt
     set -l branch (git rev-parse --abbrev-ref HEAD ^/dev/null )
     set -l prompt ''
 
@@ -53,3 +53,4 @@ function __git_rprompt
     echo -n $prompt
     set_color normal
 end
+
