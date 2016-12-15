@@ -5,7 +5,6 @@ root = $HOME
 README.txt
 dotfiles.pl
 dotfiles_config
-git_current_branch.zsh
 
 [Directory]
 bin/
