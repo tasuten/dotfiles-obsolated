@@ -24,3 +24,17 @@ function __fzf_git_tracking
     commandline -f repaint
 end
 
+
+# gitのbranch
+function __fzf_git_branch
+    set -q FZF_GIT_BRANCH
+    or set -l FZF_GIT_BRANCH_COMMAND 'git branch -vv | grep -v "^\*"'
+
+    fish -c "$FZF_GIT_BRANCH_COMMAND" | __fzfcmd -m $FZF_GIT_TRACKING_OPTS | read -la select
+    if test ! (count $select) -eq 0
+        set -l branch  (echo "$select" | cut -d \  -f 1)
+        git checkout "$branch"
+    end
+    commandline -f repaint
+end
+

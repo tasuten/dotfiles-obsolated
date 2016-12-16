@@ -23,5 +23,6 @@ function fish_user_key_bindings
     bind \cr __fzf_find_and_execute
     bind \cx\cd __fzf_z # z
     bind \cx\cf __fzf_git_tracking
+    bind \cx\cb __fzf_git_branch
 end
 
