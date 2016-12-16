@@ -5,11 +5,11 @@ function fish_prompt -d 'Leftside prompt'
     set -e prompt[1]
 
     # superuser
-    if test (id -u) -eq 0 -o $SUDO_USER
+    if [ (id -u) -eq 0 -o $SUDO_USER ]
         set_color red
         set prompt $prompt '#'
     else
-        if test $last_status -eq 0
+        if [ $last_status -eq 0 ]
             set_color blue
         else
             set_color yellow
