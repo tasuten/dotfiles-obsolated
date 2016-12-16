@@ -17,7 +17,7 @@ set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
 # homebrew-file
-set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/brewfile/Brewfile
+set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/Brewfile
 
 # rlwrap
 set -x RLWRAP_HOME $XDG_DATA_HOME/rlwrap
