@@ -15,7 +15,7 @@ function fish_user_key_bindings
     bind \cs\cl "commandline -rt '| less'"
     bind \cs\cj "commandline -rt '| head'"
     bind \cs\ck "commandline -rt '| tail'"
-    bind \cs\cg "commandline -rt '| grep'"
+    bind \cs\cg "commandline -rt '| grep '"
     bind \cs\cy "commandline -rt '| pbcopy'"
 
     # fzf
