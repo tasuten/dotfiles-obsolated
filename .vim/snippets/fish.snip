@@ -1,0 +1,25 @@
+snippet     if
+abbr        if command
+options     head
+        if ${1:#:command}
+                ${0:TARGET}
+
+snippet     if_test
+abbr        if [  ]
+options     head
+        if [ ${1:#:condition} ]
+                ${0:TARGET}
+
+snippet     else
+abbr        else
+options     head
+        else
+                ${0:TARGET}
+
+snippet     function
+abbr        function
+options     head
+        function ${1:#:function_name}
+                ${0:TARGET}
+        end
+
