@@ -3,7 +3,10 @@
 # MacVim-Kaoriya
 alias vim 'env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim '
 alias gvim 'env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app'
+
+# よく使うコマンド
 alias g 'git'
+alias b 'brew'
 
 
 # opencでopen .（カレントディレクトリを開く）
