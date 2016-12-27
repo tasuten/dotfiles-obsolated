@@ -224,7 +224,6 @@ Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'mattn/webapi-vim'
-Plug 'Shougo/vimproc', { 'do' : 'make' }
 Plug 'LeafCage/yankround.vim'
 Plug 'nishigori/increment-activator'
 Plug 'thinca/vim-template'
@@ -258,12 +257,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
 " filetype類
-Plug 'javacomplete', {
-\ 'do' : 'javac -J-Dfile.encoding=UTF-8 autoload/Reflection.java',
-\ 'for' : 'java'
-\ }
-Plug 'https://bitbucket.org/teramako/jscomplete-vim.git',
-\ { 'for' : 'javascript' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
@@ -365,10 +358,8 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 " Enable omni completion.
 autocmd vimrc FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd vimrc FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd vimrc FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 autocmd vimrc FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd vimrc FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd vimrc FileType java setlocal omnifunc=javacomplete#Complete
 autocmd vimrc FileType elixir setlocal omnifunc=vivi#complete#omni
 
 " Enable heavy omni completion.
@@ -378,7 +369,6 @@ endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.java = '\%(\.\)\h\w*'
 let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.elixir = '[^.[:digit:] *\t]\.'
 
@@ -536,10 +526,6 @@ nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
 nnoremap U :<C-u>GundoToggle<CR>
 autocmd vimrc FileType gundo nnoremap <buffer> :q :<C-u>GundoHide<CR>
 autocmd vimrc BufNewFile,BufRead __Gundo_Preview__ nnoremap <buffer> :q :<C-u>GundoHide<CR>
-
-" jscomplete-vim
-" DOM APIも補完対象に
-let g:jscomplete_use = [ 'dom' ]
 
 " vivi.vim
 " iexを立ち上げとく。refやomni補完を使うときに便利
