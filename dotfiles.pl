@@ -12,7 +12,7 @@ if ($#ARGV == -1 or $#ARGV > 2) {
     usage() and exit 1;
 }
 
-my %config = parse_config('dotfiles_config');
+my %config = parse_config( (dirname $0) . '/' .'dotfiles_config');
 my %link_table = generate_table(\%config);
 
 my $dry_run = ''; # false
