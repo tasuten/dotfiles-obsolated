@@ -14,3 +14,10 @@ bin/
 .vim/after/ftplugin/
 .config/fish/configs/
 
+[PrefixDot]
+config/
+vim/
+tmux.conf
+vimrc
+
+
