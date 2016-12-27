@@ -1,4 +1,3 @@
-" .vimrcのエンコーディング指定
 scriptencoding utf-8
 
 " autocmd vimrcはgroupに属させたほうが良い
@@ -7,11 +6,8 @@ augroup vimrc
   autocmd!
 augroup END
 
-" バックアップファイルやスワップファイルをtmp以下に
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
-
-" アンドゥ履歴をファイルに保存。これもtmp以下に
 set undodir=~/.vim/tmp/undo
 set undofile
 
@@ -19,21 +15,14 @@ set undofile
 set backspace=indent,eol,start
 
 " 常に大文字小文字を区別して検索（置換時の検索等含む）
-" 大文字小文字を区別せず検索したい時は\cをパターン中に含める
-" eg.) /aa\c みたく
-" 置換だと:%s/hoge/fuga/gi みたくiフラグを入れてもいい
 set noignorecase
 set nosmartcase
 
-" インデントは基本スペースを使う
 set expandtab
 
-" スマートインデント
 set autoindent
 set smartindent
 
-" インデント幅は基本スペース2個
-" 明示的に指定する時はftplugin/[filetype].vimで
 set softtabstop=2
 set shiftwidth=2
 
@@ -56,7 +45,7 @@ set notitle
 set list
 set listchars=tab:»\ ,
 
-" 行番号を濃い灰色で表示
+" 行番号を表示
 set number
 
 " カーソルがある行をハイライト
@@ -67,7 +56,6 @@ set noshowcmd
 
 " statuslineはプラグイン設定の後で
 
-" インデントに関する設定も反映させるためにindentもonに
 filetype on
 filetype plugin on
 filetype indent on
@@ -76,7 +64,7 @@ filetype indent on
 set splitright
 set splitbelow
 
-" >や<をshiftwidthの倍数倍に丸めるようにする
+" >や<をshiftwidthの倍数に丸めるようにする
 set shiftround
 
 " USキーボードでは:がShift-;で押しにくいので;と入れ替え
@@ -229,7 +217,6 @@ endfunction
 " ここからプラグイン設定
 
 " vim-plug
-" vim-plugそのもののアップデートはPlugUpgradeで
 
 call plug#begin('~/.vim/plugged')
 
@@ -332,7 +319,6 @@ let g:quickrun_config.markdown = {
 \ }
 
 " caw.vim
-" <Leader>cでその行のコメントを切り替え
 nmap <Leader>c <Plug>(caw:hatpos:toggle)
 vmap <Leader>c <Plug>(caw:hatpos:toggle)
 
