@@ -8,11 +8,11 @@ dotfiles_config
 
 [Directory]
 bin/
-.vim/template/
-.vim/snippets/
-.vim/ftplugin/
-.vim/after/ftplugin/
-.config/fish/configs/
+vim/template/
+vim/snippets/
+vim/ftplugin/
+vim/after/ftplugin/
+config/fish/configs/
 
 [PrefixDot]
 config/
