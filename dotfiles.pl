@@ -44,7 +44,7 @@ sub parse_config {
         chomp $line;
 
         # comment or empty line
-        if ($line =~ /^(?:\s*#.*)|(?:\s+)$/) {
+        if ($line eq '' or $line =~ /^(?:\s*#.*)|(?:\s+)$/) {
             next;
         } elsif ($line =~ /^\[(.+)\]/) { # [Section]
             my $section = lc $1;
