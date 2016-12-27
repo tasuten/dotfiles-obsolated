@@ -114,28 +114,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" tをprefixにしてタブページの操作
-" tmuxに一応合わせてる
-" The prefix key.
-nnoremap [tab] <Nop>
-nmap t [tab]
-" n番タブにジャンプ
-for s:n in range(1, 9)
-  execute 'nnoremap <silent> [tab]'.s:n  ':<C-u>tabnext '.s:n.'<CR>'
-endfor
-" 一番右にタブを開く
-nnoremap <silent> [tab]c :<C-u>tablast <bar> tabnew<CR>
-" 次のタブ
-nnoremap <silent> [tab]t :<C-u>tabnext<CR>
-nnoremap <silent> [tab]n :<C-u>tabnext<CR>
-" 前のタブ
-nnoremap <silent> [tab]p :<C-u>tabprevious<CR>
-" タブを閉じる
-nnoremap <silent> [tab]q :<C-u>tabclose<CR>
-nnoremap <silent> [tab]k :<C-u>tabclose<CR>
-" ファイルを指定して新しいタブを開く
-nnoremap [tab]N :tabnew<Space>
-
 " QuickFixの開閉のトグル
 " http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
 command -bang -nargs=? QFixToggle call QFixToggle(<bang>0)
