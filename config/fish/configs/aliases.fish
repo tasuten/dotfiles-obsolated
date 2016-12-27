@@ -47,3 +47,6 @@ alias jar 'jar -J-Dfile.encoding=UTF-8'
 # Schemeの文法では少し困るので明示的に指定
 alias gosh 'rlwrap -b "(){}[],#\";| " gosh'
 
+# cd-gitroot-fish
+alias cdu 'cd-gitroot'
+
