@@ -251,6 +251,7 @@ Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ujihisa/neco-look'
+Plug 'Shougo/neco-vim'
 
 " ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
