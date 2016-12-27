@@ -44,7 +44,7 @@ sub parse_config {
         chomp $line;
 
         # comment or empty line
-        if ($line =~ /^(?:\s*#.*)|(?:\s+)$/) {
+        if ($line eq '' or $line =~ /^(?:\s*#.*)|(?:\s+)$/) {
             next;
         } elsif ($line =~ /^\[(.+)\]/) { # [Section]
             my $section = lc $1;
@@ -116,7 +116,6 @@ sub normalize_dir {
     return $dir;
 }
 
-
 sub generate_table {
     my (@config) = @_;
     my %result;
@@ -125,7 +124,7 @@ sub generate_table {
     for my $dir (@{$config{directory}}){
         my $entity = getcwd . '/' .  $dir;
         my $root = normalize_dir($config{general}{root});
-        my $symlink = $root . $dir;
+        my $symlink = $root . prefix_dot($dir);
         $symlink =~ s/\/+$//g; # symlink name doesn't finish with slash(es)
         $result{$entity} = $symlink;
     }
@@ -138,7 +137,7 @@ sub generate_table {
         } else {
             my $entity = getcwd . '/' . $f;
             my $root = normalize_dir($config{general}{root});
-            my $symlink = $root . $f;
+            my $symlink = $root . prefix_dot($f);
             $result{$entity} = $symlink;
         }
     }
@@ -157,7 +156,6 @@ sub is_ignore {
     return ''; # false
 }
 
-
 sub in_directory {
     my ($f) = @_;
     for my $dir (@{$config{directory}}){
@@ -167,6 +165,18 @@ sub in_directory {
         }
     }
     return ''; # false
+}
+
+sub prefix_dot {
+    my ($path) = @_;
+    for my $entry (@{$config{prefixdot}}){
+        # FIXME: smarter way
+       if ($path =~ /^$entry/) {
+           return ".$path";
+       }
+    }
+
+    return $path;
 }
 
 sub usage {
