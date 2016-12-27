@@ -251,7 +251,7 @@ Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ujihisa/neco-look'
-Plug 'Shougo/neco-vim'
+Plug 'Shougo/neco-vim', { 'for' : 'vim' }
 
 " ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
@@ -261,8 +261,8 @@ Plug 'tacahiroy/ctrlp-funky'
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
-Plug 'dag/vim-fish'
-Plug 'keith/tmux.vim'
+Plug 'dag/vim-fish', { 'for' : 'fish' }
+Plug 'keith/tmux.vim', { 'for' : 'tmux' }
 Plug 'spinningarrow/vim-niji'
 
 " colorscheme
