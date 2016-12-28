@@ -223,6 +223,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'ConradIrwin/vim-bracketed-paste'
 if has('python') || has('python3')
   Plug 'sjl/gundo.vim'
+  Plug 'editorconfig/editorconfig-vim'
 endif
 
 " text-object
