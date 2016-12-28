@@ -209,6 +209,9 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'thinca/vim-quickrun'
+Plug 'osyo-manga/shabadou.vim'
+" vim-watchdogs depend_on quickrun, vimproc, shabadou.vim
+Plug 'osyo-manga/vim-watchdogs'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'mattn/webapi-vim'
@@ -304,6 +307,11 @@ let g:quickrun_config.markdown = {
 \ 'type' : 'markdown/redcarpet',
 \ 'outputter' : 'browser'
 \ }
+
+" vim-watchdogs
+" 保存時、一定時間放置時にチェック
+let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
 
 " caw.vim
 nmap <Leader>c <Plug>(caw:hatpos:toggle)
