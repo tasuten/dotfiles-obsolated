@@ -210,8 +210,9 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
-" 要Python
-Plug 'sjl/gundo.vim'
+if has('python') || has('python3')
+  Plug 'sjl/gundo.vim'
+endif
 
 " text-object
 Plug 'kana/vim-textobj-user'
@@ -225,11 +226,13 @@ Plug 'tpope/vim-surround'
 Plug 'thinca/vim-ref'
 
 " neocomplete
-Plug 'Shougo/neocomplete'
+if has('lua')
+  Plug 'Shougo/neocomplete'
+  Plug 'ujihisa/neco-look'
+  Plug 'Shougo/neco-vim', { 'for' : 'vim' }
+endif
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'ujihisa/neco-look'
-Plug 'Shougo/neco-vim', { 'for' : 'vim' }
 
 " ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
