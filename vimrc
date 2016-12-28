@@ -54,6 +54,16 @@ set cursorline
 " showcmdは個人的には画面に頻繁にちらつくのが気に入らなかったので
 set noshowcmd
 
+" Vim8.0で追加されたオプション群
+if v:version >= 800
+  " 折り返し行をインデントして表示
+  set breakindent
+  " emojiは全角幅
+  set emoji
+  " コンソールでもTrue Colorを使う
+  " set termguicolors
+endif
+
 " statuslineはプラグイン設定の後で
 
 filetype on
