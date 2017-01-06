@@ -29,10 +29,6 @@ alias s 'ls'
 # ついでにunified形式で出力するようにする
 alias diff 'colordiff -u'
 
-# ag(the_silver_searcher)の設定
-# 隠しファイル(.vimrc等)を検索対象に入れるが、.git/は無視する
-alias ag 'ag --hidden --ignore .git/'
-
 # exit
 alias q 'exit'
 
