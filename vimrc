@@ -243,7 +243,7 @@ Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'dag/vim-fish', { 'for' : 'fish' }
 Plug 'keith/tmux.vim', { 'for' : 'tmux' }
-Plug 'spinningarrow/vim-niji'
+Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
 " colorscheme
 Plug 'tasuten/Fugaku'
