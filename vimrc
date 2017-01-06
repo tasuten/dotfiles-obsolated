@@ -87,11 +87,6 @@ nnoremap k gk
 nnoremap <Up> gk
 nnoremap <Down> gj
 
-" Hで行頭、Lで行末へ
-" ノーマルモード、ビジュアルモード、演算待モードで有効
-map H 0
-map L $
-
 " 挿入モードでEmacsライクなキーバインド
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
@@ -113,16 +108,6 @@ noremap # #zz
 " x, Xで削除した文字はレジスタに突っ込ませないようにする
 nnoremap x "_x
 nnoremap X "_X
-
-" クリップボードからの貼り付け
-inoremap <silent> <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
-inoremap <silent> <C-r>+ <C-o>:set paste<CR><C-r>+<C-o>:set nopaste<CR>
-
-" <C-hjkl>でウィンドウ移動
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " QuickFixの開閉のトグル
 " http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
