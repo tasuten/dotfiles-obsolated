@@ -18,6 +18,8 @@ set -x PATH /usr/local/sbin $PATH
 
 # rustup
 set -x PATH $HOME/.cargo/bin $PATH
+# racer
+set -x RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
 
 # homebrew-file
 set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/Brewfile

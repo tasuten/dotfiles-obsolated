@@ -242,6 +242,7 @@ Plug 'kaneshin/ctrlp-sonictemplate'
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
+Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
 Plug 'dag/vim-fish', { 'for' : 'fish' }
 Plug 'keith/tmux.vim', { 'for' : 'tmux' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
@@ -515,6 +516,8 @@ let g:vivi_enable_omni_completion = 1
 " rust.vim
 " 保存時に自動でrustfmtする
 let g:rustfmt_autosave = 1
+" vim-racer
+let g:racer_experimental_completer = 1
 
 " motor.vim
 let g:motor#default_word_pattern = [
