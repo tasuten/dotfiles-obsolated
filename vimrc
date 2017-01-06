@@ -201,7 +201,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'mattn/webapi-vim'
 Plug 'LeafCage/yankround.vim'
 Plug 'nishigori/increment-activator'
-Plug 'thinca/vim-template'
+Plug 'mattn/sonictemplate-vim'
 Plug 'thinca/vim-prettyprint'
 Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
@@ -393,15 +393,12 @@ nmap <C-n> <Plug>(yankround-next)
 " キャッシュの保存先
 let g:yankround_dir = '~/.cache/yankround'
 
-" template.vim
-" execute内は<>で囲まれたテキストオブジェクト全体(a>)を
-" 削除レジスタ("_)へ削除(d)の意味
-" つまり<Cursor>を消去している
-" 最終的にカーソルは<Cursor>の有った場所の一つ前にある
-autocmd vimrc User plugin-template-loaded
-\ if search('<Cursor>')
-\ | execute 'normal! "_da>'
-\ | endif
+" sonictemplate-vim
+nnoremap <Space>t :<C-u>Template<Space>
+
+let g:sonictemplate_vim_template_dir = [
+\ $HOME.'/.vim/template',
+\ ]
 
 " MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
 " デフォルトではg/なのが思い出せないのでm/にも
