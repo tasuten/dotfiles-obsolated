@@ -16,6 +16,9 @@ set -x XDG_CONFIG_DIRS /etc/xdg
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
+# rustup
+set -x PATH $HOME/.cargo/bin $PATH
+
 # homebrew-file
 set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/Brewfile
 
