@@ -194,9 +194,8 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'thinca/vim-quickrun'
-Plug 'osyo-manga/shabadou.vim'
 " vim-watchdogs depend_on quickrun, vimproc, shabadou.vim
-Plug 'osyo-manga/vim-watchdogs'
+Plug 'osyo-manga/shabadou.vim' | Plug 'osyo-manga/vim-watchdogs'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'mattn/webapi-vim'
