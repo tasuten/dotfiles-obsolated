@@ -236,6 +236,7 @@ Plug 'Shougo/neosnippet-snippets'
 " ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'kaneshin/ctrlp-sonictemplate'
 
 " filetype類
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
@@ -394,8 +395,6 @@ nmap <C-n> <Plug>(yankround-next)
 let g:yankround_dir = '~/.cache/yankround'
 
 " sonictemplate-vim
-nnoremap <Space>t :<C-u>Template<Space>
-
 let g:sonictemplate_vim_template_dir = [
 \ $HOME.'/.vim/template',
 \ ]
@@ -499,7 +498,8 @@ nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 nnoremap <silent> [ctrlp]q :CtrlPQuickfix<CR>
 " アウトライン(ctrlp-funky)
 nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
-
+" テンプレート(ctrlp-sonictemplate)
+nnoremap <silent> [ctrlp]t :CtrlPSonictemplate<CR>
 
 " gundo.vim
 nnoremap U :<C-u>GundoToggle<CR>
