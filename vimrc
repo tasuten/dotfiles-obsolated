@@ -7,5 +7,5 @@ augroup vimrc
 augroup END
 
 runtime! conf.d/base/*.vim
-runtime! conf.d/plugin/*.vim
+runtime! conf.d/plugins/*.vim
 
