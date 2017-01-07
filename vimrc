@@ -6,6 +6,9 @@ augroup vimrc
   autocmd!
 augroup END
 
+" UIは英語にする
+language message C
+
 runtime! conf.d/base/*.vim
 runtime! conf.d/plugins/*.vim
 
