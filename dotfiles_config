@@ -8,6 +8,7 @@ dotfiles_config
 
 [Directory]
 bin/
+vim/conf.d/
 vim/template/
 vim/snippets/
 vim/ftplugin/
