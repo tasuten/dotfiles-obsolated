@@ -17,7 +17,7 @@ autocmd vimrc FileType git nnoremap <buffer> D :q<CR>
 " Vimで shebang 付ファイルを保存時に実行権限を自動で付加する
 " http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
 autocmd vimrc BufWritePost * :call AddExecmod()
-function AddExecmod()
+function! AddExecmod()
   let line = getline(1)
   if strpart(line, 0, 2) ==# '#!'
     call system('chmod +x '. expand('%'))
