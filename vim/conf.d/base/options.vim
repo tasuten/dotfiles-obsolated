@@ -53,7 +53,9 @@ if v:version >= 800
   " emojiは全角幅
   set emoji
   " コンソールでもTrue Colorを使う
-  " set termguicolors
+   set termguicolors
+   let &t_8f = "\x1b[38;2;%lu;%lu;%lum"
+   let &t_8b = "\x1b[48;2;%lu;%lu;%lum"
 endif
 
 " ウィンドウ分割で上や左にではなく右や下に開くように
