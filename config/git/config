@@ -43,3 +43,5 @@
 [push]
   default = simple
 
+[ghq]
+	root = ~/src
