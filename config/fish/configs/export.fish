@@ -16,8 +16,10 @@ set -x XDG_CONFIG_DIRS /etc/xdg
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 
+# cargo
+set -x CARGO_HOME $XDG_DATA_HOME/cargo
 # rustup
-set -x PATH $HOME/.cargo/bin $PATH
+set -x PATH $CARGO_HOME/bin $PATH
 # racer
 set -x RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
 
