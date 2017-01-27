@@ -10,7 +10,10 @@ endfunction
 if !exists('g:fugaku_customize')
   let g:fugaku_customize = {}
 endif
-let g:fugaku_customize.ZenkakuSpace = { 'cterm' : 'underline', 'gui' : 'underline' }
+let g:fugaku_customize.ZenkakuSpace = {
+\ 'ctermfg': 131, 'cterm' : 'underline',
+\ 'guifg': '#B23E52', 'gui' : 'underline'
+\ }
 let g:fugaku_customize.WhitespaceEOL = { 'ctermbg' : 131, 'guibg' : '#B23E52' }
 
 " ターミナルエミュレータの背景色に合わせる
