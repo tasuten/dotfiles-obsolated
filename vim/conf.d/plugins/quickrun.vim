@@ -26,3 +26,11 @@ let g:quickrun_config.markdown = {
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_CursorHold_enable = 1
 
+" Rubyでrubocopが使えるならそっちを使う
+if executable('rubocop')
+  let g:quickrun_config['ruby/watchdogs_checker'] = {
+  \   'type' : 'watchdogs_checker/rubocop'
+  \ }
+endif
+call watchdogs#setup(g:quickrun_config)
+
