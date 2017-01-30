@@ -24,15 +24,6 @@ function __fzf_git_trackings
     commandline -f repaint
 end
 
-function __fzf_smart_files
-    if git_is_repo
-        __fzf_git_trackings
-    else
-        fzf
-    end
-end
-
-
 # gitのbranch
 function __fzf_git_branches
     set -q FZF_GIT_BRANCH

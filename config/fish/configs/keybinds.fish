@@ -23,7 +23,7 @@ function fish_user_key_bindings
     bind \cr __fzf_find_and_execute
     bind \cx\ch __fzf_reverse_isearch
     bind \cx\cd __fzf_z_directories # z
-    bind \cx\cf __fzf_smart_files
+    bind \cx\cf __fzf_git_trackings
     bind \cx\cb __fzf_git_branches
     bind \cx\cg __ghq_crtl_g # fish-ghq
 end
