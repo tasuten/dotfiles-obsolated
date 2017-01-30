@@ -1,5 +1,5 @@
 # zのディレクトリ
-function __fzf_z
+function __fzf_z_directories
     set -q FZF_Z_COMMAND
     or set -l FZF_Z_COMMAND "
   __z -l 2>&1 | sed -E 's/^[0-9]+(.[0-9]+)? +//g'"
@@ -12,7 +12,7 @@ function __fzf_z
 end
 
 # gitのトラッキング中のファイル
-function __fzf_git_tracking
+function __fzf_git_trackings
     set __GIT_ROOT_PATH (git rev-parse --show-cdup)
     set -q FZF_GIT_TRACKING
     or set -l FZF_GIT_TRACKING_COMMAND "git ls-files --full-name $__GIT_ROOT_PATH"
@@ -24,9 +24,9 @@ function __fzf_git_tracking
     commandline -f repaint
 end
 
-function __fzf_smart_file
+function __fzf_smart_files
     if git_is_repo
-        __fzf_git_tracking
+        __fzf_git_trackings
     else
         fzf
     end
@@ -34,7 +34,7 @@ end
 
 
 # gitのbranch
-function __fzf_git_branch
+function __fzf_git_branches
     set -q FZF_GIT_BRANCH
     or set -l FZF_GIT_BRANCH_COMMAND 'git branch -vv | grep -v "^\*"'
 
