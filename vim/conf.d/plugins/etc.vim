@@ -44,12 +44,6 @@ let g:sonictemplate_vim_template_dir = [
 \ $HOME.'/.vim/template',
 \ ]
 
-" MacVim-KaoriYa等のKaoriYa版パッチに含まれるmigemo検索が
-" デフォルトではg/なのが思い出せないのでm/にも
-" 元のmは一応mmに
-nnoremap mm m
-nnoremap m/ g/
-
 " increment-activator
 let g:increment_activator_filetype_candidates = {
 \ '_' : [

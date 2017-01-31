@@ -2,7 +2,7 @@
 
 # 基本的なこと
 set -x LANG ja_JP.UTF-8
-set -x EDITOR /Applications/MacVim.app/Contents/MacOS/Vim
+set -x EDITOR /usr/local/bin/vim
 
 # XDG Base Directoryを明示
 set -x XDG_CONFIG_HOME $HOME/.config
