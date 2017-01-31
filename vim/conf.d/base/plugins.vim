@@ -2,6 +2,7 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'thinca/vim-quickrun'
 " vim-watchdogs depend_on quickrun, vimproc, shabadou.vim
 Plug 'osyo-manga/shabadou.vim' | Plug 'osyo-manga/vim-watchdogs'
