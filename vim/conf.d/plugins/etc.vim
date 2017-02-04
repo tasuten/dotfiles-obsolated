@@ -93,9 +93,6 @@ let g:vivi_enable_auto_warm_up_iex = 1
 " omni補完
 let g:vivi_enable_omni_completion = 1
 
-" rust.vim
-" 保存時に自動でrustfmtする
-let g:rustfmt_autosave = 1
 " vim-racer
 let g:racer_experimental_completer = 1
 
