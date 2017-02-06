@@ -23,6 +23,9 @@ set -x PATH $CARGO_HOME/bin $PATH
 # racer
 set -x RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
 
+# golang
+set -x PATH /usr/local/opt/go/libexec/bin $PATH
+
 # homebrew-file
 set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/Brewfile
 
