@@ -25,6 +25,8 @@ set -x RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rus
 
 # golang
 set -x PATH /usr/local/opt/go/libexec/bin $PATH
+set -x GOPATH $XDG_DATA_HOME/go
+set -x PATH $GOPATH/bin $PATH
 
 # homebrew-file
 set -x HOMEBREW_BREWFILE $XDG_DATA_HOME/Brewfile
