@@ -53,6 +53,7 @@ Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'liquidz/vivi.vim', { 'for' : 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
+Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'dag/vim-fish', { 'for' : 'fish' }
 Plug 'keith/tmux.vim', { 'for' : 'tmux' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }

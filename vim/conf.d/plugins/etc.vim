@@ -96,6 +96,9 @@ let g:vivi_enable_omni_completion = 1
 " vim-racer
 let g:racer_experimental_completer = 1
 
+" vim-go
+let g:go_fmt_command = 'goimports'
+
 " motor.vim
 let g:motor#default_word_pattern = [
 \ '\l+',
