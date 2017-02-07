@@ -5,6 +5,8 @@ nnoremap [doc] <Nop>
 nmap - [doc]
 " _hでVimのhelpを引く
 nnoremap [doc]h :<C-u>h<Space>
+" godoc
+nnoremap [doc]go :<C-u>GoDoc<Space>
 " ref.vim
 nnoremap [doc]r :<C-u>Ref<Space>
 nnoremap [doc]m :<C-u>Ref<Space>man<Space>
