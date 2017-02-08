@@ -98,6 +98,8 @@ let g:racer_experimental_completer = 1
 
 " vim-go
 let g:go_fmt_command = 'goimports'
+" 保存時のフォーマッティングを無効化
+let g:go_fmt_autosave = 0
 
 " motor.vim
 let g:motor#default_word_pattern = [
