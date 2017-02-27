@@ -56,6 +56,7 @@ Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'dag/vim-fish', { 'for' : 'fish' }
 Plug 'keith/tmux.vim', { 'for' : 'tmux' }
+Plug 'justmao945/vim-clang', { 'for' : [ 'c', 'cpp' ] }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
 " colorscheme
