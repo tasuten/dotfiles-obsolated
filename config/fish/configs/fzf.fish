@@ -17,7 +17,7 @@ function __fzf_git_trackings
     set -q FZF_GIT_TRACKING
     or set -l FZF_GIT_TRACKING_COMMAND "git ls-files --full-name $__GIT_ROOT_PATH"
 
-    fish -c "$FZF_GIT_TRACKING_COMMAND" | __fzfcmd $FZF_GIT_TRACKING_OPTS | __fzfescape | read -la selects
+    fish -c "$FZF_GIT_TRACKING_COMMAND" | __fzfcmd $FZF_GIT_TRACKING_OPTS | read -la selects
     if test (count $selects) -ne 0
         vim "$__GIT_ROOT_PATH$selects"
     end
