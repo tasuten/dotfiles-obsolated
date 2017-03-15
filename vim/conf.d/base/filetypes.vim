@@ -14,7 +14,7 @@ let g:vim_indent_cont = 0
 autocmd vimrc FileType gitcommit nnoremap <buffer> D :DiffGitCached<CR>
 autocmd vimrc FileType git nnoremap <buffer> D :q<CR>
 
-" Vimで shebang 付ファイルを保存時に実行権限を自動で付加する
+" Vimでshebang付ファイルを保存時に実行権限を自動で付加する
 " http://d.hatena.ne.jp/spiritloose/20060519/1147970872 より
 autocmd vimrc BufWritePost * :call AddExecmod()
 function! AddExecmod()
