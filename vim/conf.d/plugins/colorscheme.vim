@@ -7,18 +7,18 @@ function! s:my_highlights()
   let w:m2 = matchadd('WhitespaceEOL', '\s\+$')
 endfunction
 
-if !exists('g:fugaku_customize')
-  let g:fugaku_customize = {}
+if !exists('g:machiya_customize')
+  let g:machiya_customize = {}
 endif
-let g:fugaku_customize.ZenkakuSpace = {
-\ 'ctermfg': 131, 'cterm' : 'underline',
-\ 'guifg': '#B23E52', 'gui' : 'underline'
+let g:machiya_customize.ZenkakuSpace = {
+\ 'ctermfg': 175, 'cterm' : 'underline',
+\ 'guifg': '#db7bb1', 'gui' : 'underline'
 \ }
-let g:fugaku_customize.WhitespaceEOL = { 'ctermbg' : 131, 'guibg' : '#B23E52' }
+let g:machiya_customize.WhitespaceEOL = { 'ctermbg' : 175, 'guibg' : '#db7bb1' }
 
 " ターミナルエミュレータの背景色に合わせる
-let g:fugaku_use_terminal_background_color = 1
+let g:machiya_use_terminal_background_color = 1
 
 " colorschemeの適用
-colorscheme Fugaku
+colorscheme machiya
 
