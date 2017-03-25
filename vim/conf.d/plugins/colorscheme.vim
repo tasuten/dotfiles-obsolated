@@ -11,10 +11,10 @@ if !exists('g:machiya_customize')
   let g:machiya_customize = {}
 endif
 let g:machiya_customize.ZenkakuSpace = {
-\ 'ctermfg': 175, 'cterm' : 'underline',
-\ 'guifg': '#db7bb1', 'gui' : 'underline'
+\ 'ctermfg': 218, 'cterm' : 'underline',
+\ 'guifg': '#e7a5c9', 'gui' : 'underline'
 \ }
-let g:machiya_customize.WhitespaceEOL = { 'ctermbg' : 175, 'guibg' : '#db7bb1' }
+let g:machiya_customize.WhitespaceEOL = { 'ctermbg' : 218, 'guibg' : '#e7a5c9' }
 
 " ターミナルエミュレータの背景色に合わせる
 let g:machiya_use_terminal_background_color = 1
