@@ -7,7 +7,7 @@ if !exists('g:lightline')
   let g:lightline = {}
 endif
 " colorscheme
-let g:lightline.colorscheme = 'machiya'
+let g:lightline.colorscheme = 'default'
 " セパレータの指定
 let g:lightline.separator    = { 'left' : '', 'right' : '' }
 let g:lightline.subseparator = { 'left' : '', 'right' : '' }
