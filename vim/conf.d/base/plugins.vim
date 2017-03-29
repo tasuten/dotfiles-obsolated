@@ -59,6 +59,7 @@ Plug 'keith/tmux.vim', { 'for' : 'tmux' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
 " colorscheme
+Plug 'morhetz/gruvbox'
 " statusline
 Plug 'itchyny/lightline.vim'
 
