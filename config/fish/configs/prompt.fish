@@ -6,13 +6,13 @@ function fish_prompt -d 'Leftside prompt'
 
     # superuser
     if test (id -u) -eq 0 -o $SUDO_USER
-        set_color red
+        set_color brred
         set prompt $prompt '#'
     else
         if test $last_status -eq 0
-            set_color blue
+            set_color brblack 
         else
-            set_color yellow
+            set_color bryellow
         end
         set prompt $prompt '$'
     end
@@ -37,9 +37,9 @@ function __git_prompt
     # working treeと最新のコミットの間に差異がある場合、赤色
     # これはuntrackedなファイルがある場合も含む
     if git_is_touched
-        set_color red
+        set_color brred
     else
-        set_color green
+        set_color brgreen
     end
 
     set prompt $prompt $branch

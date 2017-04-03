@@ -1,10 +1,10 @@
-set fish_color_normal brwhite
+set fish_color_normal white
 set fish_color_command brcyan
 set fish_color_quote bryellow
 set fish_color_redirection green
 set fish_color_end magenta
 set fish_color_error red --bold
-set fish_color_comment white
+set fish_color_comment brblack
 set fish_color_match yellow
 set fish_color_search_match cyan
 set fish_color_operator brgreen
