@@ -22,6 +22,7 @@ if has('python') || has('python3')
   Plug 'sjl/gundo.vim'
   Plug 'editorconfig/editorconfig-vim'
 endif
+Plug 'vim-scripts/matchit.zip'
 
 " text-object
 Plug 'kana/vim-textobj-user'
