@@ -101,22 +101,3 @@ let g:go_fmt_command = 'goimports'
 " 保存時のフォーマッティングを無効化
 let g:go_fmt_autosave = 0
 
-" motor.vim
-let g:motor#default_word_pattern = [
-\ '\l+',
-\ '\u\l+',
-\ '\u+',
-\ '\d+',
-\ '%(\s+|\_^)\zs[!-/:-?\[-`{-~]+\ze%(\s+|$)',
-\ '[ぁ-んー〜]+',
-\ '[ァ-ンヴヵヶー〜]+',
-\ '[一-龠々〇]+'
-\]
-
-map  w  <Plug>(motor-w)
-map  b  <Plug>(motor-b)
-" map  e  <Plug>(motor-e)
-map  ge <Plug>(motor-ge)
-omap iw <Plug>(motor-textobj-w)
-xmap iw <Plug>(motor-textobj-w)
-

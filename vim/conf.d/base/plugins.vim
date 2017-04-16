@@ -66,7 +66,6 @@ Plug 'itchyny/lightline.vim'
 
 " 自作プラグイン
 Plug 'tasuten/gcalc.vim'
-Plug 'tasuten/motor.vim'
 
 call plug#end()
 
