@@ -1,3 +1,9 @@
 recipes:
   - command_line_tools
   - homebrew/installer
+  - homebrew/tap
+taps:
+  - argon/mas
+  - caskroom/versions
+  - tasuten/tasuten
+
