@@ -1,0 +1,7 @@
+matrix:
+  include:
+    - os: osx
+
+script:
+  - sh setup.sh
+
