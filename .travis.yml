@@ -2,6 +2,7 @@ matrix:
   include:
     - os: osx
 
+language: generic
 script:
   - sh setup.sh
 
