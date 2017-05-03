@@ -1,2 +1,3 @@
 recipes:
   - command_line_tools
+  - homebrew/installer
