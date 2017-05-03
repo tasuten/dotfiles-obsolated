@@ -33,6 +33,6 @@ else
   echo "Already Downloaded MItamae"
 fi
 
-./mitamae entrypoint.rb
+./mitamae local -y "nodes/$os.yml" entrypoint.rb
 
 
