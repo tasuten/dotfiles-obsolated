@@ -1,3 +1,3 @@
-include_recipe 'xcode'
-include_recipe 'homebrew'
+include_cookbook 'xcode'
+include_cookbook 'homebrew_install'
 
