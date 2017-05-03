@@ -2,8 +2,38 @@ recipes:
   - command_line_tools
   - homebrew/installer
   - homebrew/tap
+  - homebrew/package
 taps:
-  - argon/mas
   - caskroom/versions
   - tasuten/tasuten
-
+packages:
+  - base64
+  - colordiff
+  - elixir
+  - erlang
+  - fish
+  - fzf
+  - gauche
+  - ghq
+  - git
+  - gnupg
+  - htop
+  - jerm
+  - mas
+  - nmap
+  - ocaml
+  - tasuten/tasuten/osx-cpu-temp
+  - rbenv
+  - rbenv-default-gems
+  - reattach-to-user-namespace
+  - ripgrep
+  - rlwrap
+  - screenfetch
+  - shellcheck
+  - tig
+  - tmux
+  - tree
+  - tasuten/tasuten/ttyload
+  - tasuten/tasuten/used-mem
+  - vim
+  - w3m
