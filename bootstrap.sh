@@ -25,6 +25,6 @@ __mitamae_install() {
   unlink "$archive_name"
 }
 
-which ./mitamae >/dev/null 2>&1 || echo "Download MItamae..." || __mitamae_install
+which ./$bin_name >/dev/null 2>&1 || echo "Download MItamae..." &&  __mitamae_install
 ./$bin_name local entrypoint.rb
 
