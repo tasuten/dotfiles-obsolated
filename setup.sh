@@ -33,6 +33,5 @@ else
   echo "Already Downloaded MItamae"
 fi
 
-./mitamae entrypoint.rb
-
+./mitamae local entrypoint.rb
 
