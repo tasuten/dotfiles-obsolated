@@ -4,4 +4,3 @@
 # define :new_command, arg1: nil, args2: nil do
 #   # something to do
 # end
-

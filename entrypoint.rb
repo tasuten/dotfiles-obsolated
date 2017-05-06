@@ -11,4 +11,3 @@ MItamae::RecipeContext.class_eval do
 end
 include_role 'common'
 include_role node[:platform] # darwin, arch, ubuntu, ...
-
