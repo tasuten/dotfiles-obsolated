@@ -1,1 +1,2 @@
-# include_cookbooks "foobar"
+include_role 'common'
+
