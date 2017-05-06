@@ -9,6 +9,6 @@ MItamae::RecipeContext.class_eval do
     include_recipe File.join(root_dir, 'roles', name, 'default')
   end
 end
-
+include_role 'common'
 include_role node[:platform] # darwin, arch, ubuntu, ...
 
