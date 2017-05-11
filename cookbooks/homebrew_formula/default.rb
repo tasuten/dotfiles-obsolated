@@ -10,4 +10,3 @@ File.open(path).each_line do |line|
     options opt
   end
 end
-
