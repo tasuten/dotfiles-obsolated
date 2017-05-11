@@ -6,4 +6,9 @@ dotfile 'config/fish/configs' do
   add_dot true
 end
 
-# TODO: fisher's install and package install
+execute 'Install fisherman' do
+  command 'curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher'
+  not_if 'which fisher'
+end
+
+# TODO: package install by fisher
