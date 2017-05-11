@@ -5,4 +5,3 @@ include_cookbook 'homebrew_formula'
 include_cookbook 'homebrew_cask'
 
 include_cookbook 'environment'
-
