@@ -1,0 +1,5 @@
+homebrew:
+  taps: ~/Dropbox/configs/Homebrew/taps
+  formulas: ~/Dropbox/configs/Homebrew/formulas
+  casks: ~/Dropbox/configs/Homebrew/casks
+
