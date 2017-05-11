@@ -13,3 +13,8 @@ vim/ftplugin
   end
 end
 
+execute 'Install vim-plug' do
+  url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  plug_path = "#{ENV['HOME']}/.vim/autoload/plug.vim"
+  system("curl -fLo #{plug_path} --create-dirs #{url}") unless File.exist?(plug_path)
+end
