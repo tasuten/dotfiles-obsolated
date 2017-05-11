@@ -2,7 +2,7 @@
 
 define :dotfile, add_dot: false do
   entity = params[:name]
-  symlink = params[:add_dot] ? ".#{entity}" : entity 
+  symlink = params[:add_dot] ? ".#{entity}" : entity
 
   link_root = ENV['HOME']
 
