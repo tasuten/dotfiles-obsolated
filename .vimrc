@@ -185,6 +185,7 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'tyru/caw.vim'
+Plug 'LeafCage/yankround.vim'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -205,6 +206,17 @@ let g:plug_window = 'belowright new'
 " caw.vim
 nmap <Leader>c <Plug>(caw:hatpos:toggle)
 vmap <Leader>c <Plug>(caw:hatpos:toggle)
+
+" yankround.vim
+" YankRing likeなキーバインド
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+" キャッシュの保存先
+let g:yankround_dir = '~/.cache/yankround'
+
 
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
