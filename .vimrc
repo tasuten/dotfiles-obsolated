@@ -287,6 +287,12 @@ call lexima#add_rule({'char': '*',  'at': '^\s*\* \%#$',  'input': '<BS>*', 'fil
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 
+" indentLine
+" See: https://github.com/Yggdroot/indentLine/issues/125
+let g:indentLine_concealcursor = ''
+" helpでは無効にする
+let g:indentLine_fileTypeExclude = [ 'help' ]
+
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
 " WhitespaceEOL: 行末のスペース
