@@ -191,6 +191,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
+Plug 'ConradIrwin/vim-bracketed-paste'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
