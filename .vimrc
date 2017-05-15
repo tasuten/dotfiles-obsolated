@@ -186,6 +186,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tyru/caw.vim'
 Plug 'LeafCage/yankround.vim'
+Plug 'nishigori/increment-activator'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -216,6 +217,21 @@ nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
 " キャッシュの保存先
 let g:yankround_dir = '~/.cache/yankround'
+
+" increment-activator
+let g:increment_activator_filetype_candidates = {
+\ '_' : [
+\   [ 'private', 'protected', 'public' ],
+\   [ 'right', 'left' ],
+\   [ 'up', 'down' ],
+\   [ 'top', 'bottom' ],
+\   [ 'max', 'min' ],
+\   [ 'width', 'height' ]
+\ ],
+\ 'gitrebase': [
+\   [ 'pick', 'reword', 'edit', 'squash', 'fixup', 'exec' ]
+\ ]
+\ }
 
 
 " ユーザ定義のハイライトグループ
