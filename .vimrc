@@ -190,6 +190,7 @@ Plug 'nishigori/increment-activator'
 Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'Yggdroot/indentLine'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
