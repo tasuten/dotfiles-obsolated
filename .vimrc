@@ -189,6 +189,7 @@ Plug 'LeafCage/yankround.vim'
 Plug 'nishigori/increment-activator'
 Plug 'haya14busa/incsearch.vim'
 Plug 'cohama/lexima.vim'
+Plug 'junegunn/vim-easy-align'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -271,6 +272,9 @@ call lexima#add_rule({'char': '<BS>',  'at': '^\s*\* \%#$', 'input': '<BS><BS>',
 call lexima#add_rule({'char': '-',  'at': '^- \%#$',  'input': '<BS>-', 'filetype': 'markdown'})
 " *についても強調で使うので細工
 call lexima#add_rule({'char': '*',  'at': '^\s*\* \%#$',  'input': '<BS>*', 'filetype': 'markdown'})
+
+" vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
 
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
