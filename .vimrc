@@ -206,6 +206,9 @@ Plug 'tpope/vim-surround'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
+" filetypes
+Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
+
 " colorscheme
 Plug 'morhetz/gruvbox'
 
