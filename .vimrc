@@ -192,6 +192,7 @@ Plug 'cohama/lexima.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'vim-scripts/matchit.zip'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
