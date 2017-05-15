@@ -184,6 +184,8 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'tyru/caw.vim'
+
 " colorscheme
 Plug 'morhetz/gruvbox'
 
@@ -199,6 +201,10 @@ let g:loaded_spellfile_plugin = 1
 " vim-plug
 " アップデートウィンドウは下に開く
 let g:plug_window = 'belowright new'
+
+" caw.vim
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
 
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
