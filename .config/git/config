@@ -1,0 +1,39 @@
+[user]
+  name = tasuten
+  email = heliopause64@gmail.com
+[core]
+  autocrlf = input
+[color]
+  ui = true
+
+[alias]
+  amend = commit --amend
+  create-branch = checkout -b
+  # Instead of git reset --hard HEAD
+  destroy = !git commit -a -m 'Temporary commit for git-destroy' && git reset --hard HEAD~
+  merge-commit = merge --no-ff
+  unstage = reset HEAD
+  a = add
+  c = commit
+  d = diff --word-diff
+  l = log --graph --date=short --pretty=twoline
+  s = status -s -b
+  br = branch
+  cb = checkout -b
+  cl = clone
+  co = checkout
+  gr = grep
+  mg = merge
+  mc = merge --no-ff
+  pl = pull
+  ps = push
+  rl = reflog
+  rv = revert
+  rbi = rebase -i
+
+[pretty]
+  twoline = %C(Green)%h%C(Magenta)%d%C(Blue) %an, %ad%n%C(reset)%s
+
+[push]
+  default = simple
+
