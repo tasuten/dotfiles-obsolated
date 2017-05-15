@@ -187,6 +187,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tyru/caw.vim'
 Plug 'LeafCage/yankround.vim'
 Plug 'nishigori/increment-activator'
+Plug 'haya14busa/incsearch.vim'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -233,6 +234,17 @@ let g:increment_activator_filetype_candidates = {
 \ ]
 \ }
 
+" incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)zz
+map N  <Plug>(incsearch-nohl-N)zz
+map *  <Plug>(incsearch-nohl-*)zz
+map #  <Plug>(incsearch-nohl-#)zz
+map g* <Plug>(incsearch-nohl-g*)zz
+map g# <Plug>(incsearch-nohl-g#)zz
 
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
