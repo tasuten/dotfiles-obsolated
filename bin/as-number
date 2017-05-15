@@ -1,4 +1,0 @@
-#!/bin/sh
-
-curl -s ipinfo.io/org | cut -d " " -f 1
-

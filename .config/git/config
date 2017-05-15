@@ -11,12 +11,6 @@
   create-branch = checkout -b
   # Instead of git reset --hard HEAD
   destroy = !git commit -a -m 'Temporary commit for git-destroy' && git reset --hard HEAD~
-  # diff aliases
-  # last commit(HEAD) <-[staged]-> index <-[unstaged]-> work tree
-  #     ^-----------------------[changed]-------------------^
-  diff-staged = diff --cached --word-diff
-  diff-unstaged = diff --word-diff
-  diff-changed = diff --word-diff HEAD
   merge-commit = merge --no-ff
   unstage = reset HEAD
   a = add
@@ -43,5 +37,3 @@
 [push]
   default = simple
 
-[ghq]
-	root = ~/src
