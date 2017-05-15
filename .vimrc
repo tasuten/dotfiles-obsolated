@@ -180,3 +180,12 @@ function! AddExecmod()
   endif
 endfunction
 
+" vim-plug
+
+call plug#begin('~/.vim/plugged')
+
+" colorscheme
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
