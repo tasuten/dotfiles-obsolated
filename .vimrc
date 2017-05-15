@@ -194,6 +194,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'vim-scripts/matchit.zip'
 
+" text-object
+Plug 'kana/vim-textobj-user'
+" URL。u
+Plug 'mattn/vim-textobj-url'
+" surround.vim。囲ってる文字を消したり(ds")変えたり(cs"')、
+" 新たに囲んだり(ys<範囲><囲むの>, eg.)yss})
+Plug 'tpope/vim-surround'
+
 " colorscheme
 Plug 'morhetz/gruvbox'
 
