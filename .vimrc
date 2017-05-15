@@ -189,6 +189,13 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" 使わない標準プラグインを無効化
+let g:loaded_getscript = 1
+let g:loaded_getscriptPlugin = 1
+let g:loaded_logipat = 1
+let g:loaded_rrhelper = 1
+let g:loaded_spellfile_plugin = 1
+
 " vim-plug
 " アップデートウィンドウは下に開く
 let g:plug_window = 'belowright new'
