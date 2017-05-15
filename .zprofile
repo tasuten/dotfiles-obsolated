@@ -14,7 +14,7 @@ export XDG_CONFIG_DIRS=/etc/xdg
 
 export RLWRAP_HOME=$XDG_DATA_HOME/rlwrap
 
-MacTeX
+# MacTeX
 export TEXBIN=/Library/TeX/texbin
 export PATH=$TEXBIN:$PATH
 # TeX関連ファイルの置き場所
