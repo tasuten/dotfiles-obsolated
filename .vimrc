@@ -189,6 +189,10 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" vim-plug
+" アップデートウィンドウは下に開く
+let g:plug_window = 'belowright new'
+
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
 " WhitespaceEOL: 行末のスペース
