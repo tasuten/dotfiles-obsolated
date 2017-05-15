@@ -1,3 +1,0 @@
-" Makefileはソフトタブでなくハードタブでないといけない
-setlocal noexpandtab
-

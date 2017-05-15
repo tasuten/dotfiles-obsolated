@@ -1,4 +1,0 @@
-#!/bin/sh
-
-osx-cpu-temp | tr -d "°"
-
