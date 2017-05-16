@@ -17,7 +17,7 @@ export LESSHISTFILE='-'
 # 単語のデリミタを指定
 autoload -Uz select-word-style
 select-word-style default
-zstyle ':zle:*' word-chars ' _-=/;@'
+zstyle ':zle:*' word-chars ' _-=./;@'
 zstyle ':zle:*' word-style unspecified
 
 # 1: 補完の時にVimで言うsmartcaseにする
