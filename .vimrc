@@ -1,3 +1,5 @@
+" vim: foldmethod=marker commentstring=\ "\ %s:
+
 scriptencoding utf-8
 
 " Ref: http://rbtnn.hateblo.jp/entry/2014/11/30/174749
@@ -6,6 +8,8 @@ augroup vimrc
 augroup END
 
 language message C
+
+" options{{{
 
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
@@ -66,7 +70,9 @@ set splitright
 set splitbelow
 
 " >や<をshiftwidthの倍数に丸めるようにする
-set shiftround
+set shiftround " }}}
+
+" keymaps{{{
 
 " USキーボードでは:が押しにくいので;と入れ替え
 noremap ; :
@@ -152,8 +158,9 @@ cnoremap <C-e> <End>
 " http://stackoverflow.com/questions/26310401/
 " 既知の問題として、incsearch.vimの/や?では効かないことに注意
 cnoremap <C-k> <C-\>e
-\getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
+\getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR> " }}}
 
+" filetypes{{{
 filetype on
 filetype plugin on
 filetype indent on
@@ -178,9 +185,9 @@ function! AddExecmod()
   if strpart(line, 0, 2) ==# '#!'
     call system('chmod +x '. expand('%'))
   endif
-endfunction
+endfunction " }}}
 
-" vim-plug
+" vim-plug{{{
 
 call plug#begin('~/.vim/plugged')
 
@@ -215,24 +222,24 @@ Plug 'morhetz/gruvbox'
 " statusline
 Plug 'itchyny/lightline.vim'
 
-call plug#end()
+call plug#end() " }}}
 
-" 使わない標準プラグインを無効化
+" 使わない標準プラグインを無効化{{{
 let g:loaded_getscript = 1
 let g:loaded_getscriptPlugin = 1
 let g:loaded_logipat = 1
 let g:loaded_rrhelper = 1
-let g:loaded_spellfile_plugin = 1
+let g:loaded_spellfile_plugin = 1 " }}}
 
-" vim-plug
+" vim-plug setting {{{
 " アップデートウィンドウは下に開く
-let g:plug_window = 'belowright new'
+let g:plug_window = 'belowright new' " }}}
 
-" caw.vim
+" caw.vim{{{
 nmap <Leader>c <Plug>(caw:hatpos:toggle)
-vmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle) " }}}
 
-" yankround.vim
+" yankround.vim{{{
 " YankRing likeなキーバインド
 nmap p <Plug>(yankround-p)
 xmap p <Plug>(yankround-p)
@@ -240,9 +247,9 @@ nmap P <Plug>(yankround-P)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
 " キャッシュの保存先
-let g:yankround_dir = '~/.cache/yankround'
+let g:yankround_dir = '~/.cache/yankround' " }}}
 
-" increment-activator
+" increment-activator{{{
 let g:increment_activator_filetype_candidates = {
 \ '_' : [
 \   [ 'private', 'protected', 'public' ],
@@ -255,9 +262,9 @@ let g:increment_activator_filetype_candidates = {
 \ 'gitrebase': [
 \   [ 'pick', 'reword', 'edit', 'squash', 'fixup', 'exec' ]
 \ ]
-\ }
+\ } " }}}
 
-" incsearch.vim
+" incsearch.vim{{{
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 set hlsearch
@@ -267,8 +274,9 @@ map N  <Plug>(incsearch-nohl-N)zz
 map *  <Plug>(incsearch-nohl-*)zz
 map #  <Plug>(incsearch-nohl-#)zz
 map g* <Plug>(incsearch-nohl-g*)zz
-map g# <Plug>(incsearch-nohl-g#)zz
+map g# <Plug>(incsearch-nohl-g#)zz " }}}
 
+" lexima.vim{{{
 " <と>に関するルール
 " <>と入力すると<#>とカーソルを真ん中に
 " <と入力しただけで>を補完しないのは不等号入力を考えて
@@ -292,18 +300,18 @@ call lexima#add_rule({'char': '<BS>',  'at': '^\s*\* \%#$', 'input': '<BS><BS>',
 " -に関しては連続する場合はヘッダの区切り行なので細工
 call lexima#add_rule({'char': '-',  'at': '^- \%#$',  'input': '<BS>-', 'filetype': 'markdown'})
 " *についても強調で使うので細工
-call lexima#add_rule({'char': '*',  'at': '^\s*\* \%#$',  'input': '<BS>*', 'filetype': 'markdown'})
+call lexima#add_rule({'char': '*',  'at': '^\s*\* \%#$',  'input': '<BS>*', 'filetype': 'markdown'}) " }}}
 
-" vim-easy-align
-vmap <Enter> <Plug>(EasyAlign)
+" vim-easy-align{{{
+vmap <Enter> <Plug>(EasyAlign) " }}}
 
-" indentLine
+" indentLine{{{
 " See: https://github.com/Yggdroot/indentLine/issues/125
 let g:indentLine_concealcursor = ''
 " helpでは無効にする
-let g:indentLine_fileTypeExclude = [ 'help' ]
+let g:indentLine_fileTypeExclude = [ 'help' ] " }}}
 
-" ctrlp.vim
+" ctrlp.vim{{{
 " <C-p>はyankroundに使うので代わりに<C-e>を使う
 let g:ctrlp_map = '<C-e>'
 " 隠しファイルも表示する
@@ -332,8 +340,9 @@ nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 " QuickFix
 nnoremap <silent> [ctrlp]q :CtrlPQuickfix<CR>
 " アウトライン(ctrlp-funky)
-nnoremap <silent> [ctrlp]f :CtrlPFunky<CR>
+nnoremap <silent> [ctrlp]f :CtrlPFunky<CR> " }}}
 
+" colorscheme: gruvbox{{{
 " ユーザ定義のハイライトグループ
 " ZenkakuSpace: 全角スペース
 " WhitespaceEOL: 行末のスペース
@@ -345,9 +354,9 @@ function! s:my_highlights()
   let w:m2 = matchadd('WhitespaceEOL', '\s\+$')
 endfunction
 
-colorscheme gruvbox
+colorscheme gruvbox " }}}
 
-" statusline
+" lightline.vim{{{
 " statuslineを常に表示
 set laststatus=2
 
@@ -464,5 +473,4 @@ let g:lightline.active = {
 let g:lightline.inactive = {
 \ 'right' : []
 \ }
-
-
+ " }}}
