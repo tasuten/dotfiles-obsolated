@@ -30,114 +30,117 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 # ../とした時に今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
-# メモリに展開する履歴の数
-HISTSIZE=100000
-# 保存する履歴の数
-SAVEHIST=100000
-
-# 補完機能の強化
-autoload -U compinit
-compinit
-
-# コアダンプサイズを制限
-limit coredumpsize 102400
-# 出力の文字列末尾に改行コードが無い場合でも表示
-# unsetopt promptcr
-# Emacsライクキーバインド設定
-bindkey -e
-# Ctrl-F, Ctrl-Bでワード単位移動
-bindkey '^F' forward-word
-bindkey '^B' backward-word
-# Ctrl-Dでforward方向にワード削除
-bindkey '^D' kill-word
-# backward-kill-wordはEmacsキーバインドではCtrl-Wに割当済み
-# Shift-Tabで補完一覧候補を逆順に辿る
-bindkey "^[[Z" reverse-menu-complete
-# Ctrl-R/Sの検索でワイルドカードなどを使えるように
-bindkey '^R' history-incremental-pattern-search-backward
-bindkey '^S' history-incremental-pattern-search-forward
-
-
-# PROMPT変数で変数展開などを行う
-setopt prompt_subst
-# 今のプロンプト以外のRPROMPTを消す
-setopt transient_rprompt
-# ビープを鳴らさない
-setopt no_beep
-# 内部コマンドjobsの出力にPIDを含める
-setopt long_list_jobs
-# 補完候補一覧でファイルの種別をマーク表示
-setopt list_types
-# サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
-setopt auto_resume
-# 補完候補を一覧表示
-setopt auto_list
-# 直前と同じコマンドをヒストリに追加しない
-setopt hist_ignore_dups
-# cd時に自動でpushd
-setopt auto_pushd
-# 同じディレクトリをpushdしない
-setopt pushd_ignore_dups
-# 拡張グロブを使う
-# ざっくり言えばzshのファイル名補完とかでパターンとか使えるようになる
-setopt extended_glob
-# [TAB]で順に補完候補を切り替える
-setopt auto_menu
-# ヒストリを拡張フォーマットで保存
-setopt extended_history
-# =commandをcommandのフルパスに展開する
-setopt equals
-# --prefix=/usrなどの=以降もファイル名補完
-setopt magic_equal_subst
-# ヒストリを呼び出してから実行する間に一旦編集可能に
-setopt hist_verify
-# ファイル名の数字は辞書順ではなく数値的にソート
-setopt numeric_glob_sort
-# 出力時8ビットを通す
-setopt print_eight_bit
-# 複数のzsh間でヒストリを共有
-# ただし、ヒストリを読み込むタイミングはプロンプトが出る時
-# なのでプロンプト出したまま放置してると古いまま
-setopt share_history
 # 補完候補のカーソル選択を有効に
 zstyle ':completion:*:default' menu select=1
 # 補完候補の色づけ
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# メモリに展開する履歴の数
+HISTSIZE=100000
+# 保存する履歴の数
+SAVEHIST=100000
+# コアダンプサイズを制限
+limit coredumpsize 102400
+
+# 補完機能の強化
+autoload -U compinit
+compinit
+
+# Emacsライクキーバインド設定
+bindkey -e
+# Ctrl-F, Ctrl-Bでワード単位移動
+bindkey '^F' forward-word
+bindkey '^B' backward-word
+# Ctrl-D, Ctrl-Wでforward方向にワード削除
+bindkey '^D' kill-word
+bindkey '^W' backword-kill-word
+# Shift-Tabで補完一覧候補を逆順に辿る
+bindkey "^[[Z" reverse-menu-complete
+# Ctrl-R/Sの検索でワイルドカードなどを使えるように
+bindkey '^R' history-incremental-pattern-search-backward
+
+
+# cd
 # ディレクトリ名だけでcd
 setopt auto_cd
-# 変数名の補完で空白や}を後ろに補う
-# ただしその直後の入力が:や}など変数名の直後に来るものなら
-# その空白を削除して:や}をそこに入力
+# pushd
+setopt auto_pushd
+# 同じディレクトリは重複してpushdしない
+setopt pushd_ignore_dups
+
+# completion
+# 補完候補を一覧表示
+setopt auto_list
+# [TAB]で順に補完候補を切り替える
+setopt auto_menu
+# 変数名の補完で空白やいい感じに後に補う
 setopt auto_param_keys
 # ディレクトリ名の補完で末尾の/を自動的に付加し、次の補完に備える
 setopt auto_param_slash
-# ↑でスラッシュが補完された後、;やスペースを入力したら自動的にそのスラッシュを消す
+# auto_param_slashで付いた/をいい感じに削除する
 setopt auto_remove_slash
-# **/*.cのようなパターンを**.cと書けるようにする
-setopt glob_star_short
-# スペルチェック
-setopt correct
+# aliasを貼ってる場合の補完を適時うまいことやってくれる
+setopt complete_aliases
+# 補完候補を詰めて表示
+setopt list_packed
+# 補完候補一覧でファイルの種別をマーク表示
+setopt list_types
+
+# glob
 # {a-c}や{cba}を a b c に展開する機能を使えるようにする
 setopt brace_ccl
+# 拡張グロブを使う
+# ざっくり言えばzshのファイル名補完とかでパターンとか使えるようになる
+setopt extended_glob
+# 明確な場合はファイル名先頭のドットを必要としない
+setopt glob_dots
+# --prefix=/usrなどの=以降もファイル名補完
+setopt magic_equal_subst
+# ファイル名の数字は辞書順ではなく数値的にソート
+setopt numeric_glob_sort
+
+# History
+# ヒストリを拡張フォーマットで保存
+setopt extended_history
+# 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_dups
+# コマンドラインの先頭がスペースで始まる場合ヒストリに追加しない
+setopt hist_ignore_space
+# ヒストリを呼び出してから実行する間に一旦編集可能に
+setopt hist_verify
+# 複数のzsh間でヒストリを共有
+setopt share_history
+
+# I/O
+# ビープを鳴らさない
+setopt no_beep
+# スペルチェック
+setopt correct
+# 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
+setopt combining_chars
 # Ctrl-S/Ctrl-Qによるフロー制御を使わないようにする
 setopt no_flow_control
 # Ctrl-Dでzshを終了しない
 setopt ignore_eof
-# コマンドラインの先頭がスペースで始まる場合ヒストリに追加しない
-setopt hist_ignore_space
 # コマンドラインでも # 以降をコメントと見なす
 setopt interactive_comments
-# 補完候補を詰めて表示
-setopt list_packed
-# aliasを貼ってる場合の補完を適時うまいことやってくれる
-setopt complete_aliases
-# 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
-setopt combining_chars
-# ドット始まりのファイルも補完させる
-setopt globdots
+# 出力時8ビットを通す
+setopt print_eight_bit
+
+# Job
+# 内部コマンドjobsの出力にPIDを含める
+setopt long_list_jobs
+
+# Prompt
+# PROMPT変数で変数展開などを行う
+setopt prompt_subst
+# 今のプロンプト以外のRPROMPTを消す
+setopt transient_rprompt
+
 # パスを重複登録させない
 typeset -U path cdpath fpath manpath
+
 # zshのビルトインコマンドのr（直前に実行したコマンドを実行）を無効化
 disable r
 
@@ -148,7 +151,6 @@ alias gosh='rlwrap -b "(){}[],#\";| " gosh'
 
 # opencでopen .（カレントディレクトリを開く）
 alias openc='open .'
-
 
 # pdでauto_pushdでpushされた1つ前のディレクトリへ移動
 alias pd='popd'
