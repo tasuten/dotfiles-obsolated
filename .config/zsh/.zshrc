@@ -35,6 +35,8 @@ zstyle ':completion:*:default' menu select=1
 # 補完候補の色づけ
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# killも色づけ
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=0;33' # yellow
 
 # メモリに展開する履歴の数
 HISTSIZE=100000
