@@ -199,6 +199,10 @@ alias -g C='| pbcopy' # クリップボードへコピー
 # exit周り
 alias q='exit'
 
+# antigen
+source `brew --prefix`/share/antigen/antigen.zsh
+
+
 # tmuxを自動で起動
 if [[ "$TMUX" = "" ]]; then
   tmux
