@@ -144,17 +144,6 @@ typeset -U path cdpath fpath manpath
 # zshのビルトインコマンドのr（直前に実行したコマンドを実行）を無効化
 disable r
 
-# プロンプト
-autoload colors
-colors
-# 太字(%B %b)で青色(%F{blue} %f)、プロンプトは$ のみ
-# （正確にはrootなら# になるが、OS Xの場合rootは/bin/shなので無問題）
-PROMPT="%B%F{blue}%(!.#.$)%f%b "
-PROMPT2="%_> "
-SPROMPT="correct: %R -> %r [nyae]? "
-RPROMPT=''
-
-
 # Gaucheのgoshをrlwrap経由で起動するようにする
 # なお、-bで設定する単語の区切り文字の設定がデフォルトだと
 # Schemeの文法では少し困るので明示的に指定
@@ -202,6 +191,10 @@ alias q='exit'
 # antigen
 source `brew --prefix`/share/antigen/antigen.zsh
 
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
+antigen apply
 
 # tmuxを自動で起動
 if [[ "$TMUX" = "" ]]; then
