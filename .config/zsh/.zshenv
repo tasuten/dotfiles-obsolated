@@ -8,6 +8,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
+export HISTFILE=$XDG_DATA_HOME/zsh/history
 
 export RLWRAP_HOME=$XDG_DATA_HOME/rlwrap
 

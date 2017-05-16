@@ -33,8 +33,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 # ../とした時に今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
-# 履歴の保存先
-HISTFILE=$HOME/.zsh-history
 # メモリに展開する履歴の数
 HISTSIZE=100000
 # 保存する履歴の数
