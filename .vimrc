@@ -214,6 +214,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
 " filetypes
+Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
+Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
 " colorscheme
@@ -342,6 +344,11 @@ nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 nnoremap <silent> [ctrlp]q :CtrlPQuickfix<CR>
 " アウトライン(ctrlp-funky)
 nnoremap <silent> [ctrlp]f :CtrlPFunky<CR> " }}}
+
+" rust.vim, vim-racer{{{
+autocmd vimrc FileType rust nnoremap <buffer> <Leader>f :<C-u>RustFmt<CR>
+let g:racer_experimental_completer = 1
+ " }}}
 
 " colorscheme: gruvbox{{{
 " ユーザ定義のハイライトグループ
