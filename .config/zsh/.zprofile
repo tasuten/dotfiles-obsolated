@@ -8,7 +8,8 @@ if [[ -d $RBENV_ROOT ]]; then
   eval "$(rbenv init -)"
 fi
 
-export PATH=$HOME/.cargo/bin:$PATH
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+export PATH=$CARGO_HOME/bin:$PATH
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$XDG_DATA_HOME/go
