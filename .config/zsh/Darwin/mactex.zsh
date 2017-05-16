@@ -1,0 +1,8 @@
+export TEXBIN=/Library/TeX/texbin
+export PATH=$TEXBIN:$PATH
+
+export TEXHOME=$XDG_DATA_HOME/MacTeX
+export TEXINPUTS=$TEXINPUTS:$TEXHOME/tex
+export BIBINPUTS=$BIBINPUTS:$TEXHOME/bibtex/bib
+export BSTINPUTS=$BSTINPUTS:$TEXHOME/bibtex/bst
+
