@@ -191,6 +191,11 @@ alias q='exit'
 # antigen
 source `brew --prefix`/share/antigen/antigen.zsh
 
+# completion
+antigen bundle docker
+antigen bundle vagrant
+
+# theme
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
