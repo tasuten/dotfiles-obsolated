@@ -191,6 +191,9 @@ alias q='exit'
 # antigen
 source `brew --prefix`/share/antigen/antigen.zsh
 
+# plugin
+antigen bundle mollifier/cd-gitroot
+
 # completion
 antigen bundle docker
 antigen bundle vagrant
@@ -200,6 +203,9 @@ antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
 antigen apply
+
+alias cdu='cd-gitroot'
+compdef cdu=cd-gitroot
 
 # tmuxを自動で起動
 if [[ "$TMUX" = "" ]]; then
