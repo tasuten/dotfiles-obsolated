@@ -1,10 +1,6 @@
 export LANG=ja_JP.UTF-8
 export EDITOR=/usr/local/bin/vim
 
-# Homebrew
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-
 # XDG Base Directoryを明示
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
