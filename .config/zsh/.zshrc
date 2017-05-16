@@ -184,6 +184,8 @@ alias -g C='| pbcopy' # クリップボードへコピー
 alias q='exit'
 
 # antigen
+ADOTDIR=$XDG_DATA_HOME/antigen
+
 source `brew --prefix`/share/antigen/antigen.zsh
 
 # plugin
