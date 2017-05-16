@@ -214,6 +214,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
 " filetypes
+Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
@@ -344,6 +345,10 @@ nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 nnoremap <silent> [ctrlp]q :CtrlPQuickfix<CR>
 " アウトライン(ctrlp-funky)
 nnoremap <silent> [ctrlp]f :CtrlPFunky<CR> " }}}
+
+" vim-go{{{
+let g:go_fmt_command = "goimports"
+autocmd vimrc FileType go nnoremap <buffer> <Leader>f :<C-u>GoFmt<CR> " }}}
 
 " rust.vim, vim-racer{{{
 autocmd vimrc FileType rust nnoremap <buffer> <Leader>f :<C-u>RustFmt<CR>
