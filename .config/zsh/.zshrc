@@ -1,21 +1,18 @@
-# lsの結果
+# coloring
+# ls
 export LSCOLORS=gxhxcxdxbxaeagabafacad
-# 補完の方の色
+# completion
 export LS_COLORS='di=36:ln=37:so=32:pi=33:ex=31:bd=30;44:cd=30;46:su=30;41:sg=30;45:tw=30;42:ow=30;43'
-# lsに色を付ける（-G指定と同じ）
+# colored ls
 export CLICOLOR=true
-# lessを付きで表示してくれるように
+# colored less
 export LESS='-R'
-# grepに色を付ける
-# --color=alwaysにしないのは、grepコマンドを使用しているスクリプトなんかで
-# 困るかもしれないそうなので
-# http://d.hatena.ne.jp/bubbles/20081210/1228918665
+# colored grep
 export GREP_OPTIONS='--color=auto'
-# 色はシアン
-export GREP_COLOR='00;36'
+export GREP_COLOR='00;36' # cyan
 
 # lesshstを作らない
-export LESSHISTFILE '-'
+export LESSHISTFILE='-'
 
 # 単語のデリミタを指定
 autoload -Uz select-word-style
