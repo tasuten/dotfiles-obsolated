@@ -10,3 +10,8 @@ fi
 
 export PATH=$HOME/.cargo/bin:$PATH
 
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$XDG_DATA_HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+
