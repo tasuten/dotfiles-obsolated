@@ -23,6 +23,7 @@
   cl = clone
   co = checkout
   gr = grep
+  ls = ls-files
   mg = merge
   mc = merge --no-ff
   pl = pull
