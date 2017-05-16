@@ -134,6 +134,8 @@ setopt list_packed
 setopt complete_aliases
 # 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
 setopt combining_chars
+# ドット始まりのファイルも補完させる
+setopt globdots
 # パスを重複登録させない
 typeset -U path cdpath fpath manpath
 # zshのビルトインコマンドのr（直前に実行したコマンドを実行）を無効化
