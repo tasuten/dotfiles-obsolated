@@ -335,6 +335,7 @@ let g:ctrlp_types = [ 'fil' ]
 " The prefix key
 nnoremap [ctrlp] <Nop>
 nmap e [ctrlp]
+nnoremap <silent> [ctrlp]e :CtrlP<CR>
 " 行
 nnoremap <silent> [ctrlp]l :CtrlPLine<CR>
 " QuickFix
