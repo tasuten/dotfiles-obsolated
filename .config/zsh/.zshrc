@@ -98,7 +98,7 @@ setopt brace_ccl
 # 拡張グロブを使う
 # ざっくり言えばzshのファイル名補完とかでパターンとか使えるようになる
 setopt extended_glob
-# 明確な場合はファイル名先頭のドットを必要としない
+# 明確な場合はドットから始まるファイルもglobでマッチする
 setopt glob_dots
 # --prefix=/usrなどの=以降もファイル名補完
 setopt magic_equal_subst
