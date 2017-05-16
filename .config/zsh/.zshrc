@@ -189,7 +189,7 @@ alias q='exit'
 # antigen
 ADOTDIR=$XDG_DATA_HOME/antigen
 
-source `brew --prefix`/share/antigen/antigen.zsh
+source "$(brew --prefix)"/share/antigen/antigen.zsh
 
 # plugin
 antigen bundle mollifier/cd-gitroot
