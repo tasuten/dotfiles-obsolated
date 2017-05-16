@@ -4,7 +4,7 @@
 [core]
   autocrlf = input
 [color]
-  ui = true
+  ui = auto
 
 [alias]
   amend = commit --amend
