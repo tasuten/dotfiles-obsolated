@@ -12,7 +12,10 @@ export HISTFILE=$XDG_DATA_HOME/zsh/history
 
 export RLWRAP_HOME=$XDG_DATA_HOME/rlwrap
 
-if [[ -d $HOME/.rbenv ]]; then
+
+export RBENV_ROOT=$XDG_DATA_HOME/rbenv
+
+if [[ -d $RBENV_ROOT ]]; then
   eval "$(rbenv init -)"
 fi
 
