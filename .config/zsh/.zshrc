@@ -30,6 +30,9 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 # ../とした時に今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
+# _から始まる関数、例えばzshの内部関数などを外す
+zstyle ':completion:*:functions' ignored-patterns '_*'
+
 # 補完候補のカーソル選択を有効に
 zstyle ':completion:*:default' menu select=1
 # 補完候補の色づけ
