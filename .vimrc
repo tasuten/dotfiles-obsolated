@@ -1,4 +1,4 @@
-" vim: foldmethod=marker commentstring=\ "\ %s:
+" vim: foldmethod=marker commentstring=\ \"\ %s:
 
 scriptencoding utf-8
 
