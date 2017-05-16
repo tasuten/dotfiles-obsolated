@@ -206,8 +206,7 @@ antigen bundle docker
 antigen bundle vagrant
 
 # theme
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+antigen theme S1cK94/minimal
 
 antigen apply
 
