@@ -203,7 +203,6 @@ export _Z_DATA=$XDG_DATA_HOME/z
 
 # completion
 antigen bundle docker
-antigen bundle vagrant
 
 # theme
 antigen theme tasuten/zenzee
