@@ -198,9 +198,9 @@ antigen bundle mollifier/cd-gitroot
 alias cdu='cd-gitroot'
 compdef cdu=cd-gitroot
 # knu/z
-antigen bundle knu/z
 export _Z_CMD=j
 export _Z_DATA=$XDG_DATA_HOME/z
+antigen bundle knu/z
 
 # completion
 antigen bundle docker
