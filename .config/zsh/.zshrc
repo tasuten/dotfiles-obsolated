@@ -62,9 +62,6 @@ bindkey '^D' kill-word
 bindkey '^W' backword-kill-word
 # Shift-Tabで補完一覧候補を逆順に辿る
 bindkey "^[[Z" reverse-menu-complete
-# Ctrl-R/Sの検索でワイルドカードなどを使えるように
-bindkey '^R' history-incremental-pattern-search-backward
-
 
 # cd
 # ディレクトリ名だけでcd
