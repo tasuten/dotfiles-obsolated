@@ -206,7 +206,7 @@ antigen bundle docker
 antigen bundle vagrant
 
 # theme
-antigen theme S1cK94/minimal
+antigen theme tasuten/zenzee
 
 antigen apply
 
