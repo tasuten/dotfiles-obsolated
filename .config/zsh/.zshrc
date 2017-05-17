@@ -63,6 +63,10 @@ bindkey '^W' backword-kill-word
 # Shift-Tabで補完一覧候補を逆順に辿る
 bindkey "^[[Z" reverse-menu-complete
 
+
+# fzf
+source "$ZDOTDIR"/fzf.zsh
+
 # cd
 # ディレクトリ名だけでcd
 setopt auto_cd
