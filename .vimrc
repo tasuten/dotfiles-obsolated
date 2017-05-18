@@ -214,6 +214,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
 " filetypes
+Plug 'justmao945/vim-clang', { 'for' : [ 'c', 'cpp' ] }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
