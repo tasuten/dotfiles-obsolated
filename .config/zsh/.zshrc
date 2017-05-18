@@ -163,8 +163,10 @@ alias pd='popd'
 
 alias g='git'
 compdef g=git
-alias b='brew'
-compdef b=brew
+if type brew >/dev/null 2>&1;then
+  alias b='brew'
+  compdef b=brew
+fi
 
 # ls関連エイリアス
 alias ll='ls -alF'
@@ -190,7 +192,9 @@ alias q='exit'
 # antigen
 ADOTDIR=$XDG_DATA_HOME/antigen
 
-source "$(brew --prefix)"/share/antigen/antigen.zsh
+if type brew >/dev/null 2>&1;then
+  source "$(brew --prefix)"/share/antigen/antigen.zsh
+fi
 
 # plugin
 # cd-gitroot
