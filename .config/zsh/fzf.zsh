@@ -6,6 +6,6 @@ function eg () { # edit git tracking file
 }
 
 function hs () { # input history into command line
-  print -z $(fc -ln -50 | fzf)
+  print -z $(fc -ln -100 | fzf)
 }
 
