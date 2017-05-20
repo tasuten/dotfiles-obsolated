@@ -42,9 +42,9 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=0;33' # yellow
 
 # メモリに展開する履歴の数
-HISTSIZE=100000
+HISTSIZE=5000
 # 保存する履歴の数
-SAVEHIST=100000
+SAVEHIST=5000
 # コアダンプサイズを制限
 limit coredumpsize 102400
 
