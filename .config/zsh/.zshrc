@@ -67,7 +67,7 @@ bindkey "^[[Z" reverse-menu-complete
 # fzf
 source "$ZDOTDIR"/fzf.zsh
 bindkey '^R' __fzf_input_history
-bindkey '^X^G' __fzf_edit_git_files
+alias eg=__fzf_edit_git_files
 
 # cd
 # ディレクトリ名だけでcd
