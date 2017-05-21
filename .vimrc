@@ -218,6 +218,7 @@ Plug 'justmao945/vim-clang', { 'for' : [ 'c', 'cpp' ] }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
+Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
 " colorscheme
