@@ -17,7 +17,7 @@ die() {
 mkdir_p() {
   local target
   target=$1
-  if [[ -d $target ]]; then
+  if [[ ! -d $target ]]; then
     mkdir -p "$target"
   fi
 }
