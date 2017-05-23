@@ -3,12 +3,6 @@
 # when any command returns non-0, exit this script
 set -e
 
-source_config() {
-  local this_directory
-  this_directory=$(cd "$(dirname "$0")" && pwd)
-  source "$this_directory/configs.sh"
-}
-
 die() {
   echo "$@" >&2
   exit 1
@@ -42,8 +36,6 @@ symlink() {
   fi
 }
 
-
-source_config
 
 unset -f die mkdir_p symlink
 # unset -v var
