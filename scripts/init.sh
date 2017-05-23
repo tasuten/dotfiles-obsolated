@@ -55,4 +55,19 @@ link ".vimrc"
 link ".vim/ftplugin" # directory
 link ".zshenv"
 
+dir ".vim/tmp/swap"
+dir ".vim/tmp/backup"
+dir ".vim/tmp/undo"
+dir ".vim/plugged"
+dir ".config" # XDG_CONFIG_HOME
+dir ".cache" # XDG_CACHE_HOME
+dir ".local/share" # XDG_DATA_HOME
+dir ".local/share/zsh"
+dir ".local/share/antigen"
+dir ".local/share/rlwrap"
+dir ".local/share/rbenv"
+dir ".local/share/rustup"
+dir ".local/share/cargo"
+dir ".local/share/go"
+
 unset -f die mkdir_p symlink link dir
