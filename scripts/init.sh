@@ -43,6 +43,10 @@ link () {
   symlink "$dotfiles/$1" "$root/$1"
 }
 
+dir () {
+  mkdir_p "$HOME/$1"
+}
+
 # Don't suffix slash after directory name
 link ".config/git/config"
 link ".config/zsh" # directory
@@ -51,4 +55,4 @@ link ".vimrc"
 link ".vim/ftplugin" # directory
 link ".zshenv"
 
-unset -f die mkdir_p symlink link
+unset -f die mkdir_p symlink link dir
