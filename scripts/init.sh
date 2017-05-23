@@ -3,7 +3,11 @@
 # when any command returns non-0, exit this script
 set -e
 
-source "$(cd $(dirname $0) && pwd)"/configs.sh
+source_config() {
+  local this_directory
+  this_directory=$(cd "$(dirname "$0")" && pwd)
+  source "$this_directory/configs.sh"
+}
 
 die() {
   echo "$@" >&2
@@ -17,6 +21,9 @@ mkdir_p() {
     mkdir -p "$target"
   fi
 }
+
+
+source_config
 
 unset -f die mkdir_p
 # unset -v var
