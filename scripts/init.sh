@@ -10,6 +10,13 @@ die() {
   exit 1
 }
 
+mkdir_p() {
+  local target
+  target=$1
+  if [[ -d $target ]]; then
+    mkdir -p "$target"
+  fi
+}
 
-unset -f die
+unset -f die mkdir_p
 # unset -v var
