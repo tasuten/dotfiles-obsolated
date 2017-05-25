@@ -43,16 +43,19 @@ link () {
   symlink "$dotfiles/$1" "$root/$1"
 }
 
+link_d () {
+  link "${1/%\/}"
+}
+
 dir () {
   mkdir_p "$HOME/$1"
 }
 
-# Don't suffix slash after directory name
 link ".config/git/config"
-link ".config/zsh" # directory
+link_d ".config/zsh/"
 link ".tmux.conf"
 link ".vimrc"
-link ".vim/ftplugin" # directory
+link_d ".vim/ftplugin"
 link ".zshenv"
 
 dir ".vim/tmp/swap"
