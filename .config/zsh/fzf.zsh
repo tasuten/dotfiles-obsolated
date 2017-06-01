@@ -6,7 +6,7 @@ function __fzf_edit_git_files () {
 }
 
 function __fzf_input_history () {
-  print -z $(fc -ln | fzf --tac)
+  print -z $(fc -ln -1000 | fzf --tac)
 }
 zle -N __fzf_input_history
 
