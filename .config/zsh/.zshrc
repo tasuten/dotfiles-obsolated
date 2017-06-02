@@ -20,9 +20,11 @@ select-word-style default
 zstyle ':zle:*' word-chars ' _-=./;@'
 zstyle ':zle:*' word-style unspecified
 
-# 1: 補完の時にVimで言うsmartcaseにする
-# 2: 例えばs.vでs*.v*なファイルを補完出来るようにする （『zshの本』P.154）
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|.=*'
+# 1: 小文字のときは大文字にもマッチ、大文字は大文字にマッチ(smartcase)
+# 2. ._-区切りの文字列をf.c->foo.cppのようにマッチ
+# 3. CamelCaseの文字列をCC->CamelCaseのようにマッチ
+zstyle ':completion:*' matcher-list \
+   '' '+m:{a-z}={A-Z}' '+r:|{._-}=*' '+r:|{A-Z}=*'
 
 # sudoでも以下のディレクトリ内のコマンドは補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
