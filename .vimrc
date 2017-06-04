@@ -217,7 +217,6 @@ Plug 'tacahiroy/ctrlp-funky'
 Plug 'justmao945/vim-clang', { 'for' : [ 'c', 'cpp' ] }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
-Plug 'racer-rust/vim-racer', { 'for' : 'rust' }
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'spinningarrow/vim-niji', { 'for' : [ 'lisp', 'scheme', 'clojure' ] }
 
@@ -352,9 +351,8 @@ nnoremap <silent> [ctrlp]f :CtrlPFunky<CR> " }}}
 let g:go_fmt_command = "goimports"
 autocmd vimrc FileType go nnoremap <buffer> <Leader>f :<C-u>GoFmt<CR> " }}}
 
-" rust.vim, vim-racer{{{
+" rust.vim {{{
 autocmd vimrc FileType rust nnoremap <buffer> <Leader>f :<C-u>RustFmt<CR>
-let g:racer_experimental_completer = 1
  " }}}
 
 " colorscheme: gruvbox{{{
