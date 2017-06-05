@@ -66,6 +66,7 @@ dir () {
 }
 
 link   ".config/git/config"
+link   ".config/git/ignore"
 link_d ".config/zsh/"
 link   ".tmux.conf"
 link   ".vimrc"
