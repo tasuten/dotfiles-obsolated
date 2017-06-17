@@ -87,6 +87,5 @@ dir ".local/share/rbenv"
 dir ".local/share/rustup"
 dir ".local/share/cargo"
 dir ".local/share/go"
-dir ".local/share/stack"
 
 unset -f die mkdir_p symlink link link_d dir
