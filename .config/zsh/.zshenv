@@ -12,5 +12,7 @@ export HISTFILE=$XDG_DATA_HOME/zsh/history
 
 export RLWRAP_HOME=$XDG_DATA_HOME/rlwrap
 
+export RANDFILE=$XDG_CACHE_HOME/rnd
+
 export PATH=$HOME/bin:$PATH
 
